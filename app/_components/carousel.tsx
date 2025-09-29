@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination,Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,7 +16,8 @@ const Carousel = () => {
   return (
     <div className="relative w-full max-w-[1200px] mx-auto">
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination,Autoplay]}
+         autoplay={{ delay: 3000, disableOnInteraction: false }}
         navigation={{
           nextEl: ".carousel-next",
           prevEl: ".carousel-prev",

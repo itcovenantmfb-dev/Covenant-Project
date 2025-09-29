@@ -6,7 +6,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { CheckCircle, ChevronRight } from "lucide-react";
 
 const faqData = [
   {

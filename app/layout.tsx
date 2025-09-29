@@ -5,7 +5,7 @@ import Navbar from "./_components/navbar";
 import CTA from "./_components/cta-section";
 import Footer from "./_components/footer-section";
 import localFont from "next/font/local";
-
+import ZohoDeskWidget from "./_components/ZohoDeskWidget";
 const myFont = localFont({
   src: [
     {
@@ -37,6 +37,7 @@ export default function RootLayout({
       <body className={`${myFont.className} antialiased`}>
         <Navbar />
         {children}
+        {/* <ZohoDeskWidget /> */}
         <CTA />
         <Footer />
       </body>
