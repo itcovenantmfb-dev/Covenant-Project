@@ -51,8 +51,8 @@ const footerItems = [
         route: "/cards-and-payments",
       },
       {
-        text: "Branch Locator",
-        route: "/branch-locator",
+        text: "POS",
+        route: "/pos",
       },
       {
         text: "Careers",
@@ -74,6 +74,14 @@ const footerItems = [
       {
         text: "Anti Money Laundering Policy",
         route: "/anti-money-laundering-policy",
+      },
+      {
+        text: "Terms and Conditions",
+        route: "/terms-and-conditions",
+      },
+      {
+        text: "Risk Management",
+        route: "/risk-management-policy",
       },
     ],
   },

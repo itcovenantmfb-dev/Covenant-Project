@@ -24,7 +24,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
       {/* Main Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8">
         <div className="flex justify-center items-center">
-          <Title text={pillText} borderColor="#001102" textColor="green-200" />
+          <Title text={pillText} borderColor="#001102" textColor="#1D9C4A" />
         </div>
 
         {/* Main Heading */}
