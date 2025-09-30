@@ -41,12 +41,12 @@ const JobCard: React.FC<{ job: Job }> = ({ job }) => (
       </p>
     </div>
 
-    <div className="relative mt-28 sm:mt-30 flex justify-center p-4 sm:p-6 z-20">
+    <div className=" mt-auto flex justify-center p-4 sm:p-6 z-10">
       <Link
         href={`/careers/${job.slug}`}
         className="inline-block rounded-lg bg-green-600/80 hover:bg-green-700/90 text-white px-4 sm:px-6 py-2 sm:py-2.5 text-center text-xs sm:text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400"
       >
-        View Details
+        View Detail
       </Link>
     </div>
   </article>

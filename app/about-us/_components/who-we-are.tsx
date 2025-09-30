@@ -1,33 +1,42 @@
-'use client'; 
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Play } from 'lucide-react';
-import SectionPill from './section-pill';
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog"; 
+import React, { useState } from "react";
+import Image from "next/image";
+import { Play } from "lucide-react";
+import SectionPill from "./section-pill";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const WhoWeAreSection = () => {
   return (
-    <section data-aos="fade-up" className="bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6">
+    <section
+      data-aos="fade-up"
+      className="bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
+    >
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-5 lg:gap-16">
-
-          <div className="lg:col-span-3"> 
+          <div className="lg:col-span-3">
             <div>
               <SectionPill>Who We Are</SectionPill>
               <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
                 <p>
-                  Covenant Microfinance Bank (Covenant MFB) is a forward-thinking financial institution established in 2003, dedicated to providing accessible, innovative, and customer-centric banking solutions. We serve individuals, entrepreneurs, small businesses, and organizations with a strong focus on financial inclusion, digital empowerment, and community development.
+                  Covenant Microfinance Bank (Covenant MFB) is a
+                  forward-thinking financial institution established in 2003,
+                  dedicated to providing accessible, innovative, and
+                  customer-centric banking solutions. We serve individuals,
+                  entrepreneurs, small businesses, and organizations with a
+                  strong focus on financial inclusion, digital empowerment, and
+                  community development.
                 </p>
                 <p>
-                  With a wide range of services including mobile and internet banking, USSD banking, loans and savings products, debit cards, and POS/ATM services, Covenant MFB bridges the gap between traditional banking and modern financial needs.
+                  With a wide range of services including mobile and internet
+                  banking, USSD banking, loans and savings products, debit
+                  cards, and POS/ATM services, Covenant MFB bridges the gap
+                  between traditional banking and modern financial needs.
                 </p>
                 <p>
-                  Rooted in excellence and guided by integrity, we are committed to helping our customers grow, thrive, and achieve lasting financial success.
+                  Rooted in excellence and guided by integrity, we are committed
+                  to helping our customers grow, thrive, and achieve lasting
+                  financial success.
                 </p>
               </div>
             </div>
@@ -36,13 +45,17 @@ const WhoWeAreSection = () => {
               <div>
                 <SectionPill>Our Vision</SectionPill>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  To be the leading Microfinance Bank in the business of transforming ordinary individuals and micro-enterprises into wealth creators.
+                  To be the leading Microfinance Bank in the business of
+                  transforming ordinary individuals and micro-enterprises into
+                  wealth creators.
                 </p>
               </div>
               <div>
                 <SectionPill>Our Mission</SectionPill>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  To meet the developmental needs of the community. To intellectually promote creativity. To serve as an instrument of wealth creation.
+                  To meet the developmental needs of the community. To
+                  intellectually promote creativity. To serve as an instrument
+                  of wealth creation.
                 </p>
               </div>
             </div>
@@ -60,7 +73,7 @@ const WhoWeAreSection = () => {
             </div>
           </div>
 
-          <div className="relative lg:col-span-2"> 
+          {/* <div className="relative lg:col-span-2"> 
             <Dialog>
               <DialogTrigger asChild>
                 <button className="relative block h-full w-full cursor-pointer overflow-hidden rounded-2xl">
@@ -91,8 +104,7 @@ const WhoWeAreSection = () => {
                 </div>
               </DialogContent>
             </Dialog>
-          </div>
-
+          </div> */}
         </div>
       </div>
     </section>
@@ -100,7 +112,3 @@ const WhoWeAreSection = () => {
 };
 
 export default WhoWeAreSection;
-
-
-
-
