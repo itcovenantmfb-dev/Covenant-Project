@@ -6,10 +6,10 @@ const BrandLogo = ({ small }: { small?: boolean }) => {
   return (
     <Link href={"/"}>
       <Image
-        src={"/icons/logo.svg"}
+        src={"/Brand-logo.svg"}
         alt="company logo"
-        width={small ? 40 : 56}
-        height={small ? 40 : 53}
+        width={small ? 100 : 130}
+        height={small ? 100 : 130}
       />
     </Link>
   );

@@ -4,6 +4,57 @@ import { Section } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const slug = (await params).slug;
+  const post = allBlogPosts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+      description: "The requested blog post could not be found.",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    keywords: [
+      "covenant microfinance bank news",
+      "banking news",
+      "financial updates",
+      post.title.toLowerCase(),
+      "microfinance industry",
+      "financial services news"
+    ],
+    openGraph: {
+      title: `${post.title} - Covenant Microfinance Bank`,
+      description: post.excerpt,
+      url: `/news/${post.slug}`,
+      images: [
+        {
+          url: post.imageSrc,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      type: "article",
+      publishedTime: post.date,
+    },
+    twitter: {
+      title: `${post.title} - Covenant Microfinance Bank`,
+      description: post.excerpt,
+      images: [post.imageSrc],
+      card: "summary_large_image",
+    },
+  };
+}
 
 const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => (
   <article className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-sm shadow-gray-900/5 ring-1 ring-gray-900/5 overflow-hidden">

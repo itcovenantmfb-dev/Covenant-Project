@@ -37,8 +37,20 @@ const Navbar = () => {
               {NAV_ITEMS.map((item) =>
                 item.isDropdown ? (
                   <NavigationMenuItem key={item.route} className="border-none">
-                    <NavigationMenuTrigger className=" hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent text-[#DBE4C4] hover:text-white p-0  font-normal text-[13px] gap-1">
-                      <div className="flex items-center justify-center gap-1.5">
+                    <NavigationMenuTrigger
+                      className={cn(
+                        "hover:bg-transparent focus:bg-transparent  cursor-pointer data-[active]:bg-transparent data-[state=open]:bg-transparent text-[#DBE4C4] hover:text-white p-0 font-normal text-[13px] gap-1 relative px-3 py-2 rounded-md",
+                        item.subItems?.some(
+                          (subItem) => pathname === subItem.route
+                        ) && "text-white"
+                      )}
+                    >
+                      {item.subItems?.some(
+                        (subItem) => pathname === subItem.route
+                      ) && (
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#75FF8C]/20 to-transparent rounded-md" />
+                      )}
+                      <div className="relative z-10 flex items-center justify-center gap-1.5">
                         <Image
                           src={item.icon || "/placeholder.svg"}
                           alt={item.text}
@@ -47,9 +59,14 @@ const Navbar = () => {
                         />
                         <p>{item.text}</p>
                       </div>
+                      {item.subItems?.some(
+                        (subItem) => pathname === subItem.route
+                      ) && (
+                        <div className="absolute bottom-0  cursor-pointer left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full" />
+                      )}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className=" border-none mt-6 bg-white">
-                      <div className="px-6 py-6  w-[800px]">
+                    <NavigationMenuContent className="border-none mt-6 bg-white">
+                      <div data-aos="fade-up" className="px-6 py-6 w-[800px]">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                           {item.subItems?.map((subItem) => (
                             <div key={subItem.route}>
@@ -57,7 +74,7 @@ const Navbar = () => {
                                 <Link
                                   href={subItem.route}
                                   className={cn(
-                                    "block px-3 py-2 text-sm hover:text-[#043B20] hover:bg-[#F1F5EB] rounded-md transition-colors font-medium",
+                                    "block px-3 py-2 text-sm cursor-pointer hover:text-[#043B20] hover:bg-[#F1F5EB] rounded-md transition-colors font-medium",
                                     pathname === subItem.route &&
                                       "bg-[#F1F5EB] text-[#043B20]"
                                   )}
@@ -92,15 +109,26 @@ const Navbar = () => {
                   <NavigationMenuItem key={item.route}>
                     <Link
                       href={item.route}
-                      className="flex items-center justify-center gap-1.5 transition-colors hover:text-white text-[#DBE4C4] text-[13px]"
+                      className={cn(
+                        "flex items-center justify-center gap-1.5 transition-colors hover:text-white text-[#DBE4C4] text-[13px] relative px-3 py-2 rounded-md",
+                        pathname === item.route && "text-white"
+                      )}
                     >
-                      <Image
-                        src={item.icon || "/placeholder.svg"}
-                        alt={item.text}
-                        width={13}
-                        height={15}
-                      />
-                      <p>{item.text}</p>
+                      {pathname === item.route && (
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#75FF8C]/20 to-transparent rounded-md" />
+                      )}
+                      <div className="relative z-10 flex items-center justify-center gap-1.5">
+                        <Image
+                          src={item.icon || "/placeholder.svg"}
+                          alt={item.text}
+                          width={13}
+                          height={15}
+                        />
+                        <p>{item.text}</p>
+                      </div>
+                      {pathname === item.route && (
+                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full" />
+                      )}
                     </Link>
                   </NavigationMenuItem>
                 )

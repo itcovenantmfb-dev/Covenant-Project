@@ -38,8 +38,8 @@ export function AccountCard({ account }: AccountCardProps) {
   return (
     <>
       <Card className="h-full grid grid-cols-1 lg:grid-cols-2 gap-0 text-[#000]/60 border-none hover:shadow-lg bg-white transition-shadow duration-200">
-        <CardHeader className="  rounded-md  relative">
-          <div className="rounded-4xl hidden lg:flex ">
+        <CardHeader className="rounded-md relative min-h-[200px] lg:min-h-auto">
+          <div className="rounded-4xl flex lg:flex">
             <Image
               src={account.image || "/placeholder.svg"}
               alt={account.name}
@@ -48,27 +48,27 @@ export function AccountCard({ account }: AccountCardProps) {
             />
           </div>
         </CardHeader>
-        <CardContent className=" flex flex-col gap-4 ">
+        <CardContent className="flex flex-col gap-4 p-4 sm:p-6">
           <div className="flex flex-col gap-3">
-            {" "}
-            <CardTitle className="text-xl font-semibold text-[#04391F]">
+            <CardTitle className="text-lg sm:text-xl font-semibold text-[#04391F]">
               {account.name}
             </CardTitle>
-            <CardDescription className="text-[#000]/60 w-full text-md">
+            <CardDescription className="text-[#000]/60 w-full text-sm sm:text-md leading-relaxed">
               {account.description}
             </CardDescription>
           </div>
 
-          <div className="flex flex-col gap-4">
-            {account.items.map((i) => (
-              <div className="flex gap-2">
+          <div className="flex flex-col gap-3 sm:gap-4">
+            {account.items.map((i,index) => (
+              <div key={index} className="flex gap-2 items-start">
                 <Image
                   src={"/icons/mark.svg"}
                   alt="mark-icon"
                   width={20}
                   height={20}
+                  className="flex-shrink-0 mt-0.5"
                 />
-                <p>{i.list}</p>
+                <p className="text-sm sm:text-base">{i.list}</p>
               </div>
             ))}
           </div>

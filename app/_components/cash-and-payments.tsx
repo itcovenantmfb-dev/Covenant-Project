@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const CashAndPayments = () => (
-  <section className=" relative mt-8 lg:mt-14 px-4 lg:px-0">
+  <section data-aos="fade-up" className=" relative mt-8 lg:mt-14 px-4 lg:px-0">
     <div
       style={{
         backgroundImage: 'url("/banner2.svg")',

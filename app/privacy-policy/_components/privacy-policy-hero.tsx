@@ -9,7 +9,11 @@ const pageTitle = (
   </>
 );
 const PrivacyPolicyHeroSection = () => {
-  return <PageBanner pillText={"Privacy Policy"} title={pageTitle} />;
+  return (
+    <div data-aos="fade-up">
+      <PageBanner pillText={"Privacy Policy"} title={pageTitle} />
+    </div>
+  );
 };
 
 export default PrivacyPolicyHeroSection;

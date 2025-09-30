@@ -106,26 +106,28 @@ const footerItems = [
 
 const Footer = () => (
   <footer
+   
     style={{
       backgroundImage: "url('/Footer.svg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
-    className="relative w-full pt-40 pb-10 px-8 lg:px-20 text-white overflow-hidden z-10"
+    className="relative w-full pt-40 sm:pt-32 lg:pt-40 pb-8 sm:pb-10 px-4 sm:px-8 lg:px-20 text-white overflow-hidden z-10"
   >
-    <div className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-4">
-      <div className="flex flex-col lg:flex-row gap-4">
-        <div className="flex flex-col items-start gap-6 max-w-xs">
+    <div  data-aos="fade-up" className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-6 sm:gap-4">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full">
+        <div className="flex flex-col items-center sm:items-start gap-4 sm:gap-6 max-w-full sm:max-w-xs text-center sm:text-left">
           <Image
-            src="/icons/Company logo.svg"
+            src="/COVENANT-MICROFINANCE-BANK-LTD---AUDIT-COMPLAINCE-TRUSTMARK 1.svg"
             alt="Covenant MFB"
-            width={190}
-            height={85}
+            width={150}
+            height={150}
+            className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] lg:w-[190px] lg:h-[190px]"
           />
-          <p className="text-[#F1F5EB]  text-sm lg:text-base">
+          <p className="text-[#F1F5EB] text-sm lg:text-base leading-relaxed">
             Transforming ordinary individuals into creators of wealth since 2003
           </p>
-          <div className="flex gap-3 mt-2">
+          <div className="flex gap-3 mt-2 justify-center sm:justify-start">
             {socials.map((social, index) => (
               <Link
                 href={social.link}
@@ -142,31 +144,32 @@ const Footer = () => (
             ))}
           </div>
         </div>
-        <div className="flex flex-col md:flex-wrap md:flex-row gap-8 w-fit flex-1 justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full lg:flex-1">
           {footerItems.map((item, index) => (
-            <div key={index}>
-              <h4 className="text-[#B6E44B] font-semibold mb-3">
+            <div key={index} className="text-center sm:text-left">
+              <h4 className="text-[#B6E44B] font-semibold mb-3 text-base sm:text-lg">
                 {item.title}
               </h4>
-              <div className="space-y-1 text-white/80 text-sm">
+              <div className="space-y-2 text-white/80 text-sm">
                 {item.links.map((link, linkIndex) => (
                   <div key={linkIndex}>
                     {"route" in link ? (
-                      <li className="flex  items-start gap-1">
+                      <li className="flex items-start gap-1 justify-center sm:justify-start">
                         <span className="mb-1">•</span>
-                        <Link href={link.route}>{link.text}</Link>
+                        <Link href={link.route} className="hover:text-white transition-colors">{link.text}</Link>
                       </li>
                     ) : (
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
                         {"icon" in link && (
                           <Image
                             src={link.icon}
                             alt=""
-                            width={24}
-                            height={24}
+                            width={20}
+                            height={20}
+                            className="flex-shrink-0"
                           />
                         )}
-                        {link.text}
+                        <span className="text-xs sm:text-sm leading-relaxed">{link.text}</span>
                       </div>
                     )}
                   </div>

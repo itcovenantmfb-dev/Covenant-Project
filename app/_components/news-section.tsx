@@ -31,7 +31,7 @@ const newsData = [
 
 const NewsSection = () => {
   return (
-    <section className="py-6 lg:py-16 bg-[#F1F5EB]">
+    <section data-aos="fade-up" className="py-6 lg:py-16 bg-[#F1F5EB]">
       <div className="flex flex-col items-center justify-center gap-6 px-4">
         <Title
           text="News / Announcement"

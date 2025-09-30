@@ -41,17 +41,17 @@ const BranchCard: React.FC<(typeof branchesData)[0]> = ({
   phone,
   phoneHref,
 }) => (
-  <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5">
-    <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300 p-3">
-        <MapPin className="h-6 w-6 text-green-600" />
+  <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-900/5">
+    <div className="flex items-start gap-3 sm:gap-4">
+      <div className="flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300 p-2 sm:p-3">
+        <MapPin className="h-4 w-4 sm:h-6 sm:w-6 text-green-600" />
       </div>
-      <div>
-        <p className="text-sm font-semibold text-gray-800">{name}</p>
-        <p className="mt-1 text-sm text-gray-600">{address}</p>
+      <div className="min-w-0 flex-1">
+        <p className="text-sm sm:text-base font-semibold text-gray-800">{name}</p>
+        <p className="mt-1 text-xs sm:text-sm text-gray-600 leading-relaxed">{address}</p>
         <a
           href={phoneHref}
-          className="mt-2 inline-block text-sm font-bold text-green-700 hover:text-green-800"
+          className="mt-2 inline-block text-xs sm:text-sm font-bold text-green-700 hover:text-green-800"
         >
           {phone}
         </a>
@@ -65,18 +65,18 @@ const BranchLocator = () => {
   const mapEmbedUrl =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.735704072937!2d3.1678709!3d6.6796291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9ec46aba5e83%3A0x76b9ca8126fcbe02!2sCovenant%20Microfinance%20Bank!5e0!3m2!1sen!2sng!4v1758370830473!5m2!1sen!2sng";
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-12 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
           <SectionPill>Other Branches</SectionPill>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight text-gray-900">
             Find a Covenant Branch Near You
           </h2>
         </div>
 
         {/* Branch Grid */}
-        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 md:max-w-none md:grid-cols-2">
+        <div className="mx-auto mt-8 sm:mt-12 lg:mt-16 grid max-w-lg grid-cols-1 gap-6 sm:gap-8 sm:max-w-none sm:grid-cols-2">
           {branchesData.map((branch) => (
             <BranchCard key={branch.name} {...branch} />
           ))}

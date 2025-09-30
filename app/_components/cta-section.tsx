@@ -4,6 +4,7 @@ import Image from "next/image";
 
 const CTA = () => (
   <section
+    data-aos="fade-up"
     className="relative w-full flex justify-center items-center z-30 mt-12"
     style={{ marginBottom: "-120px" }}
   >

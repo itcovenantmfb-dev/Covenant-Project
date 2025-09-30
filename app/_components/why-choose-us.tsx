@@ -46,26 +46,26 @@ const subCardTwo = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="max-w-[1200px] mx-auto py-6 lg:py-16 z-10"> 
-      <div className="flex flex-col items-center justify-center gap-6 px-4">
+    <section data-aos="fade-up" className="max-w-[1200px] mx-auto py-8 sm:py-12 lg:py-16 z-10"> 
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
         <Title
           text="Why Choose Us"
           borderColor="[#1D9B5E]/40"
           textColor="#1D9B5E"
         />
 
-        <div className="max-w-[1038px]">
-          <h3 className="font-semibold text-xl lg:text-[28px] text-[#020617]">
+        <div className="max-w-[1038px] text-center">
+          <h3 className="font-semibold text-lg sm:text-xl lg:text-[28px] text-[#020617] leading-relaxed">
             We're more than a bank, we're the leading Microfinance bank in Ogun
             State, built on trust, driven by impact, and committed to delivering
             a seamless, personalized experience. Our mission is to transform
             individuals into creators of wealth.
           </h3>
         </div>
-        <div className=" flex flex-col lg:flex-row items-center justify-center gap-6 w-full h-full">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 w-full h-full">
           <WhyUsCard mainCard={mainCard} subCard={subCard} />
         </div>
-        <div className=" flex flex-col lg:flex-row-reverse items-center justify-center gap-6 w-full h-full">
+        <div className="flex flex-col lg:flex-row-reverse items-center justify-center gap-6 sm:gap-8 w-full h-full">
           <WhyUsCard mainCard={mainCardTwo} subCard={subCardTwo} />
         </div>
       </div>

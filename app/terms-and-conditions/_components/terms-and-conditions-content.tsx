@@ -4,7 +4,7 @@ import React from "react";
 
 const TermsAndConditionsContent = () => {
   return (
-    <section className="mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="mt-8 sm:mt-12 lg:mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-gray-700 leading-relaxed">
         {/* Section: General */}
         <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">General</h2>

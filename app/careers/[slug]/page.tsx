@@ -1,5 +1,55 @@
 import { allJobs, Job } from "@/app/_data/job-data";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const slug = (await params).slug;
+  const job = allJobs.find((j) => j.slug === slug);
+
+  if (!job) {
+    return {
+      title: "Job Not Found",
+      description: "The requested job posting could not be found.",
+    };
+  }
+
+  return {
+    title: `${job.title} - Job Opening`,
+    description: `Join Covenant Microfinance Bank as ${job.title}. ${job.description}. Apply now for this exciting career opportunity.`,
+    keywords: [
+      "covenant microfinance bank careers",
+      "banking jobs",
+      job.title.toLowerCase(),
+      "microfinance jobs",
+      "job opportunity",
+      "career openings",
+      ...job.tags.map(tag => tag.toLowerCase())
+    ],
+    openGraph: {
+      title: `${job.title} - Covenant Microfinance Bank`,
+      description: `Join us as ${job.title}. ${job.description}`,
+      url: `/careers/${job.slug}`,
+      images: [
+        {
+          url: "/og-career-opening.jpg",
+          width: 1200,
+          height: 630,
+          alt: `${job.title} - Career Opportunity`,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      title: `${job.title} - Covenant Microfinance Bank`,
+      description: `Join us as ${job.title}. Apply now for this exciting career opportunity.`,
+      card: "summary_large_image",
+    },
+  };
+}
 
 const InfoBox: React.FC<{ label: string; value: string }> = ({
   label,

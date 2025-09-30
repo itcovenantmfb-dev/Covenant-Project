@@ -12,14 +12,14 @@ import {
 
 const WhoWeAreSection = () => {
   return (
-    <section className="bg-white py-16 sm:py-24 p-5">
-      <div className=" max-w-[1200px] mx-auto px-2">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
+    <section data-aos="fade-up" className="bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-5 lg:gap-16">
 
           <div className="lg:col-span-3"> 
             <div>
               <SectionPill>Who We Are</SectionPill>
-              <div className="space-y-4 text-gray-600">
+              <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
                 <p>
                   Covenant Microfinance Bank (Covenant MFB) is a forward-thinking financial institution established in 2003, dedicated to providing accessible, innovative, and customer-centric banking solutions. We serve individuals, entrepreneurs, small businesses, and organizations with a strong focus on financial inclusion, digital empowerment, and community development.
                 </p>
@@ -32,16 +32,16 @@ const WhoWeAreSection = () => {
               </div>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <div className="mt-8 sm:mt-12 grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2">
               <div>
                 <SectionPill>Our Vision</SectionPill>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   To be the leading Microfinance Bank in the business of transforming ordinary individuals and micro-enterprises into wealth creators.
                 </p>
               </div>
               <div>
                 <SectionPill>Our Mission</SectionPill>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   To meet the developmental needs of the community. To intellectually promote creativity. To serve as an instrument of wealth creation.
                 </p>
               </div>

@@ -42,10 +42,14 @@ export const ParallexCard = ({ i, feature, progress, range, targetScale, imageWi
         className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-8 lg:p-4 origin-top"
       >
         <div className="flex flex-col lg:flex-row max-w-[900px] mx-auto  gap-12 items-center justify-center h-full">
-          <div className={i % 2 === 1 ? "order-2 lg:order-1" : ""}>
+          <div className={ ""}>
             <div className="flex flex-col items-left gap-4 mb-6">
-              <div className=" text-white rounded-full flex items-left gap-4 justify-left text-xl font-bold">
+              <div className=" text-white rounded-full hidden lg:flex items-left gap-4 justify-left text-xl font-bold">
                 <Image src={feature.number} width={60} height={60} alt="" />
+              </div>
+
+               <div className=" text-white rounded-full flex lg:hidden items-left gap-4 justify-left text-xl font-bold">
+                <Image src={feature.number} width={30} height={30} alt="" />
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[#020617]">
                 {feature.title}
@@ -55,18 +59,29 @@ export const ParallexCard = ({ i, feature, progress, range, targetScale, imageWi
           </div>
 
           <div
-            className={`flex justify-center ${
-              i % 2 === 1 ? "order-1 lg:order-2" : ""
-            }`}
+            className={`flex justify-center`}
           >
-            <div className="mt-[-120px] w-full">
+            <div className=" hidden lg:flex  mt-[-120px] w-full">
               <motion.div className="w-full h-full">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} Mobile Banking Feature`}
                   width={imageWidth}
                   height={400}
-                  className="object-cover"
+                 
+              
+                />
+              </motion.div>
+            </div>
+
+             <div className=" flex lg:hidden  mt-[-80px] w-full">
+              <motion.div className="w-full h-full">
+                <Image
+                  src={feature.image}
+                  alt={`${feature.title} Mobile Banking Feature`}
+                  width={200}
+                  height={200}
+                 
               
                 />
               </motion.div>

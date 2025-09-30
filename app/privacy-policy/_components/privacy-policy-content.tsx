@@ -5,9 +5,9 @@ import { Mail, Phone, Building } from "lucide-react";
 
 const PrivacyPolicyContent = () => {
   return (
-    <section className="mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">
+    <section data-aos="fade-up" className="mt-8 sm:mt-12 lg:mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="prose prose-sm sm:prose lg:prose-lg max-w-none text-gray-700 leading-relaxed">
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
           Privacy Policy
         </h1>
 
@@ -31,14 +31,14 @@ const PrivacyPolicyContent = () => {
           grounds for processing the same, and the safeguards that must apply.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">
+        <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mt-6 sm:mt-8 mb-3 sm:mb-4">
           Basis for collecting and processing Personal Data by the Bank
         </h2>
-        <p>
+        <p className="text-sm sm:text-base leading-relaxed">
           The Bank processes your personal data relying on any of the following
           legal grounds:
         </p>
-        <ul className="list-disc pl-5 space-y-2">
+        <ul className="list-disc pl-4 sm:pl-5 space-y-2 text-sm sm:text-base">
           <li>Where your Consent as the Data Subject has been obtained.</li>
           <li>Offering banking and allied services to the Data Subject.</li>
           <li>Offer of employment to the Data Subject.</li>

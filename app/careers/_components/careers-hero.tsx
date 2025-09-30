@@ -29,9 +29,11 @@ export default function CareersPage() {
 
   return (
     <main className="bg-white">
-      <PageBanner pillText="Career" title={pageTitle} />
+      <div>
+        <PageBanner pillText="Career" title={pageTitle} />
+      </div>
 
-      <div className="relative z-10 -mt-20 pb-16">
+      <div data-aos="fade-up" className="relative z-10 -mt-20 pb-16">
         <JobSearchForm
           searchQuery={searchQuery}
           experience={experience}
@@ -45,7 +47,7 @@ export default function CareersPage() {
         />
       </div>
 
-      <div className="pb-24">
+      <div data-aos="fade-up" className="pb-24">
         <JobListings
           searchQuery={searchQuery}
           experience={experience}

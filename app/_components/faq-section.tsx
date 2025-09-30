@@ -73,7 +73,7 @@ const faqData = [
 ];
 const FAQSection = () => {
   return (
-    <section className="py-6 lg:py-16 flex flex-col items-center justify-center gap-6 px-4">
+    <section data-aos="fade-up" className="py-6 lg:py-16 flex flex-col items-center justify-center gap-6 px-4">
       <Title
         text="Frequently Asked Questions (FAQ)"
         borderColor="[#1D9B5E]/40"

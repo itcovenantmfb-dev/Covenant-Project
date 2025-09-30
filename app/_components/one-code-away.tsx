@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const OneCodeAway = () => (
-  <section className=" relative mt-8 lg:mt-34 px-4 lg:px-0">
+  <section data-aos="fade-up" className=" relative mt-8 lg:mt-34 px-4 lg:px-0">
     <div
       style={{
         backgroundImage: 'url("/outline-bg.svg")',

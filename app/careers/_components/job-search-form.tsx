@@ -50,29 +50,29 @@ const JobSearchForm: React.FC<JobSearchFormProps> = ({
 }) => {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-      <div className="rounded-3xl bg-[#F1F5EB] p-6 sm:p-8 shadow-lg">
+      <div className="rounded-2xl sm:rounded-3xl bg-[#F1F5EB] p-4 sm:p-6 lg:p-8 shadow-lg">
         <form onSubmit={handleSubmit}>
           {/* Search Input */}
-          <div className="relative mb-6">
+          <div className="relative mb-4 sm:mb-6">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for jobs..."
-              className="w-full rounded-lg border-gray-300 py-3 pl-4 pr-12 text-gray-700 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-200"
+              className="w-full rounded-lg border-gray-300 py-3 pl-4 pr-12 text-sm sm:text-base text-gray-700 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-200"
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-4">
-              <Search className="h-5 w-5 text-gray-900" />
+              <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900" />
             </div>
           </div>
 
           {/* Dropdown Filters */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Experience Level */}
             <div>
               <label
                 htmlFor="experience"
-                className="block text-sm font-bold text-gray-800 mb-2"
+                className="block text-xs sm:text-sm font-bold text-gray-800 mb-2"
               >
                 Experience Level
               </label>
@@ -80,7 +80,7 @@ const JobSearchForm: React.FC<JobSearchFormProps> = ({
                 id="experience"
                 value={experience}
                 onChange={(e) => setExperience(e.target.value)}
-                className="w-full rounded-lg border-gray-300 py-3 pl-3 pr-10 text-gray-700 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-200"
+                className="w-full rounded-lg border-gray-300 py-3 pl-3 pr-10 text-sm sm:text-base text-gray-700 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-200"
               >
                 {experienceLevels.map((level) => (
                   <option key={level}>{level}</option>
@@ -92,7 +92,7 @@ const JobSearchForm: React.FC<JobSearchFormProps> = ({
             <div>
               <label
                 htmlFor="location"
-                className="block text-sm font-bold text-gray-800 mb-2"
+                className="block text-xs sm:text-sm font-bold text-gray-800 mb-2"
               >
                 Location
               </label>

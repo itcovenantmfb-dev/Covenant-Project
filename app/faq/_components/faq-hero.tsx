@@ -11,7 +11,11 @@ const pageTitle = (
   </>
 );
 const FaqHeroSection = () => {
-  return <PageBanner pillText={"FAQs"} title={pageTitle} />;
+  return (
+    <div>
+      <PageBanner pillText={"FAQs"} title={pageTitle} />
+    </div>
+  );
 };
 
 export default FaqHeroSection;

@@ -99,20 +99,20 @@ const ContactPageContent = () => {
   };
 
   return (
-    <section className="bg-[#F9FFF5] py-20 sm:py-28">
+    <section data-aos="fade-up" className="bg-[#F9FFF5] py-12 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* --- Left Column: Info --- */}
           <div className="flex flex-col">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-gray-900">
               Contact Our Team
             </h1>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
               Get in touch with our team to explore how we can support your
               financial journey. We're here to answer your questions and provide
               personalized assistance.
             </p>
-            <div className="mt-10 space-y-6">
+            <div className="mt-8 sm:mt-10 space-y-6">
               {contactInfoData.map((item) => (
                 <ContactInfoCard key={item.label} {...item} />
               ))}
@@ -120,20 +120,20 @@ const ContactPageContent = () => {
           </div>
 
           {/* --- Right Column: Form --- */}
-          <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 sm:p-10">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+          <div className="rounded-2xl bg-white p-6 sm:p-8 lg:p-10 shadow-sm ring-1 ring-gray-900/5">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900">
               We'll get in touch shortly
             </h2>
-            <p className="mt-2 text-base text-gray-600">
+            <p className="mt-2 text-sm sm:text-base text-gray-600">
               We're here to answer your questions and provide personalized
               assistance.
             </p>
-            <form onSubmit={handleSubmit} className="mt-8">
-              <div className="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+            <form onSubmit={handleSubmit} className="mt-6 sm:mt-8">
+              <div className="grid grid-cols-1 gap-x-4 sm:gap-x-6 gap-y-4 sm:gap-y-5 sm:grid-cols-2">
                 <div>
                   <label
                     htmlFor="fullName"
-                    className="block text-sm font-semibold leading-6 text-gray-500"
+                    className="block text-xs sm:text-sm font-semibold leading-6 text-gray-500"
                   >
                     Full Name
                   </label>
@@ -145,7 +145,7 @@ const ContactPageContent = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       placeholder="Enter your name"
-                      className="w-full rounded-sm border border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 p-2"
+                      className="w-full rounded-sm border border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 p-2 sm:p-3 text-sm sm:text-base"
                       required
                     />
                   </div>
@@ -234,7 +234,7 @@ const ContactPageContent = () => {
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#1D9B5E] px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#1D9B5E] px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                 >
                   Send message
                   <ChevronRight className="h-5 w-5" />

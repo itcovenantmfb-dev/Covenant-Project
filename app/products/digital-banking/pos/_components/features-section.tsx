@@ -23,6 +23,7 @@ const FeaturesSection = () => {
             progress={scrollYProgress}
             range={[i * 0.1, 1]}
             targetScale={targetScale}
+            imageWidth={700}
           />
         );
       })}

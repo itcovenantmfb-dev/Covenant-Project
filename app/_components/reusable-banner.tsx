@@ -18,7 +18,7 @@ const ReusableBanner = ({
   secondImage,
 }: ReusableBannerProps) => {
   return (
-    <section className="flex min-h-[550px]  w-full bg-[url('/path2830.png')] items-center justify-center bg-[#F1FEF4]  ">
+    <section data-aos="fade-up" className="flex min-h-[550px]  w-full bg-[url('/path2830.png')] items-center justify-center bg-[#F1FEF4]  ">
       <div className="relative z-10  px-6 w-full max-w-6xl items-center justify-center text-center ">
         <Image
           src={secondImage}

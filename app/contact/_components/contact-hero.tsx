@@ -10,7 +10,11 @@ const pageTitle = (
   </>
 );
 const ContactHeroSection = () => {
-  return <PageBanner pillText={"Contact"} title={pageTitle} />;
+  return (
+    <div data-aos="fade-up">
+      <PageBanner pillText={"Contact"} title={pageTitle} />
+    </div>
+  );
 };
 
 export default ContactHeroSection;

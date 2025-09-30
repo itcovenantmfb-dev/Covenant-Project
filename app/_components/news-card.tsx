@@ -11,7 +11,7 @@ interface NewsCardProps {
 
 const NewsCard = ({ title, text, date, image }: NewsCardProps) => {
   return (
-    <div className="bg-white p-4 rounded-2xl lg:max-w-[600px] flex flex-col md:flex-row gap-4">
+    <div data-aos="fade-up" className="bg-white p-4 rounded-2xl lg:max-w-[600px] flex flex-col md:flex-row gap-4">
       <Image
         src={image}
         alt={title}

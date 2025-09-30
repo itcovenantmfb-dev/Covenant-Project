@@ -120,7 +120,7 @@ const MobileNavbar = () => {
           <DrawerFooter>
             <div className="mt-8">
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="font-jakarta border border-[#164623] bg-[#0D4A06] shadow-lg text-[#F0F1F4] py-3 px-6 font-medium text-base flex items-center rounded-full w-full justify-center"
                 onClick={() => setOpen(false)}
               >

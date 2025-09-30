@@ -26,7 +26,7 @@ const galleryImgs = [
 
 const Gallery = () => {
   return (
-    <section className="py-6 lg:py-16 flex flex-col items-center justify-center gap-6 px-4">
+    <section data-aos="fade-up" className="py-6 lg:py-16 flex flex-col items-center justify-center gap-6 px-4">
       <Title text="Gallery" borderColor="[#1D9B5E]/40" textColor="#1D9B5E" />
       <div className="max-w-[945px] mx-auto mb-8">
         <h2 className="font-semibold text-xl lg:text-[28px] text-[#020617]">

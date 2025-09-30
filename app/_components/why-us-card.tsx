@@ -21,7 +21,7 @@ interface WhyUsCardProps {
 const WhyUsCard = ({ mainCard, subCard }: WhyUsCardProps) => {
   return (
     <>
-      <div className="bg-[#F1F5EB] rounded-[30px] max-w-[600px] min-h-[570px] h-full  flex items-center justify-center gap-3 flex-col px-12 py-7">
+      <div data-aos="fade-up" className="bg-[#F1F5EB] rounded-[30px] max-w-[600px] min-h-[570px] h-full  flex items-center justify-center gap-3 flex-col px-12 py-7">
         <Image
           src={mainCard[0].image}
           alt={mainCard[0].title}

@@ -11,12 +11,14 @@ const pageTitle = (
 
 const AboutHeroSection = () => {
   return (
-    <ReusableBanner
-      pillText={"About Us"}
-      title={pageTitle}
-      firstImage={"/flot-one.svg"}
-      secondImage={"/flot-2.svg"}
-    />
+    <div data-aos="fade-up">
+      <ReusableBanner
+        pillText={"About Us"}
+        title={pageTitle}
+        firstImage={"/flot-one.svg"}
+        secondImage={"/flot-2.svg"}
+      />
+    </div>
   );
 };
 
