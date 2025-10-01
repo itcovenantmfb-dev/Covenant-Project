@@ -30,10 +30,10 @@ export const BiographyModal: React.FC<BiographyModalProps> = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="w-full max-w-5xl p-0 rounded-2xl"
+        className="max-w-3xl p-0 rounded-2xl"
         showCloseButton={false}
       >
-        <DialogHeader className="bg-[#0c3c26] p-5 rounded-t-2xl">
+        <DialogHeader className="bg-[#0c3c26] p-5 rounded-t-2xl text-left">
           <DialogTitle className="text-xl font-bold text-[#a3d960]">
             {member.name}
             {member.credentials && (
