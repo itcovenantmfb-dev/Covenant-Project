@@ -30,7 +30,7 @@ export async function generateMetadata({
       "financial updates",
       post.title.toLowerCase(),
       "microfinance industry",
-      "financial services news"
+      "financial services news",
     ],
     openGraph: {
       title: `${post.title} - Covenant Microfinance Bank`,
@@ -57,26 +57,27 @@ export async function generateMetadata({
 }
 
 const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => (
-  <article className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-sm shadow-gray-900/5 ring-1 ring-gray-900/5 overflow-hidden">
-    <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-full flex-shrink-0">
+  <article className="flex flex-col sm:flex-row items-center bg-white rounded-2xl shadow-sm shadow-gray-900/5 ring-1 ring-gray-900/5 overflow-hidden">
+    <div className="relative w-full sm:w-2/5 aspect-video sm:aspect-auto sm:h-[200px] md:h-full flex-shrink-0 p-2 rounded-xl">
       <Image
         src={post.imageSrc}
         alt={post.title}
-        fill
-        className="object-cover"
+        width={200}
+        height={300}
+        className="m-auto object-cover py-2 rounded-xl "
       />
     </div>
-    <div className="flex flex-col p-6 w-full md:w-3/5">
-      <h2 className="text-lg font-bold text-gray-900 leading-tight">
+    <div className="flex flex-col p-4 sm:p-6 w-full sm:w-3/5">
+      <h3 className="font-semibold text-lg lg:text-1xl text-[#020617] mb-2 line-clamp-2">
         {post.title}
-      </h2>
-      <p className="mt-2 text-sm text-gray-600 line-clamp-3 flex-grow">
+      </h3>
+      <p className="text-[#64748B] text-base mb-2 line-clamp-3">
         {post.excerpt}
       </p>
-      <div className="mt-6 flex justify-between items-center">
+      <div className="flex items-center justify-between mt-">
         <Link
           href={`/news/${post.slug}`}
-          className="inline-block rounded-lg bg-green-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700"
+          className="bg-[#1D9B5E] text-white py-3 px-6 rounded-[14px] h-fit text-sm font-semibold"
         >
           Read More
         </Link>
@@ -117,12 +118,12 @@ export default async function BlogPostPage({
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 text-center">
               {post.title}
             </h1>
 
             {/* Article Body */}
-            <div className="mt-10  p-6 ">
+            <div className="mt-2  p-4 mb-4 ">
               <div
                 className="prose prose-lg max-w-none font-normal leading-relaxed prose-headings:text-gray-900 prose-strong:text-gray-900 prose-a:text-green-600 hover:prose-a:text-green-700"
                 style={{ color: "hsla(215, 28%, 55%, 1)" }}

@@ -20,7 +20,13 @@ const NumbersSection = () => {
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center justify-center w-full max-w-[1000px]">
           <div className="flex justify-center">
-            <Image src={"/clients.svg"} alt="Clients" width={140} height={140} className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] lg:w-[161px] lg:h-[157px]" />
+            <Image
+              src={"/clients.svg"}
+              alt="Clients"
+              width={140}
+              height={140}
+              className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[210px] lg:h-[210px]"
+            />
           </div>
           <div className="flex justify-center">
             <Image
@@ -28,7 +34,7 @@ const NumbersSection = () => {
               alt="Clients"
               width={140}
               height={140}
-              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] lg:w-[161px] lg:h-[157px]"
+              className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[210px] lg:h-[210px]"
             />
           </div>
           <div className="flex justify-center">
@@ -37,7 +43,7 @@ const NumbersSection = () => {
               alt="Clients"
               width={140}
               height={140}
-              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] lg:w-[161px] lg:h-[157px]"
+              className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[210px] lg:h-[210px]"
             />
           </div>
           <div className="flex justify-center">
@@ -46,7 +52,7 @@ const NumbersSection = () => {
               alt="Clients"
               width={140}
               height={140}
-              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] lg:w-[161px] lg:h-[157px]"
+              className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[210px] lg:h-[210px]"
             />
           </div>
         </div>

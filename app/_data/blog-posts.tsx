@@ -17,7 +17,7 @@ export const allBlogPosts: Post[] = [
       "Covenant Microfinance Bank Ltd. Opens New Branch in Abeokuta, Ogun State",
     excerpt:
       "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world...",
-    imageSrc: "/image5.png",
+    imageSrc: "/image3.png",
     date: "October 23, 2024",
     slug: "new-branch-abeokuta",
     content: (
@@ -185,7 +185,7 @@ export const allBlogPosts: Post[] = [
     title: "Starter Plans Tailored for Small Businesses",
     excerpt:
       "Starter plans offer cost-effective solutions tailored to small businesses. Find out how they enable growth without breaking the bank....",
-    imageSrc: "/image1.png",
+    imageSrc: "/image3.png",
     date: "16 Jun 2024",
     slug: "starter-plans-smb",
     content: (

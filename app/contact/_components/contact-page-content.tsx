@@ -43,6 +43,8 @@ const ContactInfoCard: React.FC<(typeof contactInfoData)[0]> = ({
   content,
   href,
 }) => {
+  const isLink = href.startsWith("tel:") || href.startsWith("mailto:");
+
   const CardContent = () => (
     <div className="flex items-start gap-5">
       <div className="flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300 p-3">
@@ -50,7 +52,13 @@ const ContactInfoCard: React.FC<(typeof contactInfoData)[0]> = ({
       </div>
       <div>
         <p className="text-sm text-gray-500">{label}</p>
-        <p className="mt-1 text-base font-bold text-green-800">{content}</p>
+        <p
+          className={`mt-1 text-base font-bold text-green-800 ${
+            isLink ? "underline decoration-green-800" : ""
+          }`}
+        >
+          {content}
+        </p>
       </div>
     </div>
   );
@@ -60,11 +68,7 @@ const ContactInfoCard: React.FC<(typeof contactInfoData)[0]> = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-shadow hover:shadow-md ${
-        href.startsWith("tel:") || href.startsWith("mailto:")
-          ? "underline decoration-green-800"
-          : "no-underline"
-      }`}
+      className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-shadow hover:shadow-md"
     >
       <CardContent />
     </a>
@@ -99,7 +103,10 @@ const ContactPageContent = () => {
   };
 
   return (
-    <section data-aos="fade-up" className="bg-[#F9FFF5] py-12 sm:py-20 lg:py-28">
+    <section
+      data-aos="fade-up"
+      className="bg-[#F9FFF5] py-12 sm:py-20 lg:py-28"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* --- Left Column: Info --- */}
@@ -145,7 +152,7 @@ const ContactPageContent = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       placeholder="Enter your name"
-                      className="w-full rounded-sm border border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 p-2 sm:p-3 text-sm sm:text-base"
+                      className="w-full rounded-sm border border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 p-2"
                       required
                     />
                   </div>

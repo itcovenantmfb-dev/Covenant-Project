@@ -8,7 +8,7 @@ const OurHistorySection = () => {
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="mx-auto max-w-5xl text-center">
           <SectionPill>Our History</SectionPill>
-          <h2 className="mt-4 text-lg lg:text-[28px] font-bold text-start leading-snug">
+          <h2 className="mt-4 text-lg lg:text-[28px] font-bold text-center leading-snug">
             Discover Covenant MFB&apos;s rich history of growth, innovation, and
             community-focused banking since its founding.
           </h2>

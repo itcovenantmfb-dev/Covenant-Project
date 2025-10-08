@@ -30,10 +30,10 @@ export const BiographyModal: React.FC<BiographyModalProps> = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="max-w-3xl p-0 rounded-2xl"
+        className="w-[90vw] max-w-3xl p-0 rounded-2xl bg-gray-50 flex flex-col border-none"
         showCloseButton={false}
       >
-        <DialogHeader className="bg-[#0c3c26] p-5 rounded-t-2xl text-left">
+        <DialogHeader className="bg-[#0c3c26] rounded-t-2xl p-4 text-left flex-shrink-0 relative">
           <DialogTitle className="text-xl font-bold text-[#a3d960]">
             {member.name}
             {member.credentials && (
@@ -47,7 +47,7 @@ export const BiographyModal: React.FC<BiographyModalProps> = ({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="p-6 bg-gray-50 rounded-b-2xl max-h-[70vh] overflow-y-auto">
+        <div className="py-2 px-6 bg-gray-50 rounded-b-2xl max-h-[70vh] overflow-y-auto">
           <div className="text-base text-gray-500 leading-relaxed space-y-4">
             {member.biography || (
               <p className="text-gray-500 italic">Biography not available.</p>
