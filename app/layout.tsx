@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./_components/navbar";
-import CTA from "./_components/cta-section";
-import Footer from "./_components/footer-section";
+
 import localFont from "next/font/local";
-import ZohoDeskWidget from "./_components/ZohoDeskWidget";
-import ZohoIMWidget from "./_components/ZohoIMWidget";
-import AosClient from "./_components/aos-client";
+
 const myFont = localFont({
   src: [
     {
@@ -26,9 +22,10 @@ const myFont = localFont({
 export const metadata: Metadata = {
   title: {
     default: "Covenant Microfinance Bank - Your Trusted Financial Partner",
-    template: "%s | Covenant Microfinance Bank"
+    template: "%s | Covenant Microfinance Bank",
   },
-  description: "Covenant Microfinance Bank provides comprehensive financial services including savings accounts, loans, digital banking, and mobile banking solutions to empower individuals and businesses.",
+  description:
+    "Covenant Microfinance Bank provides comprehensive financial services including savings accounts, loans, digital banking, and mobile banking solutions to empower individuals and businesses.",
   keywords: [
     "microfinance bank",
     "savings account",
@@ -39,7 +36,7 @@ export const metadata: Metadata = {
     "covenant microfinance",
     "banking solutions",
     "micro loans",
-    "business banking"
+    "business banking",
   ],
   authors: [{ name: "Covenant Microfinance Bank" }],
   creator: "Covenant Microfinance Bank",
@@ -59,7 +56,8 @@ export const metadata: Metadata = {
     url: "https://covenantmfb.com",
     siteName: "Covenant Microfinance Bank",
     title: "Covenant Microfinance Bank - Your Trusted Financial Partner",
-    description: "Covenant Microfinance Bank provides comprehensive financial services including savings accounts, loans, digital banking, and mobile banking solutions.",
+    description:
+      "Covenant Microfinance Bank provides comprehensive financial services including savings accounts, loans, digital banking, and mobile banking solutions.",
     images: [
       {
         url: "/og-image.jpg",
@@ -72,7 +70,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Covenant Microfinance Bank - Your Trusted Financial Partner",
-    description: "Covenant Microfinance Bank provides comprehensive financial services including savings accounts, loans, digital banking, and mobile banking solutions.",
+    description:
+      "Covenant Microfinance Bank provides comprehensive financial services including savings accounts, loans, digital banking, and mobile banking solutions.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -95,20 +94,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.className} antialiased`}>
-        <AosClient>
-          <Navbar />
-
-          {children}
-
-          <ZohoDeskWidget />
-
-          <ZohoIMWidget />
-
-          <CTA />
-          <Footer />
-        </AosClient>
-      </body>
+      <body className={`${myFont.className} antialiased`}>{children}</body>
     </html>
   );
 }
