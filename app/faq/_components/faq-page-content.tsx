@@ -12,8 +12,11 @@ import { faqPageData } from "../../_data/faqPageData";
 import SectionPill from "@/app/about-us/_components/section-pill";
 const FaqPageContent = () => {
   return (
-    <section data-aos="fade-up" className="bg-slate-50/70 py-12 sm:py-20 lg:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section
+      data-aos="fade-up"
+      className="bg-slate-50/70 py-12 sm:py-20 lg:py-28"
+    >
+      <div className="mx-auto max-w-4xl px-6 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center">
           <SectionPill>Frequently Asked Questions (FAQ)</SectionPill>
@@ -36,7 +39,11 @@ const FaqPageContent = () => {
                   {cat.category}
                 </span>
               </div>
-              <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
+              <Accordion
+                type="single"
+                collapsible
+                className="space-y-3 sm:space-y-4"
+              >
                 {cat.questions.map((q, index) => (
                   <AccordionItem
                     key={index}

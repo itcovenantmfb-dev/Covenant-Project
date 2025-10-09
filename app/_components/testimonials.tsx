@@ -10,44 +10,30 @@ import "swiper/css/pagination";
 const testimonialsData = [
   {
     testimonial:
-      "Zeepay makes online payments a breeze! It’s fast, reliable, and so easy to use. I handle all my transactions with just a few taps, whether I’m paying for groceries, services, or sending money to friends. Zeepay truly simplifies my day-to-day payments.",
-    name: "Priya K.",
-    business: "Small Business Owner",
-    avatar: "/icons/priya-img.svg",
+      "Since joining Covenant Microfinance Bank Ltd, even though I also bank with other conventional banks, their services have been nothing short of fantastic. They make banking so much easier. Personally, I dislike going to banks, but with Covenant Microfinance Bank Ltd, they handle most of the processes for me, I only need to do the necessary signing. It’s stress-free.",
+    name: "Adekoya Olugbenga",
+    business: "Camavoc Global Services",
   },
   {
     testimonial:
-      "Zeepay makes online payments a breeze! It’s fast, reliable, and so easy to use. I handle all my transactions with just a few taps, whether I’m paying for groceries, services, or sending money to friends. Zeepay truly simplifies my day-to-day payments.",
-    name: "Priya K.",
-    business: "Small Business Owner",
-    avatar: "/icons/priya-img.svg",
+      "I joined Covenant Microfinance Bank Ltd just three months ago, and their support has been remarkable. Their assistance has boosted my purchasing power, and my business is now thriving. Despite the challenges caused by the economic downturn, their backing has helped my business bounce back to its former strength. I encourage others to partner with Covenant Microfinance Bank Ltd, because they truly stand by businesses.",
+    name: "Lawal Kazeem",
+    business: "Principal Owner, Shokaz Stores Venture Owner",
   },
   {
     testimonial:
-      "Zeepay makes online payments a breeze! It’s fast, reliable, and so easy to use. I handle all my transactions with just a few taps, whether I’m paying for groceries, services, or sending money to friends. Zeepay truly simplifies my day-to-day payments.",
-    name: "Priya K.",
-    business: "Small Business Owner",
-    avatar: "/icons/priya-img.svg",
-  },
-  {
-    testimonial:
-      "Zeepay makes online payments a breeze! It’s fast, reliable, and so easy to use. I handle all my transactions with just a few taps, whether I’m paying for groceries, services, or sending money to friends. Zeepay truly simplifies my day-to-day payments.",
-    name: "Priya K.",
-    business: "Small Business Owner",
-    avatar: "/icons/priya-img.svg",
-  },
-  {
-    testimonial:
-      "Zeepay makes online payments a breeze! It’s fast, reliable, and so easy to use. I handle all my transactions with just a few taps, whether I’m paying for groceries, services, or sending money to friends. Zeepay truly simplifies my day-to-day payments.",
-    name: "Priya K.",
-    business: "Small Business Owner",
-    avatar: "/icons/priya-img.svg",
+      "I bank with Covenant Microfinance Bank Ltd, Sango Branch. When I first walked in as a new customer to make inquiries, I was treated with so much warmth and professionalism. Back then, my business was still small, but since partnering with them, it has expanded significantly. Today, both my business and I have grown. I am grateful, and I pray for continued blessings.",
+    name: "Mrs. Atinuke",
+    business: "Global ISK Limited",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section data-aos="fade-up" className="py-8 sm:py-12 max-w-[1400px] mx-auto lg:py-16 flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
+    <section
+      data-aos="fade-up"
+      className="py-8 sm:py-12 max-w-[1400px] mx-auto lg:py-16 flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6"
+    >
       <Title
         text="Testimonials"
         borderColor="[#1D9B5E]/40"
