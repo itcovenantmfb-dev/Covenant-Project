@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import type { LoanData } from "@/app/_data/loans-data";
 import { cn } from "@/lib/utils";
+import type { LoanData } from "@/app/(website)/_data/loans-data";
 
 interface LoanDetailDialogProps {
   loan: LoanData | null;

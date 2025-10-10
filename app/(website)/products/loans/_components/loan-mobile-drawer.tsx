@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import type { LoanData } from "@/app/_data/loans-data";
+
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +16,7 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@/components/ui/drawer";
+import { LoanData } from "@/app/(website)/_data/loans-data";
 
 interface LoanDetailDialogProps {
   loan: LoanData | null;

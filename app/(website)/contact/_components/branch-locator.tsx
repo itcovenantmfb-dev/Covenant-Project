@@ -2,7 +2,8 @@
 
 import React from "react";
 import { MapPin } from "lucide-react";
-import SectionPill from "@/app/about-us/_components/section-pill";
+import SectionPill from "../../about-us/_components/section-pill";
+
 
 // --- Data for the Branch Locations ---
 const branchesData = [

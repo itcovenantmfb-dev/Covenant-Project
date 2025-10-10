@@ -9,10 +9,11 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { LoanData } from "@/app/_data/loans-data";
+
 import { LoanDetailDialog } from "./loan-detail-dialog";
 import { useState } from "react";
 import { LoanMobileDrawer } from "./loan-mobile-drawer";
+import { LoanData } from "@/app/(website)/_data/loans-data";
 
 
 interface LoanCardProps {

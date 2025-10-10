@@ -84,7 +84,8 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
     },
   ];
 
-  const displayData = testimonials && testimonials.length > 0 ? testimonials : fallbackData;
+  const displayData =
+    testimonials && testimonials.length > 0 ? testimonials : fallbackData;
   return (
     <section
       data-aos="fade-up"
@@ -136,11 +137,6 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
                 testimonial={item.testimonial}
                 name={item.name}
                 business={item.business}
-                avatar={
-                  typeof item.avatar === 'string' 
-                    ? item.avatar 
-                    : urlFor(item.avatar).width(80).height(80).url()
-                }
               />
             </SwiperSlide>
           ))}

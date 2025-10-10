@@ -9,10 +9,11 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { AccountData } from "@/app/_data/accounts-data";
+
 import { AccountDetailDialog } from "./account-detail-dialog";
 import { useState } from "react";
 import { AccountMobileDrawer } from "./account-mobile-drawer";
+import { AccountData } from "@/app/(website)/_data/accounts-data";
 
 interface AccountCardProps {
   account: AccountData;
@@ -59,7 +60,7 @@ export function AccountCard({ account }: AccountCardProps) {
           </div>
 
           <div className="flex flex-col gap-3 sm:gap-4">
-            {account.items.map((i,index) => (
+            {account.items.map((i, index) => (
               <div key={index} className="flex gap-2 items-start">
                 <Image
                   src={"/icons/mark.svg"}
