@@ -19,7 +19,10 @@ const CTA = () => (
         </p>
       </div>
       <div className="flex-1 flex flex-col items-center justify-end gap-4 w-full max-w-xl">
-        <div className="flex items-center bg-white rounded-[20px] pl-6 pr-2 py-3 md:py-2 w-full">
+        <div
+          className="flex items-center bg-white rounded-[20px] pl-6 pr-2 py-3 md:py-2 w-full
+  focus-within:border-2 focus-within:border-[#001102] focus-within:ring-2 focus-within:ring-[#1D9B5E]/40 transition-all duration-200"
+        >
           <Image
             src="/icons/email 1.svg"
             alt="email"

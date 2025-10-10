@@ -1,17 +1,22 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 interface NewsCardProps {
   title: string;
   text: string;
   date: string;
   image: string;
+  slug: string;
 }
 
-const NewsCard = ({ title, text, date, image }: NewsCardProps) => {
+const NewsCard = ({ title, text, date, image, slug }: NewsCardProps) => {
   return (
-    <div data-aos="fade-up" className="bg-white p-4 rounded-2xl lg:max-w-[600px] flex flex-col md:flex-row gap-4">
+    <div
+      data-aos="fade-up"
+      className="bg-white p-4 rounded-2xl lg:max-w-[600px] flex flex-col md:flex-row gap-4"
+    >
       <Image
         src={image}
         alt={title}
@@ -25,10 +30,13 @@ const NewsCard = ({ title, text, date, image }: NewsCardProps) => {
           {title}
         </h3>
         <p className="text-[#64748B] text-base mb-2">{text}</p>
-        <div className="flex items-center justify-between mt-4">
-          <Button className="bg-[#1D9B5E] text-white py-4 px-7.5 rounded-[14px] h-fit text-sm font-semibold">
+        <div className="flex items-center justify-between mt-6">
+          <Link
+            href={`/news/${slug}`}
+            className="bg-[#1D9B5E] text-white py-4 px-6 rounded-[14px] h-fit text-sm font-semibold"
+          >
             Read More
-          </Button>
+          </Link>
           <span className="text-gray-400 text-sm">{date}</span>
         </div>
       </div>

@@ -34,8 +34,11 @@ const FaqPageContent = ({ faqs }: FaqPageContentProps) => {
     return acc;
   }, {} as Record<string, FAQ[]>);
   return (
-    <section data-aos="fade-up" className="bg-slate-50/70 py-12 sm:py-20 lg:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section
+      data-aos="fade-up"
+      className="bg-slate-50/70 py-12 sm:py-20 lg:py-28"
+    >
+      <div className="mx-auto max-w-4xl px-6 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center">
           <SectionPill>Frequently Asked Questions (FAQ)</SectionPill>

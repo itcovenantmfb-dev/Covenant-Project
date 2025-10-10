@@ -140,7 +140,7 @@ const Navbar = () => {
           <div className="hidden lg:flex w-fit relative">
             <div className="absolute top-0 left-5 max-w-3/4 mx-auto w-full h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full z-40" />
             <Link
-              href="/contact-us"
+              href="/contact"
               className="font-jakarta border border-[#164623] bg-[#0D4A06] shadow-lg text-[#F0F1F4] py-2.5 px-4.5 h-fit font-medium text-[13px] flex items-center rounded-full relative z-20"
             >
               <Image

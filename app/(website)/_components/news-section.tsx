@@ -8,24 +8,28 @@ const newsData = [
     text: "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world....",
     date: "16 Jun 2024",
     image: "/image (3).svg",
+    slug: "flexible-saas-pricing",
   },
   {
     title: "Decoding the Psychology of Pricing Tiers",
     text: "Pricing perception impacts decision-making. Learn how visual cues and strategic tiering influence customer choices....",
     date: "16 Jun 2024",
     image: "/image (4).svg",
+    slug: "psychology-of-pricing",
   },
   {
     title: "Starter Plans Tailored for Small Businesses",
     text: "Starter plans offer cost-effective solutions tailored to small businesses. Find out how they enable growth without breaking the bank......",
     date: "16 Jun 2024",
     image: "/image (5).svg",
+    slug: "starter-plans-smb",
   },
   {
     title: "Unlocking Flexible Pricing for SaaS Success",
     text: "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world....",
     date: "16 Jun 2024",
     image: "/image (6).svg",
+    slug: "flexible-saas-pricing-2",
   },
 ];
 

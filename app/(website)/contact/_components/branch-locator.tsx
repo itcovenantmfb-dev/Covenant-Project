@@ -32,6 +32,13 @@ const branchesData = [
     phone: "+234 915 738 4348",
     phoneHref: "tel:+2349157384348",
   },
+  {
+    name: "Canaanland Branch",
+    address:
+      "Covenant Microfinance Bank Ltd KM 10, Idiroko Road, Canaanland Ota.",
+    phone: "+234 810 071 6957",
+    phoneHref: "tel:+2348100716957",
+  },
 ];
 
 // Reusable component for a single branch card
@@ -47,8 +54,12 @@ const BranchCard: React.FC<(typeof branchesData)[0]> = ({
         <MapPin className="h-4 w-4 sm:h-6 sm:w-6 text-green-600" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-sm sm:text-base font-semibold text-gray-800">{name}</p>
-        <p className="mt-1 text-xs sm:text-sm text-gray-600 leading-relaxed">{address}</p>
+        <p className="text-sm sm:text-base font-semibold text-gray-800">
+          {name}
+        </p>
+        <p className="mt-1 text-xs sm:text-sm text-gray-600 leading-relaxed">
+          {address}
+        </p>
         <a
           href={phoneHref}
           className="mt-2 inline-block text-xs sm:text-sm font-bold text-green-700 hover:text-green-800"

@@ -106,7 +106,6 @@ const footerItems = [
 
 const Footer = () => (
   <footer
-   
     style={{
       backgroundImage: "url('/Footer.svg')",
       backgroundSize: "cover",
@@ -114,7 +113,10 @@ const Footer = () => (
     }}
     className="relative w-full pt-40 sm:pt-32 lg:pt-40 pb-8 sm:pb-10 px-4 sm:px-8 lg:px-20 text-white overflow-hidden z-10"
   >
-    <div  data-aos="fade-up" className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-6 sm:gap-4">
+    <div
+      data-aos="fade-up"
+      className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-6 sm:gap-4"
+    >
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full">
         <div className="flex flex-col items-center sm:items-start gap-4 sm:gap-6 max-w-full sm:max-w-xs text-center sm:text-left">
           <Image
@@ -125,7 +127,8 @@ const Footer = () => (
             className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] lg:w-[190px] lg:h-[190px]"
           />
           <p className="text-[#F1F5EB] text-sm lg:text-base leading-relaxed">
-            Transforming ordinary individuals into creators of wealth since 2003
+            Transforming ordinary individuals <br />
+            into creators of wealth since 2003
           </p>
           <div className="flex gap-3 mt-2 justify-center sm:justify-start">
             {socials.map((social, index) => (
@@ -156,7 +159,12 @@ const Footer = () => (
                     {"route" in link ? (
                       <li className="flex items-start gap-1 justify-center sm:justify-start">
                         <span className="mb-1">•</span>
-                        <Link href={link.route} className="hover:text-white transition-colors">{link.text}</Link>
+                        <Link
+                          href={link.route}
+                          className="hover:text-white transition-colors"
+                        >
+                          {link.text}
+                        </Link>
                       </li>
                     ) : (
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
@@ -169,7 +177,9 @@ const Footer = () => (
                             className="flex-shrink-0"
                           />
                         )}
-                        <span className="text-xs sm:text-sm leading-relaxed">{link.text}</span>
+                        <span className="text-xs sm:text-sm leading-relaxed">
+                          {link.text}
+                        </span>
                       </div>
                     )}
                   </div>
