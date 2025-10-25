@@ -107,7 +107,7 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
             onClick={() => onViewBio(member)}
             className="rounded-md bg-green-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700"
           >
-            View Biography
+            View Profile
           </button>
         </div>
       </div>

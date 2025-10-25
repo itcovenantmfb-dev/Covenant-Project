@@ -46,7 +46,10 @@ const subCardTwo = [
 
 const WhyChooseUs = () => {
   return (
-    <section data-aos="fade-up" className="max-w-[1200px] mx-auto py-8 sm:py-12 lg:py-16 z-10"> 
+    <section
+      data-aos="fade-up"
+      className="max-w-[1200px] mx-auto py-8 sm:py-12 lg:py-16 z-10"
+    >
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
         <Title
           text="Why Choose Us"
@@ -56,7 +59,7 @@ const WhyChooseUs = () => {
 
         <div className="max-w-[1038px] text-center">
           <h3 className="font-semibold text-lg sm:text-xl lg:text-[28px] text-[#020617] leading-relaxed">
-            We're more than a bank, we're the leading Microfinance bank in Ogun
+            We're more than a bank; we're the leading Microfinance bank in Ogun
             State, built on trust, driven by impact, and committed to delivering
             a seamless, personalized experience. Our mission is to transform
             individuals into creators of wealth.

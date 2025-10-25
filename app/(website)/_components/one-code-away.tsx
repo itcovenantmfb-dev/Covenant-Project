@@ -17,7 +17,7 @@ const OneCodeAway = () => (
             Your Bank is One Code Away
           </h2>
           <p className="text-[#F1F5EB] text-base tracking-wide lg:text-base mb-8 max-w-md mx-auto lg:mx-0">
-            With *6710#, your account is always within reach — fast, secure
+            With *566*44#, your account is always within reach — fast, secure
             banking from any mobile phone.
           </p>
         </div>

@@ -1,5 +1,5 @@
-import { client } from './client'
-import { groq } from 'next-sanity'
+import { client } from "./client";
+import { groq } from "next-sanity";
 
 // Testimonials
 export async function getTestimonials() {
@@ -16,7 +16,7 @@ export async function getTestimonials() {
       featured,
       dateGiven
     }`
-  )
+  );
 }
 
 export async function getFeaturedTestimonials() {
@@ -33,7 +33,7 @@ export async function getFeaturedTestimonials() {
       featured,
       dateGiven
     }`
-  )
+  );
 }
 
 // Jobs/Careers
@@ -56,7 +56,7 @@ export async function getAllJobs() {
       applicationDeadline,
       postedDate
     }`
-  )
+  );
 }
 
 export async function getJobBySlug(slug: string) {
@@ -81,7 +81,7 @@ export async function getJobBySlug(slug: string) {
       postedDate
     }`,
     { slug }
-  )
+  );
 }
 
 // FAQs
@@ -95,7 +95,7 @@ export async function getAllFAQs() {
       order,
       isActive
     }`
-  )
+  );
 }
 
 export async function getFAQsByCategory() {
@@ -108,7 +108,7 @@ export async function getFAQsByCategory() {
       order,
       isActive
     } | group(category)`
-  )
+  );
 }
 
 // News
@@ -127,7 +127,7 @@ export async function getAllNews() {
       featured,
       publishedAt
     }`
-  )
+  );
 }
 
 export async function getFeaturedNews() {
@@ -145,7 +145,7 @@ export async function getFeaturedNews() {
       featured,
       publishedAt
     }`
-  )
+  );
 }
 
 export async function getNewsBySlug(slug: string) {
@@ -164,5 +164,5 @@ export async function getNewsBySlug(slug: string) {
       publishedAt
     }`,
     { slug }
-  )
+  );
 }

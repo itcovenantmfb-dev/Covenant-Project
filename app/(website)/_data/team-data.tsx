@@ -43,7 +43,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Dr. Barry Roberts CRM",
+    name: "Dr Barry Roberts,CRM",
     role: "Managing Director/CEO",
     imageUrl: "/Mask group.png",
     credentials: "FICA",
@@ -157,7 +157,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 4,
-    name: "Prof Chinonye Love Moses",
+    name: "Prof. Chinonye Love Moses",
     role: "Board Member",
     imageUrl: "/Mask2.png",
     biography: (
@@ -346,54 +346,33 @@ export const managementStaff: TeamMember[] = [
     biography: (
       <>
         <p>
-          Alowonle Michael Oladimeji is a seasoned banking professional with
-          over 17 years of experience in the financial services industry. His
-          career spans a broad spectrum of expertise, including branch
-          operations, treasury management, credit administration, loan recovery,
-          and regulatory compliance. Currently, he serves as the Branch Manager
-          at Covenant Microfinance Bank’s Abeokuta Branch, where he provides
-          strategic leadership and oversees the branch’s performance across
-          deposit mobilization, credit growth, recovery processes, and customer
-          service. Known for his pragmatic leadership style and deep
-          understanding of the banking landscape, Michael ensures the alignment
-          of branch objectives with the bank’s mission to deliver inclusive
-          financial services.
+          Olawumi Temidayo Esther currently serves as the Branch Manager of the
+          Ifo branch in Ogun State, bringing over 12 years of in-depth
+          experience across multiple roles within the banking sector. Throughout
+          her career, she has demonstrated a consistent commitment to customer
+          satisfaction and operational excellence.
         </p>
 
         <p>
-          Before assuming his current role, he served as the Head of Financial
-          Control, where he was instrumental in shaping and implementing the
-          bank’s strategic financial plan. His leadership contributed to
-          strengthened internal controls, improved financial reporting
-          structures, and enhanced corporate governance.
+          Her professional journey includes roles as Teller, Head Teller,
+          Marketing Officer, Risk Officer, Head of Operations at the Sango
+          branch, and Recovery Officer. Esther has built a solid reputation for
+          her ability to manage cash flow, oversee teller operations, and
+          resolve complex customer issues with efficiency and professionalism. 
         </p>
 
         <p>
-          Michael holds a Higher National Diploma in Business Administration
-          from the Federal Polytechnic, Ilaro, Ogun State, and is currently
-          pursuing an MBA in Finance at Unicef University, Zambia.
-        </p>
-
-        <p>
-          He is a member of several professional bodies, including the Chartered
-          Institute of Bankers of Nigeria (MCIB), the Institute of Chartered
-          Economists of Nigeria (ACE), the Institute of Credit Administration
-          (FICA), the Institute of Chartered Accountants of Nigeria (ICAN), and
-          the Compliance Institute of Nigeria (CIN).
-        </p>
-
-        <p>
-          His key competencies include branch management, credit administration,
-          financial control, treasury and investment management, regulatory
-          compliance, team leadership, customer relationship management, and
-          community-focused financial outreach.
+          She is skilled in risk management, regulatory compliance, and
+          promoting banking products and services while fostering a positive
+          work culture. A strong leader, she has mentored and trained staff with
+          a focus on upholding operational integrity and service excellence. 
         </p>
       </>
     ),
   },
   {
     id: 3,
-    name: "Alonwonle Michael Oladimeji",
+    name: "Alowonle Michael Oladimeji",
     role: "Branch Manager, Abeokuta, Ogun State",
     imageUrl: "/Mask6.png",
     biography: (
@@ -527,7 +506,7 @@ export const managementStaff: TeamMember[] = [
   {
     id: 6,
     name: "Fagbemi Alao Oladapo",
-    role: "Head, Internal Controland Compliance",
+    role: "Head, Internal Control and Compliance",
     imageUrl: "/Mask9.png",
     biography: (
       <>
@@ -572,7 +551,7 @@ export const managementStaff: TeamMember[] = [
     id: 7,
     name: "Ayoola Ige",
     role: "Branch Manager, Head Office Branch",
-    imageUrl: "/Mask10.png",
+    imageUrl: "/Mask14.png",
     biography: (
       <>
         <p>
@@ -735,7 +714,7 @@ export const managementStaff: TeamMember[] = [
     id: 11,
     name: "Emmanuel Adeleke Adekeye",
     role: "Branch Manager,Akute",
-    imageUrl: "/Mask14.png",
+    imageUrl: "/Mask10.png",
     biography: (
       <>
         <p>

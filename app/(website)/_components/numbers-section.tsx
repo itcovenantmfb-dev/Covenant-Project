@@ -7,7 +7,7 @@ const NumbersSection = () => {
     <section data-aos="fade-up" className="py-8 sm:py-12 lg:py-16 bg-[#033224]">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
         <Title
-          text="Convenant MFB In Numbers"
+          text="Covenant MFB In Numbers"
           borderColor="[#A2DE49]"
           textColor="#A2DE49"
         />
