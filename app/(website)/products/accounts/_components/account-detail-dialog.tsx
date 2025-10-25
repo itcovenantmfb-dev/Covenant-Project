@@ -202,7 +202,7 @@ export function AccountDetailDialog({
                 {renderTabContent()}
               </div>
               <div className="flex-shrink-0 pt-0">
-                <Button className="w-full bg-[#A2DE49] rounded-b-4xl hover:bg-green-700 text-black">
+                <Button className="w-full bg-[#A2DE49] rounded-b-4xl  text-black">
                   <Image src={"/Lightning.png"} width={20} height={20} alt="" />
                   Visit any Covenant Microfinance Bank branch nearest to you to
                   apply

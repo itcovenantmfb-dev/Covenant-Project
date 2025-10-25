@@ -4,22 +4,21 @@ import React from "react";
 import { MapPin } from "lucide-react";
 import SectionPill from "../../about-us/_components/section-pill";
 
-
 // --- Data for the Branch Locations ---
 const branchesData = [
   {
     name: "Abeokuta Branch",
     address:
-      "No 25, Olusegun Obasanjo Way, Oke Imosan, Ibara, Abeokuta, Ogun State",
+      "No 25, Olusegun Osoba Way, Oke Ilewo, Ibara, Abeokuta, Ogun State",
     phone: "+234 912 248 1176",
     phoneHref: "tel:+2349122481176",
   },
   {
-    name: "Akure Branch",
+    name: "Akute Branch",
     address:
-      "No 19, Isolo Road, Along Osolo Aladadun Akintola, Akure, Ogun State",
-    phone: "+234 904 455 0306",
-    phoneHref: "tel:+2349044550306",
+      "No 19, Ijoko Road, Along Ojodu Abiodun Arinfanle, Akute, Ogun State",
+    phone: "+234 904 468 0506",
+    phoneHref: "tel:+2349044680506",
   },
   {
     name: "Ifo Branch",
@@ -28,10 +27,11 @@ const branchesData = [
     phoneHref: "tel:+2347003752972",
   },
   {
-    name: "Ota Branch",
-    address: "Km 51, Lagos Abeokuta Expressway, Sango Ota, Ogun State",
-    phone: "+234 915 738 4348",
-    phoneHref: "tel:+2349157384348",
+    name: "Sango Branch",
+    address:
+      "Km 151, Lagos Abeokuta Expressway,Joju Bus stop, Sango Ota, Ogun State",
+    phone: "+234 815 736 4348",
+    phoneHref: "tel:+2348157364348",
   },
   {
     name: "Canaanland Branch",

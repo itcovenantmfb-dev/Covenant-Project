@@ -43,7 +43,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Dr. Barry Roberts CRM",
+    name: "Dr Barry Roberts,CRM",
     role: "Managing Director/CEO",
     imageUrl: "/Mask group.png",
     credentials: "FICA",
@@ -157,7 +157,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 4,
-    name: "Prof Chinonye Love Moses",
+    name: "Prof. Chinonye Love Moses",
     role: "Board Member",
     imageUrl: "/Mask2.png",
     biography: (
@@ -393,7 +393,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Alonwonle Michael Oladimeji",
+    name: "Alowonle Michael Oladimeji",
     role: "Branch Manager, Abeokuta, Ogun State",
     imageUrl: "/Mask6.png",
     biography: (
@@ -527,7 +527,7 @@ export const managementStaff: TeamMember[] = [
   {
     id: 6,
     name: "Fagbemi Alao Oladapo",
-    role: "Head, Internal Controland Compliance",
+    role: "Head, Internal Control and Compliance",
     imageUrl: "/Mask9.png",
     biography: (
       <>
@@ -572,7 +572,7 @@ export const managementStaff: TeamMember[] = [
     id: 7,
     name: "Ayoola Ige",
     role: "Branch Manager, Head Office Branch",
-    imageUrl: "/Mask10.png",
+    imageUrl: "/Mask14.png",
     biography: (
       <>
         <p>
@@ -735,7 +735,7 @@ export const managementStaff: TeamMember[] = [
     id: 11,
     name: "Emmanuel Adeleke Adekeye",
     role: "Branch Manager,Akute",
-    imageUrl: "/Mask14.png",
+    imageUrl: "/Mask10.png",
     biography: (
       <>
         <p>

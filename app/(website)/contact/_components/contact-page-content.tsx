@@ -8,7 +8,7 @@ const contactInfoData = [
   {
     icon: Phone,
     label: "Give us a call",
-    content: "+234 810 071 6967",
+    content: "+234 810 071 6957",
     href: "tel:+2348100716967",
   },
   {

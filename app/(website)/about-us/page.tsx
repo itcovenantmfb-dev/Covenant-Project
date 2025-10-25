@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import NumbersSection from "../_components/numbers-section";
 import Testimonials from "../_components/testimonials";
-import AboutHeroSection from "./_components/about-us";
+// import AboutHeroSection from "./_components/about-us";
 import OurHistorySection from "./_components/our-history";
 import WhoWeAreSection from "./_components/who-we-are";
 import Carousel from "../_components/carousel";
@@ -10,7 +10,8 @@ import TimelineSection from "./_components/timeline-section";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Covenant Microfinance Bank's history, mission, vision, and leadership team. Discover how we've been empowering communities through accessible financial services.",
+  description:
+    "Learn about Covenant Microfinance Bank's history, mission, vision, and leadership team. Discover how we've been empowering communities through accessible financial services.",
   keywords: [
     "about covenant microfinance bank",
     "company history",
@@ -20,11 +21,12 @@ export const metadata: Metadata = {
     "financial inclusion",
     "community banking",
     "bank management",
-    "corporate profile"
+    "corporate profile",
   ],
   openGraph: {
     title: "About Us - Covenant Microfinance Bank",
-    description: "Learn about Covenant Microfinance Bank's history, mission, vision, and leadership team. Discover how we've been empowering communities through accessible financial services.",
+    description:
+      "Learn about Covenant Microfinance Bank's history, mission, vision, and leadership team. Discover how we've been empowering communities through accessible financial services.",
     url: "/about-us",
     images: [
       {
@@ -37,14 +39,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "About Us - Covenant Microfinance Bank",
-    description: "Learn about Covenant Microfinance Bank's history, mission, vision, and leadership team.",
+    description:
+      "Learn about Covenant Microfinance Bank's history, mission, vision, and leadership team.",
   },
 };
 
 const AboutPage = () => {
   return (
     <div>
-      <AboutHeroSection />
+      {/* <AboutHeroSection /> */}
       <WhoWeAreSection />
       <NumbersSection />
       <OurHistorySection />
