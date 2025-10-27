@@ -39,7 +39,7 @@ const NumbersSection = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src={"/clients (1).svg"}
+              src={"/clients-1.svg"}
               alt="Clients"
               width={140}
               height={140}
