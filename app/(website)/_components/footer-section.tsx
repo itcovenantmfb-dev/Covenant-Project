@@ -89,7 +89,7 @@ const footerItems = [
     title: "Contact Us",
     links: [
       {
-        text: "KM 10 Idiroko Road, Cannanland, City, Ota Ogun State.",
+        text: "KM 10 Cannanland Idiroko Road, Ota Ogun State.",
         icon: "/icons/Location on.svg",
       },
       {
@@ -97,7 +97,7 @@ const footerItems = [
         icon: "/icons/Phone.svg",
       },
       {
-        text: "info@covenantmfb.com",
+        text: "office@covenantmfb.com.ng",
         icon: "/icons/Email.svg",
       },
     ],
