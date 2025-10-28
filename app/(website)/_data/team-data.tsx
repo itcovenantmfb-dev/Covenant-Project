@@ -12,7 +12,7 @@ export const boardMembers: TeamMember[] = [
     id: 1,
     name: "Adm. Dcns. Ebipre Oluyemi ",
     role: "Board Chairperson",
-    imageUrl: "/Mask1.png",
+    imageUrl: "/Mask group.svg",
     credentials: "FCIA",
     biography: (
       <>
@@ -45,7 +45,7 @@ export const boardMembers: TeamMember[] = [
     id: 2,
     name: "Dr Barry Roberts,CRM",
     role: "Managing Director/CEO",
-    imageUrl: "/Mask group.png",
+    imageUrl: "/Mask group (1).svg",
     credentials: "FICA",
     biography: (
       <>
@@ -115,7 +115,7 @@ export const boardMembers: TeamMember[] = [
     id: 3,
     name: "Prof. Uwalomwa Uwuigbe",
     role: "Board Member",
-    imageUrl: "/Mask group2.png",
+    imageUrl: "/Mask group (2).svg",
     biography: (
       <>
         <p>
@@ -159,7 +159,7 @@ export const boardMembers: TeamMember[] = [
     id: 4,
     name: "Prof. Chinonye Love Moses",
     role: "Board Member",
-    imageUrl: "/Mask2.png",
+    imageUrl: "/Mask group (3).svg",
     biography: (
       <>
         <p>
@@ -194,7 +194,7 @@ export const boardMembers: TeamMember[] = [
     id: 5,
     name: "Prof. Kehinde Adetiloye",
     role: "Board Member",
-    imageUrl: "/Mask3.png",
+    imageUrl: "/Mask group (4).svg",
     biography: (
       <>
         <p>
@@ -247,7 +247,7 @@ export const boardMembers: TeamMember[] = [
     id: 6,
     name: "Prof. Evans Osabuohien",
     role: "Board Member",
-    imageUrl: "/Mask4.png",
+    imageUrl: "/Mask group (5).svg",
     biography: (
       <>
         <p>
@@ -315,7 +315,7 @@ export const managementStaff: TeamMember[] = [
     id: 1,
     name: "Ibukun Olaleye",
     role: "Head, Enterprise Risk Management & Recovery",
-    imageUrl: "/Mask group5.png",
+    imageUrl: "/Mask group (6).svg",
     biography: (
       <>
         <p>
@@ -342,7 +342,7 @@ export const managementStaff: TeamMember[] = [
     id: 2,
     name: "Oluwunmi Temidayo Esther",
     role: "Branch Manager, Ifo, Ogun State",
-    imageUrl: "/Mask5.png",
+    imageUrl: "/Mask group (7).svg",
     biography: (
       <>
         <p>
@@ -374,7 +374,7 @@ export const managementStaff: TeamMember[] = [
     id: 3,
     name: "Alowonle Michael Oladimeji",
     role: "Branch Manager, Abeokuta, Ogun State",
-    imageUrl: "/Mask6.png",
+    imageUrl: "/Mask group (8).svg",
     biography: (
       <>
         <p>
@@ -427,7 +427,7 @@ export const managementStaff: TeamMember[] = [
     id: 4,
     name: "Justina Meekness Okorie",
     role: "Head, Administration and Human Resources Department",
-    imageUrl: "/Mask7.png",
+    imageUrl: "/Mask group (9).svg",
     biography: (
       <>
         <p>
@@ -466,7 +466,7 @@ export const managementStaff: TeamMember[] = [
     id: 5,
     name: "Oyerinde Olawale",
     role: "Head, Financial Control",
-    imageUrl: "/Mask8.png",
+    imageUrl: "/Mask group (10).svg",
     biography: (
       <>
         <p>
@@ -507,7 +507,7 @@ export const managementStaff: TeamMember[] = [
     id: 6,
     name: "Fagbemi Alao Oladapo",
     role: "Head, Internal Control and Compliance",
-    imageUrl: "/Mask9.png",
+    imageUrl: "/Mask group (11).svg",
     biography: (
       <>
         <p>
@@ -551,7 +551,7 @@ export const managementStaff: TeamMember[] = [
     id: 7,
     name: "Ayoola Ige",
     role: "Branch Manager, Head Office Branch",
-    imageUrl: "/Mask14.png",
+    imageUrl: "/Mask group (12).svg",
     biography: (
       <>
         <p>
@@ -585,7 +585,7 @@ export const managementStaff: TeamMember[] = [
     id: 8,
     name: "Adm. Gabriel Osabohien",
     role: "Head, Banking Operations",
-    imageUrl: "/Mask11.png",
+    imageUrl: "/Mask group (18).svg",
     biography: (
       <>
         <p>
@@ -649,7 +649,7 @@ export const managementStaff: TeamMember[] = [
     id: 9,
     name: "Oluwatoyin Bolujoko-Oluwole",
     role: "Branch Manager, Sango",
-    imageUrl: "/Mask12.png",
+    imageUrl: "/Mask group (14).svg",
     credentials: "BSc, MSc, MCIB, MICA",
     biography: (
       <>
@@ -681,7 +681,7 @@ export const managementStaff: TeamMember[] = [
     id: 10,
     name: "Adetunji Adedeji Akanbi",
     role: "Head, Internal Audit",
-    imageUrl: "/Mask13.png",
+    imageUrl: "/Mask group (15).svg",
     credentials: "B.A (HONS) English, ACA,MCIB",
     biography: (
       <>
@@ -714,7 +714,7 @@ export const managementStaff: TeamMember[] = [
     id: 11,
     name: "Emmanuel Adeleke Adekeye",
     role: "Branch Manager,Akute",
-    imageUrl: "/Mask10.png",
+    imageUrl: "/Mask group (16).svg",
     biography: (
       <>
         <p>
@@ -755,7 +755,7 @@ export const managementStaff: TeamMember[] = [
     id: 12,
     name: "Odeyemi Oluwakemi Christianah",
     role: "Head, Business Development",
-    imageUrl: "/Mask15.png",
+    imageUrl: "/Mask group (17).svg",
     biography: (
       <>
         <p>

@@ -2,27 +2,33 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Youtube } from "lucide-react";
 
 const socials = [
   {
     icon: "/icons/facebook 1.svg",
-    link: "#",
+    link: "https://www.facebook.com/profile.php?id=100065216031591",
     alt: "Facebook",
   },
   {
     icon: "/icons/linkedin 1.svg",
-    link: "#",
+    link: "https://www.linkedin.com/company/covenant-microfinance-bank-ltd",
     alt: "LinkedIn",
   },
-  {
-    icon: "/icons/instagram 1.svg",
-    link: "#",
-    alt: "Instagram",
-  },
+  // {
+  //   icon: "/icons/instagram 1.svg",
+  //   link: "",
+  //   alt: "Instagram",
+  // },
   {
     icon: "/icons/twitter-154 1.svg",
-    link: "#",
+    link: "https://x.com/covenantmfb_",
     alt: "Twitter",
+  },
+  {
+    icon: "/icons/youtube.svg",
+    link: "https://www.youtube.com/@CovenantMFB ",
+    alt: "Youtube",
   },
 ];
 
@@ -140,8 +146,8 @@ const Footer = () => (
                 <Image
                   src={social.icon}
                   alt={social.alt}
-                  width={20}
-                  height={20}
+                  width={22}
+                  height={22}
                 />
               </Link>
             ))}

@@ -11,13 +11,25 @@ const WhoWeAreSection = () => {
   return (
     <section
       data-aos="fade-up"
-      className="bg-white py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
+      className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
     >
+      <h1 className="text-6xl font-bold text-[#1B1C31] text-center mb-10">
+        About Us
+      </h1>
+      {/* Background Image */}
+      <Image
+        src="/worldmap (7).svg"
+        alt="Background"
+        fill
+        className="object-cover object-center -z-10"
+      />
+
+      <div className="absolute inset-0 bg-white/50 -z-10"></div>
+
       <div className="mx-auto max-w-7xl">
         {/* --- MAIN GRID CONTAINER --- */}
         {/* On mobile (default), it's a single column. On large screens (lg:), it's a 10-column grid. */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-10 lg:gap-8">
-          {/* --- 1. Who We Are (Spans 4 columns on desktop) --- */}
           <div className="lg:col-span-4">
             <SectionPill>Who We Are</SectionPill>
             <div className="mt-4 space-y-4 text-sm leading-relaxed text-gray-600 sm:text-base">

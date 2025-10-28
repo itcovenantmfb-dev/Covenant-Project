@@ -80,32 +80,31 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   onViewBio,
 }) => {
   return (
-    <div className="relative w-64 group">
-      <Image
-        src="/Mask.svg"
-        alt="Svg"
-        height={400}
-        width={500}
-        className="object-cover"
-      />
-      <Image
-        src={member.imageUrl}
-        alt={member.name}
-        width={200}
-        height={400}
-        className="object-fit absolute top-0 left-1/2 -translate-x-1/2"
-      />
+    <div className="flex w-auto max-w-lg items-stretch rounded-2xl bg-[#FFFFFF] p-2 shadow-sm ring-1 ring-gray-900/5">
+      <div className="relative h-40 w-40 flex-shrink-0">
+        <Image
+          src={member.imageUrl}
+          alt={member.name}
+          fill
+          className="rounded-xl"
+        />
+      </div>
 
-      <div className="absolute bottom-6 left-6 right-6">
-        <div className="rounded-sm bg-white/80 p-4 text-center backdrop-blur-sm shadow-md">
-          <h3 className="text-base font-bold text-green-900">{member.name}</h3>
-          <p className="text-xs text-gray-600">{member.role}</p>
+      <div className="ml-6 flex justify-between flex-grow flex-col ">
+        <div>
+          <h3 className="text-lg font-bold text-green-900">{member.name}</h3>
+          {member.credentials && (
+            <p className="mt-1 text-sm font-medium text-gray-700">
+              ({member.credentials})
+            </p>
+          )}
+          <p className=" text-sm text-gray-500">{member.role}</p>
         </div>
 
-        <div className="flex justify-center -mt-3 relative z-10">
+        <div className="mt-4">
           <button
             onClick={() => onViewBio(member)}
-            className="rounded-md bg-green-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700"
+            className="rounded-md bg-[#1D9B5E] px-2 py-1 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700 w-[140px]"
           >
             View Profile
           </button>
