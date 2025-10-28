@@ -109,24 +109,19 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         <Swiper
           modules={[Pagination, Autoplay]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={true}
-          speed={800}
           slidesPerView={1}
           spaceBetween={10}
           pagination={{ clickable: true, el: ".custom-swiper-pagination" }}
           breakpoints={{
             640: {
-              slidesPerView: 1.2,
-              spaceBetween: 20,
+              slidesPerView: 1,
             },
             768: {
-              slidesPerView: 1.5,
-              spaceBetween: 20,
+              slidesPerView: 1,
             },
             1024: {
-              slidesPerView: 2.5,
+              slidesPerView: 3,
               centeredSlides: true,
-              spaceBetween: 30,
             },
           }}
           className="py-6 sm:py-8"
