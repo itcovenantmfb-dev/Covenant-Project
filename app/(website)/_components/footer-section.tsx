@@ -89,6 +89,10 @@ const footerItems = [
         text: "Risk Management",
         route: "/risk-management-policy",
       },
+      {
+        text: "Downloadable Forms",
+        route: "/forms",
+      },
     ],
   },
   {
