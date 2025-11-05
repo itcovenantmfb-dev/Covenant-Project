@@ -7,7 +7,8 @@ import { getAllFAQs } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
-  description: "Find answers to common questions about Covenant Microfinance Bank's services, accounts, loans, digital banking, fees, and more. Get quick solutions to your banking queries.",
+  description:
+    "Find answers to common questions about Covenant Microfinance Bank's services, accounts, loans, digital banking, fees, and more. Get quick solutions to your banking queries.",
   keywords: [
     "covenant microfinance bank faq",
     "banking questions",
@@ -18,11 +19,12 @@ export const metadata: Metadata = {
     "banking fees",
     "customer support",
     "bank services explained",
-    "frequently asked questions"
+    "frequently asked questions",
   ],
   openGraph: {
     title: "FAQ - Covenant Microfinance Bank",
-    description: "Find answers to common questions about Covenant Microfinance Bank's services, accounts, loans, and digital banking.",
+    description:
+      "Find answers to common questions about Covenant Microfinance Bank's services, accounts, loans, and digital banking.",
     url: "/faq",
     images: [
       {
@@ -35,13 +37,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "FAQ - Covenant Microfinance Bank",
-    description: "Find answers to common questions about our banking services, accounts, loans, and digital banking.",
+    description:
+      "Find answers to common questions about our banking services, accounts, loans, and digital banking.",
   },
 };
 
 async function page() {
   const faqs = await getAllFAQs();
-
+  console.log(faqs);
   return (
     <div>
       <FaqHeroSection />

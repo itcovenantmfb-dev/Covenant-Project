@@ -9,7 +9,16 @@ export const faqType = defineType({
       name: 'category',
       title: 'Category',
       type: 'string',
-      description: 'The category this FAQ belongs to (e.g., "Digital Banking", "Loans & Credit")',
+      description: 'Select the category this FAQ belongs to',
+      options: {
+        list: [
+          { title: 'Questions Pertaining Digital Banking (E-Channels)', value: 'digital-banking' },
+          { title: 'Questions Pertaining Loans/Investments', value: 'loans-investments' },
+          { title: 'Questions Pertaining Accounts', value: 'accounts' },
+          { title: 'General Questions', value: 'general' },
+        ],
+        layout: 'dropdown',
+      },
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -26,32 +35,20 @@ export const faqType = defineType({
       description: 'The answer to the question',
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: 'order',
-      title: 'Display Order',
-      type: 'number',
-      description: 'Order in which this FAQ should appear within its category',
-      validation: (rule) => rule.min(0),
-    }),
-    defineField({
-      name: 'isActive',
-      title: 'Is Active',
-      type: 'boolean',
-      description: 'Whether this FAQ should be displayed on the website',
-      initialValue: true,
-    }),
+   
+  
   ],
   preview: {
     select: {
       title: 'question',
       subtitle: 'category',
-      isActive: 'isActive',
+   
     },
     prepare(selection) {
-      const { title, subtitle, isActive } = selection
+      const { title, subtitle } = selection
       return {
         title: title,
-        subtitle: `${subtitle} ${isActive ? '✅' : '❌'}`,
+        subtitle: `${subtitle}`,
       }
     },
   },
@@ -60,8 +57,8 @@ export const faqType = defineType({
       title: 'Category, Order',
       name: 'categoryOrder',
       by: [
-        { field: 'category', direction: 'asc' },
-        { field: 'order', direction: 'asc' },
+        { field: 'category', direction: 'desc' },
+        { field: 'order', direction: 'desc' },
       ],
     },
   ],

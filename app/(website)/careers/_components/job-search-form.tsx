@@ -8,23 +8,22 @@ const experienceLevels = [
   "Entry-Level",
   "Mid-Level",
   "Senior",
-  "Lead",
-  "Manager",
 ];
 const locations = [
   "All Location",
   "Lagos, Nigeria",
   "Abuja, Nigeria",
-  "Port Harcourt, Nigeria",
   "Remote",
+  "Abeokuta, Nigeria",
 ];
 const categories = [
   "All Categories",
   "Technology",
   "Finance & Accounting",
-  "Customer Support",
   "Operations",
   "Marketing",
+  "Customer Service",
+  "Human Resources",
 ];
 interface JobSearchFormProps {
   searchQuery: string;
@@ -48,6 +47,19 @@ const JobSearchForm: React.FC<JobSearchFormProps> = ({
   setCategory,
   handleSubmit,
 }) => {
+  // Check if any filters are applied
+  const hasActiveFilters = 
+    searchQuery.trim() !== '' || 
+    experience !== 'All Experience Level' || 
+    location !== 'All Location' || 
+    category !== 'All Categories';
+
+  const handleReset = () => {
+    setSearchQuery('');
+    setExperience('All Experience Level');
+    setLocation('All Location');
+    setCategory('All Categories');
+  };
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div className="rounded-2xl sm:rounded-3xl bg-[#F1F5EB] p-4 sm:p-6 lg:p-8 shadow-lg">
@@ -129,15 +141,21 @@ const JobSearchForm: React.FC<JobSearchFormProps> = ({
             </div>
           </div>
 
-          {/* Submit Button */}
-          <div className="mt-8 text-center">
-            <button
-              type="submit"
-              className="rounded-lg bg-[#1D9B5E] px-10 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-            >
-              View Job
-            </button>
-          </div>
+          {/* Reset Button - Only show when filters are active */}
+          {hasActiveFilters && (
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                onClick={handleReset}
+                className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-colors shadow-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Clear All Filters
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>

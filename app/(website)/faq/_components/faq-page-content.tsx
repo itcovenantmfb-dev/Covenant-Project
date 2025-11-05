@@ -10,6 +10,14 @@ import {
 import { ChevronDown, ChevronRight } from "lucide-react";
 import SectionPill from "../../about-us/_components/section-pill";
 
+// Category mapping to display proper names
+const categoryDisplayNames: Record<string, string> = {
+  'digital-banking': 'Questions Pertaining Digital Banking (E-Channels)',
+  'loans-investments': 'Questions Pertaining Loans/Investments',
+  'accounts': 'Questions Pertaining Accounts',
+  'general': 'General Questions',
+};
+
 
 interface FAQ {
   _id: string;
@@ -25,8 +33,17 @@ interface FaqPageContentProps {
 }
 
 const FaqPageContent = ({ faqs }: FaqPageContentProps) => {
+  // Sort FAQs in descending order first
+  const sortedFaqs = faqs.sort((a, b) => {
+    // Sort by order field in descending order (if it exists), otherwise by _id
+    if (a.order && b.order) {
+      return b.order - a.order;
+    }
+    return b._id.localeCompare(a._id);
+  });
+
   // Group FAQs by category
-  const groupedFaqs = faqs.reduce((acc, faq) => {
+  const groupedFaqs = sortedFaqs.reduce((acc, faq) => {
     if (!acc[faq.category]) {
       acc[faq.category] = [];
     }
@@ -58,7 +75,7 @@ const FaqPageContent = ({ faqs }: FaqPageContentProps) => {
               <div className="flex justify-center gap-2 mb-4">
                 <span className="mt-6 sm:mt-10 inline-flex items-center rounded-full border border-green-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-600 sm:text-sm">
                   <span className="mr-2 h-2 w-2 rounded-full bg-green-400"></span>
-                  {category}
+                  {categoryDisplayNames[category] || category}
                 </span>
               </div>
               <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
