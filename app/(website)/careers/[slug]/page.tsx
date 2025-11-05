@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { getJobBySlug, getAllJobs } from "@/sanity/lib/queries";
@@ -30,7 +29,7 @@ export async function generateMetadata({
       "microfinance jobs",
       "job opportunity",
       "career openings",
-      ...(job.tags || []).map((tag: string) => tag.toLowerCase())
+      ...(job.tags || []).map((tag: string) => tag.toLowerCase()),
     ],
     openGraph: {
       title: `${job.title} - Covenant Microfinance Bank`,
@@ -129,10 +128,10 @@ export default async function JobDetailsPage({
 
           <div className="mt-12 text-center">
             <a
-              href="#"
-              className="inline-block w-80 rounded-lg bg-green-600 px-10 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              href="mailto:careers@covenantmfb.com.ng"
+              className="inline-block rounded-lg bg-green-600 px-10 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 whitespace-nowrap"
             >
-              Apply Now
+              Send your CV to careers@covenantmfb.com.ng
             </a>
           </div>
         </div>
