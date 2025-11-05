@@ -40,21 +40,24 @@ export const metadata: Metadata = {
 };
 
 async function page() {
-  const jobs = await getAllJobs();
+  try {
+    const jobs = await getAllJobs();
 
-  return (
-    <div>
-      <CareersHeroSection />
-      <JobListings 
-        searchQuery=""
-        experience=""
-        location=""
-        category=""
-        jobs={jobs}
-      />
-      <Carousel />
-    </div>
-  );
+    return (
+      <div>
+        <CareersHeroSection jobs={jobs} />
+        <Carousel />
+      </div>
+    );
+  } catch (error) {
+    console.error('Error fetching jobs:', error);
+    return (
+      <div>
+        <CareersHeroSection jobs={[]} error="Failed to load job listings. Please try again later." />
+        <Carousel />
+      </div>
+    );
+  }
 }
 
 export default page;

@@ -47,7 +47,7 @@ const testimonialsData = [
 ];
 
 const Testimonials = ({ testimonials }: TestimonialsProps) => {
-  // Fallback data if no testimonials are provided
+
   const fallbackData = [
     {
       _id: "fallback1",
@@ -55,10 +55,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         "Covenant MFB makes online payments a breeze! It's fast, reliable, and so easy to use. I handle all my transactions with just a few taps, whether I'm paying for groceries, services, or sending money to friends. Covenant truly simplifies my day-to-day payments.",
       name: "Priya K.",
       business: "Small Business Owner",
-      avatar: "/icons/priya-img.svg",
-      rating: 5,
-      featured: true,
-      dateGiven: new Date().toISOString(),
+     
     },
     {
       _id: "fallback2",
@@ -66,10 +63,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         "The customer service at Covenant MFB is exceptional. They're always ready to help and provide solutions that fit my business needs perfectly.",
       name: "John D.",
       business: "Entrepreneur",
-      avatar: "/icons/priya-img.svg",
-      rating: 5,
-      featured: true,
-      dateGiven: new Date().toISOString(),
+    
     },
     {
       _id: "fallback3",
@@ -77,10 +71,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         "I've been banking with Covenant MFB for years, and their digital banking platform has made managing my finances so much easier.",
       name: "Sarah M.",
       business: "Small Business Owner",
-      avatar: "/icons/priya-img.svg",
-      rating: 5,
-      featured: true,
-      dateGiven: new Date().toISOString(),
+    
     },
   ];
 
@@ -89,7 +80,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
   return (
     <section
       data-aos="fade-up"
-      className="py-8 sm:py-12 max-w-[1400px] mx-auto lg:py-16 flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6"
+      className="py-8 sm:py-12 max-w-[1450px] mx-auto lg:py-16 flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6"
     >
       <Title
         text="Testimonials"
@@ -110,24 +101,32 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
           modules={[Pagination, Autoplay]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           slidesPerView={1}
-          spaceBetween={10}
+          spaceBetween={20}
           pagination={{ clickable: true, el: ".custom-swiper-pagination" }}
           breakpoints={{
             640: {
               slidesPerView: 1,
+              spaceBetween: 30,
             },
             768: {
               slidesPerView: 1,
+              spaceBetween: 30,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
+              spaceBetween: 40,
+              centeredSlides: true,
+            },
+            1200: {
+              slidesPerView: 2.5,
+              spaceBetween: 50,
               centeredSlides: true,
             },
           }}
           className="py-6 sm:py-8"
         >
           {displayData.map((item) => (
-            <SwiperSlide key={item._id}>
+            <SwiperSlide key={item._id} className="w-full">
               <TestimonialsCard
                 testimonial={item.testimonial}
                 name={item.name}

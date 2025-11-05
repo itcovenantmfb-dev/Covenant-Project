@@ -41,15 +41,26 @@ export const metadata: Metadata = {
 };
 
 const page = async () => {
-  const newsArticles = await getAllNews();
+  try {
+    const newsArticles = await getAllNews();
 
-  return (
-    <div>
-      <NewsHeroSection />
-      <BlogList newsArticles={newsArticles} />
-      <Carousel />
-    </div>
-  );
+    return (
+      <div>
+        <NewsHeroSection />
+        <BlogList newsArticles={newsArticles} />
+        <Carousel />
+      </div>
+    );
+  } catch (error) {
+    console.error('Error fetching news:', error);
+    return (
+      <div>
+        <NewsHeroSection />
+        <BlogList newsArticles={[]} error="Failed to load news articles. Please try again later." />
+        <Carousel />
+      </div>
+    );
+  }
 };
 
 export default page;

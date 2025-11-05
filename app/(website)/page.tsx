@@ -9,7 +9,7 @@ import Gallery from "./_components/gallery";
 import FAQSection from "./_components/faq-section";
 import Carousel from "./_components/carousel";
 import ProductsSection from "./products/services/_components/products-section";
-import { getTestimonials } from "@/sanity/lib/queries";
+import { getTestimonials, getAllGalleries } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -48,7 +48,10 @@ export const metadata: Metadata = {
   },
 };
 const page = async () => {
-  const testimonials = await getTestimonials();
+  const [testimonials, galleries] = await Promise.all([
+    getTestimonials(),
+    getAllGalleries(),
+  ]);
 
   return (
     <main className="min-h-screen">
@@ -60,7 +63,7 @@ const page = async () => {
       <ProductsSection />
       <Testimonials testimonials={testimonials} />
       <NewsSection />
-      <Gallery />
+      <Gallery galleries={galleries} />
       <FAQSection />
       <Carousel />
     </main>

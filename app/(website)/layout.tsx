@@ -4,6 +4,7 @@ import Footer from "./_components/footer-section";
 import ZohoDeskWidget from "./_components/ZohoDeskWidget";
 import ZohoIMWidget from "./_components/ZohoIMWidget";
 import AosClient from "./_components/aos-client";
+import ScrollToTop from "./_components/scroll-to-top";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,6 +19,7 @@ export default function RootLayout({
         <ZohoIMWidget />
         <CTA />
         <Footer />
+        <ScrollToTop />
       </AosClient>
     </main>
   );

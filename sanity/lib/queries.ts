@@ -4,17 +4,11 @@ import { groq } from "next-sanity";
 // Testimonials
 export async function getTestimonials() {
   return client.fetch(
-    groq`*[_type == "testimonial" && isActive == true] | order(displayOrder asc, dateGiven desc) {
+    groq`*[_type == "testimonial"] {
       _id,
       name,
       business,
-      avatar,
       testimonial,
-      rating,
-      serviceUsed,
-      location,
-      featured,
-      dateGiven
     }`
   );
 }
@@ -87,20 +81,20 @@ export async function getJobBySlug(slug: string) {
 // FAQs
 export async function getAllFAQs() {
   return client.fetch(
-    groq`*[_type == "faq" && isActive == true] | order(category asc, order asc) {
+    groq`*[_type == "faq"] | order(_createdAt desc) {
       _id,
       question,
       answer,
       category,
       order,
-      isActive
+      _createdAt
     }`
   );
 }
 
 export async function getFAQsByCategory() {
   return client.fetch(
-    groq`*[_type == "faq" && isActive == true] | order(category asc, order asc) {
+    groq`*[_type == "faq"]  {
       _id,
       question,
       answer,
@@ -162,6 +156,44 @@ export async function getNewsBySlug(slug: string) {
       tags,
       featured,
       publishedAt
+    }`,
+    { slug }
+  );
+}
+
+// Gallery
+export async function getAllGalleries() {
+  return client.fetch(
+    groq`*[_type == "gallery" && isActive == true] | order(order asc, eventDate desc) {
+      _id,
+      title,
+      slug,
+      description,
+      featuredImage,
+      images,
+      category,
+      eventDate,
+      location,
+      tags,
+      order
+    }`
+  );
+}
+
+export async function getGalleryBySlug(slug: string) {
+  return client.fetch(
+    groq`*[_type == "gallery" && slug.current == $slug && isActive == true][0] {
+      _id,
+      title,
+      slug,
+      description,
+      featuredImage,
+      images,
+      category,
+      eventDate,
+      location,
+      tags,
+      order
     }`,
     { slug }
   );
