@@ -93,6 +93,10 @@ const footerItems = [
         text: "Downloadable Forms",
         route: "/forms",
       },
+      {
+        text: "Gallery",
+        route: "/gallery",
+      },
     ],
   },
   {
