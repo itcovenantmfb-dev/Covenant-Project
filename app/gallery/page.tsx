@@ -3,7 +3,7 @@ import GalleryHeroSection from "./_components/gallery-hero";
 import Carousel from "../(website)/_components/carousel";
 import Navbar from "../(website)/_components/navbar";
 import CTA from "../(website)/_components/cta-section";
-import { Footer } from "react-day-picker";
+import Footer from "../(website)/_components/footer-section";
 import GallerySection from "./_components/gallery-content";
 
 function page() {
