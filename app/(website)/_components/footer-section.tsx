@@ -97,6 +97,11 @@ const footerItems = [
         text: "Gallery",
         route: "/gallery",
       },
+
+      {
+        text: "Our Team ",
+        route: "/our-team",
+      },
     ],
   },
   {

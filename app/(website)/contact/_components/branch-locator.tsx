@@ -10,35 +10,35 @@ const branchesData = [
     name: "Abeokuta Branch",
     address:
       "No 25, Olusegun Osoba Way, Oke Ilewo, Ibara, Abeokuta, Ogun State",
-    phone: "+234 912 248 1176",
-    phoneHref: "tel:+2349122481176",
+    phone: "+2347070930297",
+    phoneHref: "tel:+2347070930297",
   },
   {
     name: "Akute Branch",
     address:
       "No 19, Ijoko Road, Along Ojodu Abiodun Arinfanle, Akute, Ogun State",
-    phone: "+234 904 468 0506",
-    phoneHref: "tel:+2349044680506",
+    phone: "+2347070326181",
+    phoneHref: "tel:+2347070326181",
   },
   {
     name: "Ifo Branch",
     address: "Old Bank Bus Stop, Lagos Abeokuta Express Road, Ifo, Ogun State",
-    phone: "+234 700 375 2972",
-    phoneHref: "tel:+2347003752972",
+    phone: "+2347033752972",
+    phoneHref: "tel:+2347033752972",
   },
   {
     name: "Sango Branch",
     address:
       "Km 151, Lagos Abeokuta Expressway,Joju Bus stop, Sango Ota, Ogun State",
-    phone: "+234 815 736 4348",
-    phoneHref: "tel:+2348157364348",
+    phone: "+2347079107417",
+    phoneHref: "tel:+2347079107417",
   },
   {
     name: "Canaanland Branch",
     address:
       "Covenant Microfinance Bank Ltd KM 10, Idiroko Road, Canaanland Ota.",
-    phone: "+234 810 071 6957",
-    phoneHref: "tel:+2348100716957",
+    phone: "+2347068638427",
+    phoneHref: "tel:+2347068638427",
   },
 ];
 
@@ -58,12 +58,13 @@ const BranchCard: React.FC<(typeof branchesData)[0]> = ({
         <p className="text-sm sm:text-base font-semibold text-gray-800">
           {name}
         </p>
-        <p className="mt-1 text-xs sm:text-sm text-gray-600 leading-relaxed">
+        <p className="mt-1 text-sm sm:text-lg font-bold text-[#1D9B5E]">
           {address}
         </p>
+
         <a
           href={phoneHref}
-          className="mt-2 inline-block text-xs sm:text-sm font-bold text-green-700 hover:text-green-800"
+          className="mt-2 inline-block text-xs sm:text-sm font-bold text-[#043B20] hover:text-green-800"
         >
           {phone}
         </a>

@@ -5,7 +5,6 @@ import Testimonials from "../_components/testimonials";
 import OurHistorySection from "./_components/our-history";
 import WhoWeAreSection from "./_components/who-we-are";
 import Carousel from "../_components/carousel";
-import MeetTheTeamSection from "./_components/meet-the-team";
 import TimelineSection from "./_components/timeline-section";
 
 export const metadata: Metadata = {
@@ -52,7 +51,6 @@ const AboutPage = () => {
       <NumbersSection />
       <OurHistorySection />
       <TimelineSection />
-      <MeetTheTeamSection />
       <Testimonials />
       <Carousel />
     </div>

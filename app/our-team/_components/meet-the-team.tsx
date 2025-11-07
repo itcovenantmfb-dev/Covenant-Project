@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import SectionPill from "./section-pill";
+import SectionPill from "../../(website)/about-us/_components/section-pill";
 
 import Image from "next/image";
 
@@ -8,8 +8,11 @@ import {
   boardMembers,
   managementStaff,
   TeamMember,
-} from "../../_data/team-data";
-import { BiographyModal, TeamMemberCard } from "./team-card";
+} from "../../(website)/_data/team-data";
+import {
+  BiographyModal,
+  TeamMemberCard,
+} from "../../(website)/about-us/_components/team-card";
 
 const MeetTheTeamSection = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
