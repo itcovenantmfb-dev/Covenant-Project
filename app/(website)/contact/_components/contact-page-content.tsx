@@ -8,8 +8,8 @@ const contactInfoData = [
   {
     icon: Phone,
     label: "Give us a call",
-    content: "+234 810 071 6957",
-    href: "tel:+2348100716967",
+    content: ["+234 810 071 6957", "+234 803 535 2857"],
+    href: ["tel:+2348100716957", "tel:+2348035352857"],
   },
   {
     icon: Mail,
@@ -37,44 +37,69 @@ const contactInfoData = [
   },
 ];
 
-const ContactInfoCard: React.FC<(typeof contactInfoData)[0]> = ({
+interface ContactInfoCardProps {
+  icon: React.ElementType;
+  label: string;
+  content: string | string[] | React.ReactNode;
+  href: string | string[];
+}
+
+const ContactInfoCard: React.FC<ContactInfoCardProps> = ({
   icon: Icon,
   label,
   content,
   href,
 }) => {
-  const isLink = href.startsWith("tel:") || href.startsWith("mailto:");
+  const renderContent = () => {
+    if (Array.isArray(content) && Array.isArray(href)) {
+      return (
+        <div className="flex flex-col space-y-1">
+          {content.map((item, index) => (
+            <a
+              key={index}
+              href={href[index]}
+              className="mt-1 text-base font-bold text-green-800 underline decoration-green-800 hover:text-green-700"
+            >
+              {item}
+            </a>
+          ))}
+        </div>
+      );
+    }
 
-  const CardContent = () => (
-    <div className="flex items-start gap-5">
-      <div className="flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300 p-3">
-        <Icon className="h-4 w-4 text-green-600" />
-      </div>
-      <div>
-        <p className="text-sm text-gray-500">{label}</p>
-        <p
-          className={`mt-1 text-base font-bold text-green-800 ${
-            isLink ? "underline decoration-green-800" : ""
-          }`}
+    const singleHref = href as string;
+    const isLink =
+      singleHref.startsWith("tel:") || singleHref.startsWith("mailto:");
+
+    if (isLink) {
+      return (
+        <a
+          href={singleHref}
+          className="mt-1 block text-base font-bold text-green-800 underline decoration-green-800 hover:text-green-700"
         >
-          {content}
-        </p>
-      </div>
-    </div>
-  );
+          {content as React.ReactNode}
+        </a>
+      );
+    }
 
-  return href !== "#" ? (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-shadow hover:shadow-md"
-    >
-      <CardContent />
-    </a>
-  ) : (
-    <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5">
-      <CardContent />
+    return (
+      <p className="mt-1 text-base font-bold text-green-800">
+        {content as React.ReactNode}
+      </p>
+    );
+  };
+
+  return (
+    <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-shadow hover:shadow-md">
+      <div className="flex items-start gap-5">
+        <div className="flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300 p-3">
+          <Icon className="h-4 w-4 text-green-600" />
+        </div>
+        <div>
+          <p className="text-sm text-gray-500">{label}</p>
+          {renderContent()}
+        </div>
+      </div>
     </div>
   );
 };
