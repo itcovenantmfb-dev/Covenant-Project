@@ -16,8 +16,8 @@ export const allForms: Form[] = [
       "For individuals opening a personal current account with Covenant Microfinance Bank. Provides basic details and identification to begin banking with ease.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/individual-current.pdf",
+    fileSize: "2mb",
+    downloadLink: "/Individual-Current-Account-Opening-Form.pdf",
   },
   {
     id: 2,
@@ -26,8 +26,8 @@ export const allForms: Form[] = [
       "To request changes to your existing individual account. Submit updated contact, identification, or personal information to keep your profile current.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/individual-update.pdf",
+    fileSize: "1.2mb",
+    downloadLink: "/Individual-Account-Update-Form.pdf",
   },
   {
     id: 3,
@@ -36,8 +36,8 @@ export const allForms: Form[] = [
       "Designed for individuals who wish to start a savings account. Provides necessary details to join a simple, interest-earning savings plan.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/individual-savings.pdf",
+    fileSize: "1.8mb",
+    downloadLink: "/Individual-Savings-Account-Opening-Form.pdf",
   },
   {
     id: 4,
@@ -46,8 +46,8 @@ export const allForms: Form[] = [
       'For opening a "Shiloh" savings account with special benefits. Submit your information to enjoy features unique to that account scheme.',
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/shiloh-savings.pdf",
+    fileSize: "1.9mb",
+    downloadLink: "/Account-Opening-Form-Shiloh-Savings-Account-1.pdf",
   },
   {
     id: 5,
@@ -56,8 +56,8 @@ export const allForms: Form[] = [
       "For companies or organizations to open a current account. Provides business documentation, director details, and information for activation.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/corporate-current.pdf",
+    fileSize: "4.5mb",
+    downloadLink: "/Account-Opening-Form-Corporate.pdf",
   },
 
   {
@@ -67,8 +67,8 @@ export const allForms: Form[] = [
       "Use to update corporate account details. Submit changes to business address, authorized signatories, or corporate information for record maintenance.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/corporate-account-update.pdf",
+    fileSize: "1.1mb",
+    downloadLink: "/Corporate-Account-Update-Form.pdf",
   },
   {
     id: 7,
@@ -77,8 +77,8 @@ export const allForms: Form[] = [
       "For sole proprietors to open business accounts under their name. Supply business info, owner details, and required documentation for activation.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/sole-proprietorship.pdf",
+    fileSize: "488kb",
+    downloadLink: "/Account-Opening-Form-Sole-Proprietorship.pdf",
   },
 
   {
@@ -88,8 +88,9 @@ export const allForms: Form[] = [
       "To open an education savings account for children. Provide child’s and guardian’s details to begin saving toward educational goals.",
     category: "Accounts",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/covenant-children.pdf",
+    fileSize: "1.9mb",
+    downloadLink:
+      "/Account-Opening-Form-Covenant-Childrens-Education-Account-1.pdf",
   },
 
   {
@@ -120,8 +121,8 @@ export const allForms: Form[] = [
       "For corporate entities applying for credit or loan facilities. Provide financials, business plans, and assurances to support credit approval.",
     category: "Credits",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/corporate-credit.pdf",
+    fileSize: "1.7mb",
+    downloadLink: "/Corporate-Credit-Application-Form.pdf",
   },
   {
     id: 12,
@@ -130,8 +131,8 @@ export const allForms: Form[] = [
       "To apply for an overdraft on an existing account. Submit account details, income proof, and justification for the overdraft facility.",
     category: "Credits",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/overdraft-facility.pdf",
+    fileSize: "1.4mb",
+    downloadLink: "/Overdraft-Facility-Application-Form.pdf",
   },
 
   {
@@ -141,8 +142,8 @@ export const allForms: Form[] = [
       "For individuals seeking personal credit or loan. Provide employment, income, and guarantor details to support your application.",
     category: "Credits",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/individaul-credit.pdf",
+    fileSize: "1.7mb",
+    downloadLink: "/Individual-Credit-Application-Form.pdf",
   },
 
   {
@@ -152,8 +153,8 @@ export const allForms: Form[] = [
       "To instruct regular automatic payments or transfers from your account. Fill in beneficiary, amount, and frequency to automate payments.",
     category: "Credits",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/satnding-order.pdf",
+    fileSize: "550kb",
+    downloadLink: "/Standing-Order-Form.pdf",
   },
   {
     id: 15,
@@ -162,8 +163,8 @@ export const allForms: Form[] = [
       "For applying to the DAAP loan product. Submit necessary details about the asset, repayment plan, and personal information.",
     category: "Credits",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/dream-assest.pdf",
+    fileSize: "1.3mb",
+    downloadLink: "/Dream-Asset-Acquisition-Product-DAAP-Application-Form.pdf",
   },
   {
     id: 16,
@@ -172,8 +173,8 @@ export const allForms: Form[] = [
       "For guarantors to support someone’s loan. Provide your details and agreement to indemnify in case of default by the borrower.",
     category: "Credits",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/guarantee-indemnity.pdf",
+    fileSize: "983kb",
+    downloadLink: "/Guarantor-and-Indemnity-Form.pdf",
   },
 
   {
@@ -183,8 +184,8 @@ export const allForms: Form[] = [
       "To request internal or external transfers from your account. Specify recipient, amount, and account details to complete transfer request.",
     category: "Electronic",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/funds-transfer.pdf",
+    fileSize: "337kb",
+    downloadLink: "/CMFB-FUNDS-TRANSFER-REQUEST-FORM-ONLINE.pdf",
   },
 
   {
@@ -205,8 +206,8 @@ export const allForms: Form[] = [
       "To enroll in electronic banking services. Agree to terms and provide consent to use online and mobile banking features.",
     category: "Electronic",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/electronic-banking.pdf",
+    fileSize: "907kb",
+    downloadLink: "/Electronic-Banking-Form.pdf",
   },
 
   {
@@ -216,8 +217,8 @@ export const allForms: Form[] = [
       "To activate SMS alerts for your account transactions. Provide mobile number and preferences to receive notifications securely.",
     category: "Electronic",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/sms-alert.pdf",
+    fileSize: "987kb",
+    downloadLink: "/Sms-Alert-Form.pdf",
   },
 
   {
@@ -238,8 +239,8 @@ export const allForms: Form[] = [
       "For customers to enroll in ATM services. Provide account and identity information to enable ATM access on your account.",
     category: "Electronic",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/atm-enrolment.pdf",
+    fileSize: "1.6mb",
+    downloadLink: "/ATM-Enrollment-Form.pdf",
   },
 
   {
@@ -249,8 +250,8 @@ export const allForms: Form[] = [
       "For businesses to register for internet banking. Submit company, signatory, and security details to gain online access.",
     category: "Electronic",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/corporate-internet.pdf",
+    fileSize: "83kb",
+    downloadLink: "/INTERNET BANKING REQUEST FORM (MULTIPLE SIGNATORY).pdf",
   },
 
   {
@@ -260,8 +261,8 @@ export const allForms: Form[] = [
       "To request or change transaction transfer limits on your account. Specify desired limits and reasons for approval.",
     category: "Electronic",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/transfer-limit.pdf",
+    fileSize: "403kb",
+    downloadLink: "/LIMIT-FORM.pdf",
   },
 
   {
@@ -282,8 +283,8 @@ export const allForms: Form[] = [
       "To request issuance of a Verve debit card. Provide your account and identity information so the bank can issue your card.",
     category: "ATM/Debit",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/verve-debit.pdf",
+    fileSize: "1.6mb",
+    downloadLink: "/Verve-Debit-Card-Request-Form.pdf",
   },
   {
     id: 27,
@@ -303,8 +304,8 @@ export const allForms: Form[] = [
       "To report issues if the ATM fails to dispense cash properly. Give transaction details and your account information for investigation.",
     category: "ATM/Debit",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/atm-dispense.pdf",
+    fileSize: "71kb",
+    downloadLink: "/ATM-DISPENSE-ERROR-FORM-1.pdf",
   },
 
   {
@@ -314,8 +315,8 @@ export const allForms: Form[] = [
       "For corporate customers to update Know-Your-Customer details. Provide new documentation, addresses, and compliance info for record update.",
     category: "Others",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/corporate-kyc.pdf",
+    fileSize: "432kb",
+    downloadLink: "/kyc-form (1).pdf",
   },
 
   {
@@ -325,8 +326,8 @@ export const allForms: Form[] = [
       "To reactivate a dormant corporate account. Provide organizational information, authorized signatories, and compliance documents to restore service.",
     category: "Others",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/corporate-account.pdf",
+    fileSize: "1.4mb",
+    downloadLink: "/Corporate-Account-Reactivation-Form.pdf",
   },
 
   {
@@ -337,7 +338,7 @@ export const allForms: Form[] = [
     category: "Others",
     fileType: "PDF",
     fileSize: "235kb",
-    downloadLink: "/forms/refernce-letter-sampl.pdf",
+    downloadLink: "/Reference-Form.pdf",
   },
 
   {
@@ -358,8 +359,8 @@ export const allForms: Form[] = [
       "To reactivate a dormant individual account. Provide identity details and account info to resume usage and access.",
     category: "Others",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/individaul-account.pdf",
+    fileSize: "1.5mb",
+    downloadLink: "/Individual-Account-Reactivation-Form.pdf",
   },
 
   {
@@ -369,8 +370,8 @@ export const allForms: Form[] = [
       "To enroll for your Bank Verification Number (BVN). Provide necessary personal and biometric information to register for BVN service.",
     category: "Others",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/bvn-enrolment.pdf",
+    fileSize: "673kb",
+    downloadLink: "/BANK VERIFICATION NUMBER ENROLMENT FORM.pdf",
   },
 
   {
@@ -391,8 +392,8 @@ export const allForms: Form[] = [
       "To request issuance of a cheque book for your account. Specify number of leaves and account details to fulfil your request.",
     category: "Others",
     fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/cheque-book.pdf",
+    fileSize: "132kb",
+    downloadLink: "/Cheque-Book-Requisition.pdf",
   },
 
   {
