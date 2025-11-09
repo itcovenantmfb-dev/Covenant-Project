@@ -102,6 +102,10 @@ const footerItems = [
         text: "Our Team ",
         route: "/our-team",
       },
+      {
+        text: "Help Center ",
+        route: "/help-center",
+      },
     ],
   },
   {

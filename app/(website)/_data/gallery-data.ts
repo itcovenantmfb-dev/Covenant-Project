@@ -1,6 +1,6 @@
 export interface MediaItem {
   id: number;
-  type: "image" | "video";
+  type: "image";
   src: string;
   alt: string;
 }
