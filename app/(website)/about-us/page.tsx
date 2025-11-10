@@ -6,6 +6,7 @@ import OurHistorySection from "./_components/our-history";
 import WhoWeAreSection from "./_components/who-we-are";
 import Carousel from "../_components/carousel";
 import TimelineSection from "./_components/timeline-section";
+import { getTestimonials } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -43,7 +44,8 @@ export const metadata: Metadata = {
   },
 };
 
-const AboutPage = () => {
+const AboutPage = async () => {
+    const testimonials = await getTestimonials();
   return (
     <div>
       {/* <AboutHeroSection /> */}
@@ -51,7 +53,7 @@ const AboutPage = () => {
       <NumbersSection />
       <OurHistorySection />
       <TimelineSection />
-      <Testimonials />
+      <Testimonials testimonials={testimonials} />
       <Carousel />
     </div>
   );

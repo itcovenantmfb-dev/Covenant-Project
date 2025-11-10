@@ -5,11 +5,10 @@ import WhyChooseUs from "./_components/why-choose-us";
 import NumbersSection from "./_components/numbers-section";
 import Testimonials from "./_components/testimonials";
 import NewsSection from "./_components/news-section";
-import Gallery from "./_components/gallery";
 import FAQSection from "./_components/faq-section";
 import Carousel from "./_components/carousel";
 import ProductsSection from "./products/services/_components/products-section";
-import { getTestimonials, getAllGalleries } from "@/sanity/lib/queries";
+import { getTestimonials } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -48,10 +47,7 @@ export const metadata: Metadata = {
   },
 };
 const page = async () => {
-  const [testimonials, galleries] = await Promise.all([
-    getTestimonials(),
-    getAllGalleries(),
-  ]);
+  const testimonials = await getTestimonials();
 
   return (
     <main className="min-h-screen">
@@ -63,7 +59,6 @@ const page = async () => {
       <ProductsSection />
       <Testimonials testimonials={testimonials} />
       <NewsSection />
-      <Gallery galleries={galleries} />
       <FAQSection />
       <Carousel />
     </main>

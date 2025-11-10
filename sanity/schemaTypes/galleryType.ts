@@ -2,21 +2,21 @@ import { defineField, defineType } from 'sanity'
 
 export const galleryType = defineType({
   name: 'gallery',
-  title: 'Gallery',
+  title: 'Gallery Albums',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Gallery Title',
+      title: 'Album Title',
       type: 'string',
-      description: 'Title for this gallery collection (e.g., "Annual Event 2024", "Branch Opening")',
+      description: 'Title for this gallery album (e.g., "15th Annual General Meeting", "Customer Service Week 2025")',
       validation: (rule) => rule.required().max(100),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'URL-friendly version of the gallery title',
+      description: 'URL-friendly version of the album title',
       options: {
         source: 'title',
         maxLength: 96,
@@ -27,14 +27,14 @@ export const galleryType = defineType({
       name: 'description',
       title: 'Description',
       type: 'text',
-      description: 'Brief description of this gallery collection',
+      description: 'Brief description of this gallery album',
       validation: (rule) => rule.max(300),
     }),
     defineField({
-      name: 'featuredImage',
-      title: 'Featured Image',
+      name: 'coverImage',
+      title: 'Cover Image',
       type: 'image',
-      description: 'Main image that represents this gallery (will be shown as the large image)',
+      description: 'Main cover image that represents this album (shown in album grid)',
       options: {
         hotspot: true,
       },
@@ -45,20 +45,14 @@ export const galleryType = defineType({
           title: 'Alternative text',
           description: 'Important for accessibility and SEO',
         },
-        {
-          name: 'caption',
-          type: 'string',
-          title: 'Caption',
-          description: 'Optional caption for the image',
-        },
       ],
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'images',
-      title: 'Gallery Images',
+      name: 'media',
+      title: 'Album Media',
       type: 'array',
-      description: 'Additional images for this gallery (exactly 4 images needed for the grid layout)',
+      description: 'All images in this album (shown when viewing album details)',
       of: [
         {
           type: 'image',
@@ -71,6 +65,7 @@ export const galleryType = defineType({
               type: 'string',
               title: 'Alternative text',
               description: 'Important for accessibility and SEO',
+              validation: (rule) => rule.required(),
             },
             {
               name: 'caption',
@@ -81,13 +76,13 @@ export const galleryType = defineType({
           ],
         },
       ],
-      validation: (rule) => rule.required().min(4).max(4).error('Please add exactly 4 images for the gallery grid'),
+      validation: (rule) => rule.required().min(1).error('Please add at least 1 image to the album'),
     }),
     defineField({
       name: 'category',
       title: 'Category',
       type: 'string',
-      description: 'Category this gallery belongs to',
+      description: 'Category this album belongs to',
       options: {
         list: [
           { title: 'Events', value: 'events' },
@@ -119,7 +114,7 @@ export const galleryType = defineType({
       title: 'Tags',
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'Tags to help categorize and search for this gallery',
+      description: 'Tags to help categorize and search for this album',
       options: {
         layout: 'tags',
       },
@@ -128,14 +123,14 @@ export const galleryType = defineType({
       name: 'isActive',
       title: 'Is Active',
       type: 'boolean',
-      description: 'Whether this gallery should be visible on the website',
+      description: 'Whether this album should be visible on the website',
       initialValue: true,
     }),
     defineField({
       name: 'order',
       title: 'Display Order',
       type: 'number',
-      description: 'Order in which this gallery should appear (lower numbers appear first)',
+      description: 'Order in which this album should appear (lower numbers appear first)',
       initialValue: 0,
     }),
   ],
@@ -143,7 +138,7 @@ export const galleryType = defineType({
     select: {
       title: 'title',
       subtitle: 'category',
-      media: 'featuredImage',
+      media: 'coverImage',
       isActive: 'isActive',
       eventDate: 'eventDate',
     },

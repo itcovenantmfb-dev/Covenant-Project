@@ -161,16 +161,16 @@ export async function getNewsBySlug(slug: string) {
   );
 }
 
-// Gallery
-export async function getAllGalleries() {
+// Gallery Albums
+export async function getAllGalleryAlbums() {
   return client.fetch(
     groq`*[_type == "gallery" && isActive == true] | order(order asc, eventDate desc) {
       _id,
       title,
       slug,
       description,
-      featuredImage,
-      images,
+      coverImage,
+      media,
       category,
       eventDate,
       location,
@@ -180,15 +180,15 @@ export async function getAllGalleries() {
   );
 }
 
-export async function getGalleryBySlug(slug: string) {
+export async function getGalleryAlbumBySlug(slug: string) {
   return client.fetch(
     groq`*[_type == "gallery" && slug.current == $slug && isActive == true][0] {
       _id,
       title,
       slug,
       description,
-      featuredImage,
-      images,
+      coverImage,
+      media,
       category,
       eventDate,
       location,
