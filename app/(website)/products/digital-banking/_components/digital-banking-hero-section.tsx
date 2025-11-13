@@ -1,17 +1,13 @@
-
 import ReusableBanner from "@/app/(website)/_components/reusable-banner";
 import React from "react";
 
 const DigitalBankingHeroSection = () => {
   return (
-    <div>
-      <ReusableBanner
-        pillText={"Products / Digital Banking"}
-        title="Secure, reliable services for individuals, families, and businesses."
-        firstImage={"/Illustaration (1).svg"}
-        secondImage={"/ilust 1.svg"}
-      />
-    </div>
+    <ReusableBanner
+      pillText="Products / Digital Banking"
+      title="Modern banking at your fingertips with comprehensive digital solutions."
+      bgPattern="/Core Menu (8) 1.svg"
+    />
   );
 };
 

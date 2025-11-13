@@ -6,11 +6,9 @@ const ProductHeroSection = () => {
   return (
     <>
       <ReusableBanner
-        pillText={"Products"}
-        title="  Secure, reliable services for individuals, families, and
-              businesses."
-        firstImage={"/Illustaration (1).svg"}
-        secondImage={"/ilust 1.svg"}
+      pillText={"Products"}
+      title="Comprehensive solutions designed to protect what matters most to you and your business."
+      bgPattern="/Core Menu (7) 1.svg"
       />
     </>
   );

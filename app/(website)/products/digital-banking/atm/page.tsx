@@ -48,8 +48,7 @@ export default function DebitCardPage() {
       <ReusableBanner
         pillText={"Products / Digital Banking / Debit Card"}
         title="Secure, convenient card services for seamless payments and transactions."
-        firstImage={"/Illustaration (1).svg"}
-        secondImage={"/ilust 1.svg"}
+        bgPattern="/Core Menu (9) 1.svg"
       />
       <IntroSection />
       <FeaturesSection />

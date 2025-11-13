@@ -1,70 +1,45 @@
 "use client";
 import Image from "next/image";
-
 import { ReactNode } from "react";
 import Title from "./title";
 
 interface ReusableBannerProps {
   pillText: string;
   title: string | ReactNode;
-  firstImage: string;
-  secondImage: string;
+  bgPattern?: string;
 }
 
 const ReusableBanner = ({
   pillText,
   title,
-  firstImage,
-  secondImage,
+  bgPattern = "/path2830.png",
 }: ReusableBannerProps) => {
   return (
-    <section data-aos="fade-up" className="flex min-h-[550px]  w-full bg-[url('/path2830.png')] items-center justify-center bg-[#F1FEF4]  ">
-      <div className="relative z-10  px-6 w-full max-w-6xl items-center justify-center text-center ">
-        <Image
-          src={secondImage}
-          alt="A vertical timeline of Covenant MFB's history."
-          width={280}
-          height={280}
-          className=" z-0  absolute  md:left-[620px] lg:left-[850px] bottom-[-170px]  hidden lg:block "
-          priority
-        />
-        {/* Mobile */}
-        <Image
-          src={firstImage}
-          alt="A vertical timeline of Covenant MFB's history."
-          width={150}
-          height={150}
-          className=" z-0  object-bottom absolute right-[290px] md:right-[500px] bottom-[-100px] block lg:hidden "
-          priority
-        />
-        <div className=" relative flex flex-col gap-4 justify-center items-center">
+    <section className="relative min-h-[400px] md:min-h-[500px] lg:min-h-[550px] w-full overflow-hidden flex items-center">
+      {/* Decorative Background Pattern */}
+      <div className="">
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover bg-center md:bg-left"
+          style={{ backgroundImage: `url('${bgPattern}')` }}
+        ></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 max-w-7xl w-full">
+        {/* Content Card */}
+        <div
+          data-aos="fade-right"
+          className="bg-white/80 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-16 w-full max-w-xl lg:max-w-3xl shadow-xl mx-auto lg:mx-0"
+        >
           <Title
             text={pillText}
             borderColor="[#1D9B5E]/40"
             textColor="#1D9B5E"
           />
 
-          <h1 className="font-britti tracking-tight text-[#0D1A26] leading-tight text-2xl lg:text-5xl max-w-[230px] lg:max-w-2xl mx-auto font-bold">
+          <h1 className="mt-4 sm:mt-6 font-britti tracking-tight text-[#0D1A26] leading-tight text-2xl sm:text-3xl lg:text-5xl font-bold">
             {title}
           </h1>
         </div>
-        <Image
-          src={firstImage}
-          alt="A vertical timeline of Covenant MFB's history."
-          width={280}
-          height={280}
-          className=" z-0 left-[60px] absolute bottom-[-190px]    hidden lg:block "
-          priority
-        />
-        {/* Mobile */}
-        <Image
-          src={secondImage}
-          alt="A vertical timeline of Covenant MFB's history."
-          width={120}
-          height={120}
-          className=" z-0 absolute left-[290px] bottom-[-100px] md:left-[500px]  md:bottom-[-80px] object-contain object-bottom block lg:hidden "
-          priority
-        />
       </div>
     </section>
   );

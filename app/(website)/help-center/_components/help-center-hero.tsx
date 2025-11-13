@@ -1,5 +1,6 @@
 "use client";
 import PageBanner from "@/app/(website)/_components/reusable-hero-banner";
+import ReusableBanner from "../../_components/reusable-banner";
 
 const pageTitle = (
   <>
@@ -10,7 +11,7 @@ const pageTitle = (
 const HelpCenterHeroSection = () => {
   return (
     <div>
-      <PageBanner pillText={"Help Center"} title={pageTitle} />
+      <ReusableBanner pillText={"Help Center"} title={pageTitle} bgPattern="/Core Menu (3) 1.svg" />
     </div>
   );
 };

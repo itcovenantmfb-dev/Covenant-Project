@@ -48,8 +48,7 @@ export default function MobileBankingPage() {
         pillText={"Products/Digital Banking/Mobile Banking"}
         title="  Secure, reliable services for individuals, families, and
               businesses."
-        firstImage={"/Illustaration (1).svg"}
-        secondImage={"/ilust 1.svg"}
+        bgPattern="/Core Menu (2) 1.svg"
       />
       <IntroSection />
       <FeaturesSection />
