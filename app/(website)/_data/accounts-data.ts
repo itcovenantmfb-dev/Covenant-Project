@@ -47,7 +47,6 @@ export const ACCOUNT_DATA: AccountData[] = [
       { list: "Earn interest" },
       { list: "Flexible access" },
       { list: "24/7 banking" },
-      { list: "No charges" },
       { list: "Simple upkeep" },
     ],
     image: "/mini-house-stack-coins-with-green-blur 1.png",
@@ -211,7 +210,6 @@ export const ACCOUNT_DATA: AccountData[] = [
       { list: "High interest" },
       { list: "Low opening balance" },
       { list: "24/7 access" },
-      { list: "No charges" },
       { list: "Stress-free setup" },
     ],
     image: "/Mask group (5).png",
@@ -243,7 +241,6 @@ export const ACCOUNT_DATA: AccountData[] = [
     shortName: "CODIAS",
     description: "Daily savings made simple and rewarding for business growth.",
     items: [
-      { list: "No charges" },
       { list: "Daily savings" },
       { list: "Simple process" },
       { list: "Access loans" },

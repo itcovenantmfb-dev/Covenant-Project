@@ -19,8 +19,8 @@ const CashAndPayments = () => (
           Cash and payments, anywhere.
         </h2>
         <p className="text-[#3D3D3D] text-base lg:text-base mb-8 md:max-w-[312px] lg:ml-auto ">
-          Offer quick payments and cash access with POS and ATM services from
-          Covenant MFB — built to support your business and community.
+          Offer quick payments with POS and ATM services from Covenant MFB —
+          built to support your business and community.
         </p>
         <Button className="bg-[#1D9B5E] text-white py-4 px-7.5 rounded-[14px] h-fit text-sm font-semibold">
           Find Out More

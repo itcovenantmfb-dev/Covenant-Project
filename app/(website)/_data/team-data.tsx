@@ -10,7 +10,7 @@ export type TeamMember = {
 export const boardMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Adm. Dcns. Ebipre Oluyemi ",
+    name: "Adm. Dcns. \nEbipre \nOluyemi ",
     role: "Board Chairperson",
     imageUrl: "/Mask group.svg",
     credentials: "FCIA",
@@ -43,7 +43,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Dr Barry Roberts,CRM",
+    name: "Dr Barry \nRoberts,\nCRM",
     role: "Managing Director/CEO",
     imageUrl: "/Mask group (1).svg",
     credentials: "FICA",
@@ -113,7 +113,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Prof. Uwalomwa Uwuigbe",
+    name: "Prof. \nUwalomwa \nUwuigbe",
     role: "Board Member",
     imageUrl: "/Mask group (2).svg",
     biography: (
@@ -157,7 +157,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 4,
-    name: "Prof. Chinonye Love Moses",
+    name: "Prof.\n Chinonye \nLove Moses",
     role: "Board Member",
     imageUrl: "/Mask group (3).svg",
     biography: (
@@ -192,7 +192,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 5,
-    name: "Prof. Kehinde Adetiloye",
+    name: "Prof.\n Kehinde \nAdetiloye",
     role: "Board Member",
     imageUrl: "/Mask group (4).svg",
     biography: (
@@ -245,7 +245,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 6,
-    name: "Prof. Evans Osabuohien",
+    name: "Prof.\n Evans \nOsabuohien",
     role: "Board Member",
     imageUrl: "/Mask group (5).svg",
     biography: (
@@ -340,7 +340,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Oluwunmi Temidayo Esther",
+    name: "Oluwunmi \n Temidayo \nEsther",
     role: "Branch Manager, Ifo, Ogun State",
     imageUrl: "/Mask group (7).svg",
     biography: (
@@ -372,7 +372,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Alowonle Michael Oladimeji",
+    name: "Alowonle \nMichael \nOladimeji",
     role: "Branch Manager, Abeokuta, Ogun State",
     imageUrl: "/Mask group (8).svg",
     biography: (
@@ -425,7 +425,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 4,
-    name: "Justina Meekness Okorie",
+    name: "Justina\n Meekness Okorie",
     role: "Head, Administration and Human Resources Department",
     imageUrl: "/Mask group (9).svg",
     biography: (
@@ -464,7 +464,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 5,
-    name: "Oyerinde Olawale",
+    name: "Oyerinde\n Olawale",
     role: "Head, Financial Control",
     imageUrl: "/Mask group (10).svg",
     biography: (
@@ -505,7 +505,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 6,
-    name: "Fagbemi Alao Oladapo",
+    name: "Fagbemi Alao\n Oladapo",
     role: "Head, Internal Control and Compliance",
     imageUrl: "/Mask group (11).svg",
     biography: (
@@ -550,7 +550,7 @@ export const managementStaff: TeamMember[] = [
   {
     id: 7,
     name: "Ayoola Ige",
-    role: "Branch Manager, Head Office Branch",
+    role: "Branch Manager, Canaanland",
     imageUrl: "/Mask group (12).svg",
     biography: (
       <>
@@ -583,7 +583,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 8,
-    name: "Adm. Gabriel Osabohien",
+    name: "Adm. \nGabriel\n Osabohien",
     role: "Head, Banking Operations",
     imageUrl: "/Mask group (18).svg",
     biography: (
@@ -647,7 +647,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 9,
-    name: "Oluwatoyin Bolujoko-Oluwole",
+    name: "Oluwatoyin\n Bolujoko-Oluwole",
     role: "Branch Manager, Sango",
     imageUrl: "/Mask group (14).svg",
     credentials: "BSc, MSc, MCIB, MICA",
@@ -679,7 +679,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 10,
-    name: "Adetunji Adedeji Akanbi",
+    name: "Adetunji \nAdedeji Akanbi",
     role: "Head, Internal Audit",
     imageUrl: "/Mask group (15).svg",
     credentials: "B.A (HONS) English, ACA,MCIB",
@@ -712,7 +712,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 11,
-    name: "Emmanuel Adeleke Adekeye",
+    name: "Emmanuel \nAdeleke\n Adekeye",
     role: "Branch Manager,Akute",
     imageUrl: "/Mask group (16).svg",
     biography: (
@@ -753,7 +753,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 12,
-    name: "Odeyemi Oluwakemi Christianah",
+    name: "Odeyemi \nOluwakemi \nChristianah",
     role: "Head, Business Development",
     imageUrl: "/Mask group (17).svg",
     biography: (
