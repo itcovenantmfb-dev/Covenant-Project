@@ -29,7 +29,7 @@ const FormCard: React.FC<{ form: Form }> = ({ form }) => (
             {form.fileType}
           </span>
         </div>
-        <span>{form.fileSize}</span>
+        <span className="ml-10">{form.fileSize}</span>
       </div>
       <a
         href={form.downloadLink}
