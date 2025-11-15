@@ -10,7 +10,8 @@ import ReusableBanner from "@/app/(website)/_components/reusable-banner";
 
 export const metadata: Metadata = {
   title: "POS Terminal Services",
-  description: "Get POS terminal solutions from Covenant Microfinance Bank for your business. Accept card payments, increase sales, and provide convenient payment options to customers.",
+  description:
+    "Get POS terminal solutions from Covenant Microfinance Bank for your business. Accept card payments, increase sales, and provide convenient payment options to customers.",
   keywords: [
     "covenant microfinance bank pos terminal",
     "pos machine",
@@ -21,11 +22,12 @@ export const metadata: Metadata = {
     "payment processing",
     "pos rental",
     "card reader",
-    "business banking"
+    "business banking",
   ],
   openGraph: {
     title: "POS Terminal Services - Covenant Microfinance Bank",
-    description: "Get POS terminal solutions for your business to accept card payments and increase sales.",
+    description:
+      "Get POS terminal solutions for your business to accept card payments and increase sales.",
     url: "/products/digital-banking/pos",
     images: [
       {
@@ -38,7 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "POS Terminal Services - Covenant Microfinance Bank",
-    description: "Get POS terminal solutions for your business to accept card payments.",
+    description:
+      "Get POS terminal solutions for your business to accept card payments.",
   },
 };
 
@@ -48,8 +51,7 @@ export default function POSPage() {
       <ReusableBanner
         pillText={"Products / Digital Banking / POS Terminal"}
         title="Reliable POS solutions for your business payment needs."
-        firstImage={"/Illustaration (1).svg"}
-        secondImage={"/ilust 1.svg"}
+        bgPattern=""
       />
       <IntroSection />
       <FeaturesSection />
