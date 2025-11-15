@@ -15,12 +15,14 @@ type ServiceItem = {
 export type ServiceCard = ServiceItem[];
 
 export type SectionData = {
+  id: string;
   title: string;
   cards: ServiceCard[];
 };
 
 export const otherServicesData: SectionData[] = [
   {
+    id: "card-service",
     title: "Card Service",
     cards: [
       [
@@ -63,6 +65,7 @@ export const otherServicesData: SectionData[] = [
     ],
   },
   {
+    id: "loans",
     title: "Loans",
     cards: [
       [

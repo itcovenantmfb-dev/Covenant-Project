@@ -102,7 +102,6 @@ export const NAV_ITEMS = [
     ],
   },
 
-
   {
     icon: "/icons/support_icon.svg",
     text: "Support",
@@ -111,7 +110,7 @@ export const NAV_ITEMS = [
     subItems: [
       {
         label: "Help Center",
-        route: "/support/help-center",
+        route: "/help-center",
         icon: "HelpCircle",
         description: "Get support and reach us",
       },
@@ -129,7 +128,7 @@ export const NAV_ITEMS = [
       },
     ],
   },
-    {
+  {
     icon: "/icons/Frame 140 (2).svg",
     text: "Payments",
     route: "/payments",
