@@ -210,8 +210,7 @@ const Footer = () => (
             </div>
           ))}
         </div>
-
-        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit">
+        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit lg:ml-8">
           <span className="text-white font-semibold mb-1">
             Download our App
           </span>
