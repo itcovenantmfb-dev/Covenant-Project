@@ -109,12 +109,13 @@ const CustomerSupport: React.FC = () => {
 
   return (
     <div>
-      <div className="sticky px-2 py-6">
+      <div className="sticky px-4 py-6">
         <div
           className="
+          mx-auto
     w-fit md:w-full
     max-w-4xl
-    bg-[#F0F5EB] rounded-xl p-6 shadow-md
+    bg-[#F0F5EB] rounded-xl p-2 md:p-6 shadow-md
     flex flex-wrap md:flex-nowrap
     justify-center md:justify-between
     gap-3
