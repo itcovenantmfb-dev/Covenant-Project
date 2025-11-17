@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Youtube } from "lucide-react";
 
 const socials = [
   {
@@ -21,7 +20,7 @@ const socials = [
   //   alt: "Instagram",
   // },
   {
-    icon: "/icons/twitter-154 1.svg",
+    icon: "/icons/x-social-media-white-icon.png",
     link: "https://x.com/covenantmfb_",
     alt: "Twitter",
   },
@@ -112,7 +111,7 @@ const footerItems = [
     title: "Contact Us",
     links: [
       {
-        text: "KM 10 Cannanland Idiroko Road, Ota Ogun State.",
+        text: "KM 10 Canaanland Idiroko Road, Ota Ogun State.",
         icon: "/icons/Location on.svg",
       },
       {
@@ -153,7 +152,7 @@ const Footer = () => (
             Transforming ordinary individuals <br />
             into creators of wealth since 2003
           </p>
-          <div className="flex gap-3 mt-2 justify-center sm:justify-start">
+          <div className="flex gap-3 mt-2 justify-start">
             {socials.map((social, index) => (
               <Link
                 href={social.link}
@@ -163,8 +162,8 @@ const Footer = () => (
                 <Image
                   src={social.icon}
                   alt={social.alt}
-                  width={22}
-                  height={22}
+                  width={21}
+                  height={21}
                 />
               </Link>
             ))}
@@ -172,7 +171,7 @@ const Footer = () => (
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full lg:flex-1">
           {footerItems.map((item, index) => (
-            <div key={index} className="text-center sm:text-left">
+            <div key={index} className="text-left ml-12">
               <h4 className="text-[#B6E44B] font-semibold mb-3 text-base sm:text-lg">
                 {item.title}
               </h4>
@@ -180,7 +179,7 @@ const Footer = () => (
                 {item.links.map((link, linkIndex) => (
                   <div key={linkIndex}>
                     {"route" in link ? (
-                      <li className="flex items-start gap-1 justify-center sm:justify-start">
+                      <li className="flex items-start gap-1 justify-start">
                         <span className="mb-1">•</span>
                         <Link
                           href={link.route}
@@ -190,7 +189,7 @@ const Footer = () => (
                         </Link>
                       </li>
                     ) : (
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <div className="flex items-center gap-2 justify-start">
                         {"icon" in link && (
                           <Image
                             src={link.icon}
@@ -211,8 +210,7 @@ const Footer = () => (
             </div>
           ))}
         </div>
-
-        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit">
+        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit lg:ml-8">
           <span className="text-white font-semibold mb-1">
             Download our App
           </span>

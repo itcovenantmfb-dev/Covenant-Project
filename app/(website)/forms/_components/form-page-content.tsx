@@ -22,14 +22,14 @@ const FormCard: React.FC<{ form: Form }> = ({ form }) => (
       </p>
     </div>
     <div className="mt-2 border-gray-200 pt-2">
-      <div className="flex items-center justify-between text-sm text-gray-500">
+      <div className="flex items-center text-sm text-gray-500">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-[#0F9D58]"></span>
           <span className="text-[#0F9D58] font-semibold text-sm">
             {form.fileType}
           </span>
         </div>
-        <span>{form.fileSize}</span>
+        <span className="ml-10">{form.fileSize}</span>
       </div>
       <a
         href={form.downloadLink}
@@ -93,7 +93,17 @@ const DownloadableForms = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Filter Tabs */}
         <div className="mb-12 flex items-center justify-center">
-          <div className="flex space-x-2 rounded-full bg-[#F9FFF5] p-1.5 shadow-sm ring-1 ring-inset ring-gray-200">
+          <div
+            className="
+      flex flex-wrap md:flex-nowrap
+      justify-center md:justify-between
+      items-center
+      gap-2
+      w-fit md:w-auto
+      rounded-full bg-[#F9FFF5] p-2 shadow-sm
+      ring-1 ring-inset ring-gray-200
+    "
+          >
             {filterCategories.map((cat) => (
               <button
                 key={cat}

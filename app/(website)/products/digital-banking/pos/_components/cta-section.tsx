@@ -29,7 +29,7 @@ const CTASection = () => {
               id: 3,
               imageSrc: "/flash.svg",
               title:
-            "Submit the completed form at any Covenant MFB branch closest to you.",
+                "Submit the completed form at any Covenant MFB branch closest to you.",
             },
           ].map((step) => (
             <div
@@ -38,19 +38,19 @@ const CTASection = () => {
             >
               <Image src={step.imageSrc} width={40} height={40} alt="" />
               <h3 className="text-lg font-semibold mb-4 text-[#020617]">
-            {step.title}
+                {step.title}
               </h3>
             </div>
           ))}
         </div>
 
         {/* Bottom Message */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <p className="text-xl lg:text-2xl text-white font-medium max-w-4xl mx-auto leading-relaxed">
             Our team will process your request and guide you through the next
             steps to get your POS terminal up and running.
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

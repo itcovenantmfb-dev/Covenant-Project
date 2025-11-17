@@ -16,7 +16,7 @@ const CTASection = () => {
             {
               id: 1,
               imageSrc: "/flash.svg",
-              title: "Download & Complete the Requisition Form",
+              title: "Download & Complete the ATM Card Application Form",
             },
             {
               id: 2,
@@ -44,7 +44,8 @@ const CTASection = () => {
         {/* Bottom Message */}
         <div className="text-center">
           <p className="text-xl lg:text-2xl text-white font-medium max-w-4xl mx-auto leading-relaxed">
-            Get your debit card today and enjoy seamless transactions anytime, anywhere!
+            Get your debit card today and enjoy seamless transactions anytime,
+            anywhere!
           </p>
         </div>
       </div>

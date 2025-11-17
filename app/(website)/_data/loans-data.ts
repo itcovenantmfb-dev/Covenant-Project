@@ -55,10 +55,14 @@ export const LOAN_DATA: LoanData[] = [
       { text: "Competitive and affordable interest rates." },
       { text: "Quick access to funds for short-term financial needs." },
       { text: "Support for urgent or unexpected expenses." },
-      { text: "Option to pay off the facility before the agreed repayment date." },
+      {
+        text: "Option to pay off the facility before the agreed repayment date.",
+      },
     ],
     requirements: [
-      { text: "For salary earners: salary account domiciled with Covenant Microfinance Bank." },
+      {
+        text: "For salary earners: salary account domiciled with Covenant Microfinance Bank.",
+      },
       { text: "An active banking relationship with us for 3-6 months." },
       { text: "Two guarantors." },
     ],
@@ -89,19 +93,23 @@ export const LOAN_DATA: LoanData[] = [
       { text: "The loan amount is determined by your monthly salary." },
       { text: "Flexible repayment period between 6 to 12 months." },
       { text: "Easy repayment through monthly deductions from your salary." },
-      { text: "Can be used for personal needs such as household expenses, healthcare, or children's education." },
+      {
+        text: "Can be used for personal needs such as household expenses, healthcare, or children's education.",
+      },
       { text: "Fast processing time of 24 to 48 hours." },
     ],
     requirements: [
-      { text: "Salary account must be domiciled with Covenant Microfinance Bank." },
-      { text: "A written application letter and a completed loan application form." },
+      {
+        text: "Salary account must be domiciled with Covenant Microfinance Bank.",
+      },
+      {
+        text: "A written application letter and a completed loan application form.",
+      },
       { text: "A completed guarantor's form." },
     ],
-    targetClients: [
-      { text: "Individuals earning a salary" },
-    ],
+    targetClients: [{ text: "Individuals earning a salary" }],
   },
-   {
+  {
     id: "lpo-project-financing",
     name: "LPO / Project Financing",
     shortName: "LPO Financing",
@@ -127,7 +135,9 @@ export const LOAN_DATA: LoanData[] = [
     ],
     requirements: [
       { text: "A valid Local Purchase Order (LPO)." },
-      { text: "Completed Letter of Domiciliation of Payment with Covenant Microfinance Bank." },
+      {
+        text: "Completed Letter of Domiciliation of Payment with Covenant Microfinance Bank.",
+      },
       { text: "Application letter and facility application form." },
       { text: "Duly filled guarantor's form." },
     ],
@@ -156,14 +166,20 @@ export const LOAN_DATA: LoanData[] = [
     },
     features: [
       { text: "Loan amounts from ₦500,000 to ₦2,000,000." },
-      { text: "Maximum tenor of 6 months for first-time borrowers and 24 months for existing customers." },
+      {
+        text: "Maximum tenor of 6 months for first-time borrowers and 24 months for existing customers.",
+      },
       { text: "Competitive and affordable interest rates." },
     ],
     requirements: [
-      { text: "An active banking relationship with Covenant Microfinance Bank for 3-6 months." },
+      {
+        text: "An active banking relationship with Covenant Microfinance Bank for 3-6 months.",
+      },
       { text: "Application letter with a completed loan application form." },
-      { text: "Completed guarantor's forms were applicable." },
-      { text: "Land property documents were applicable (land receipts, deed of agreement, survey plan or C of O)." },
+      { text: "Completed guarantor's forms where applicable." },
+      {
+        text: "Land property documents were applicable (land receipts, deed of agreement, survey plan or C of O).",
+      },
     ],
     targetClients: [
       { text: "Salary earners" },
@@ -171,7 +187,7 @@ export const LOAN_DATA: LoanData[] = [
       { text: "Micro-entrepreneurs" },
     ],
   },
- 
+
   {
     id: "daap-loan",
     name: "DreamAsset Acquisition Product (DAAP)",
@@ -183,7 +199,6 @@ export const LOAN_DATA: LoanData[] = [
       { list: "Pay only 10% upfront." },
       { list: "Up to 10 months repayment." },
       { list: "Quick processing" },
-  
     ],
     image: "/Mask group (6).png",
     overview: {
@@ -192,7 +207,9 @@ export const LOAN_DATA: LoanData[] = [
         "Make your dream purchases a reality with our simple, flexible, and convenient payment plan.",
     },
     features: [
-      { text: "Brand new, original electronics and home appliances from trusted brands." },
+      {
+        text: "Brand new, original electronics and home appliances from trusted brands.",
+      },
       { text: "Warranty provided in line with supplier's policy." },
       { text: "Highly competitive prices." },
       { text: "Only 10% equity contribution required." },
@@ -210,7 +227,7 @@ export const LOAN_DATA: LoanData[] = [
       { text: "Salary earners" },
     ],
   },
-   {
+  {
     id: "fett-loan",
     name: "Financial Empowerment Through Transportation (FETT)",
     shortName: "FETT Loan",
@@ -281,7 +298,7 @@ export const LOAN_DATA: LoanData[] = [
       { text: "Artisans" },
     ],
   },
- 
+
   {
     id: "education-bridge-loan",
     name: "Covenant Education Bridge Loan",
@@ -306,9 +323,7 @@ export const LOAN_DATA: LoanData[] = [
       { text: "Flexible repayment options and structure." },
       { text: "Competitive interest rates." },
     ],
-    requirements: [
-      { text: "Must have a domiciled account with CMFB." },
-    ],
+    requirements: [{ text: "Must have a domiciled account with CMFB." }],
     targetClients: [
       { text: "Parents of Faith Academy students" },
       { text: "Parents of Covenant University Secondary School students" },
