@@ -3,6 +3,7 @@ import {
   UssdCardData,
 } from "@/app/(website)/_data/magic-code-ussd-data";
 import React from "react";
+import PictorialSection from "./pictorial";
 
 const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
   const linkClasses = "text-[#1D9B5E] hover:text-green-700 font-medium";
@@ -47,7 +48,7 @@ const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
 
 const MagicCodeUssd: React.FC = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white mt-8">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl md:text-4xl font-bold  mb-14">
           Magic Code USSD
@@ -91,6 +92,7 @@ const MagicCodeUssd: React.FC = () => {
             </div>
           ))}
         </div>
+        <PictorialSection />
       </div>
     </section>
   );

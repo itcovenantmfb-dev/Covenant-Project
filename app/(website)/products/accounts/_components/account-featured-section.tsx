@@ -2,12 +2,11 @@ import React from "react";
 import ServiceCard from "../../_components/services-card";
 import Title from "@/app/(website)/_components/title";
 
-
 export const ACCOUNT_FEATURES = [
-  "CBN Licensed & NDIC Insured",
-  "24/7 Mobile Banking",
-  "Free SMS Alerts",
-  "Nationwide ATM Access",
+  "CBN Licensed &  \n NDIC Insured",
+  "24/7 Mobile\n Banking",
+  // "Free SMS Alerts",
+  // "Nationwide ATM Access",
   "Professional Customer Service",
   "Quick Account Opening",
 ];
@@ -27,7 +26,7 @@ const AccountFeaturedSection = () => {
           </h2>
         </div>
 
-        <div className="mx-auto mt-8 sm:mt-10 grid max-w-lg grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-8 sm:mt-10 grid max-w-lg grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:max-w-none sm:grid-cols-2 lg:grid-cols-4">
           {ACCOUNT_FEATURES.map((service, index) => (
             <ServiceCard key={index} title={service} />
           ))}

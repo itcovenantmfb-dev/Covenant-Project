@@ -56,7 +56,7 @@ const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
 
 const AccountServices: React.FC = () => {
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white mt-8">
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-slate-800 mb-14">
           Account Services

@@ -5,6 +5,10 @@ import {
 } from "@/app/(website)/_data/other-service-data";
 import React from "react";
 
+interface OtherServicesProps {
+  displaySectionId?: "card-service" | "loans";
+}
+
 const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
   const linkClasses = "text-[#1D9B5E] hover:text-green-700 font-medium";
   return (
@@ -35,11 +39,15 @@ const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
   );
 };
 
-const OtherServices: React.FC = () => {
+const OtherServices: React.FC<OtherServicesProps> = ({ displaySectionId }) => {
+  const sectionsToRender = displaySectionId
+    ? otherServicesData.filter((section) => section.id === displaySectionId)
+    : otherServicesData;
+
   return (
-    <section className="bg-white">
+    <section className="bg-white mt-10">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 space-y-20">
-        {otherServicesData.map((section: SectionData) => (
+        {sectionsToRender.map((section: SectionData) => (
           <div key={section.title}>
             <h2 className="text-center text-3xl md:text-4xl font-bold text-slate-800 mb-14">
               {section.title}
