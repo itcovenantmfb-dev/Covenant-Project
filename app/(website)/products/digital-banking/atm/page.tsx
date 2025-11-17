@@ -10,7 +10,8 @@ import ReusableBanner from "@/app/(website)/_components/reusable-banner";
 
 export const metadata: Metadata = {
   title: "Debit Cards & ATM Services",
-  description: "Get your Covenant Microfinance Bank debit card for secure payments and ATM access. Enjoy worldwide acceptance, contactless payments, and 24/7 ATM services.",
+  description:
+    "Get your Covenant Microfinance Bank debit card for secure payments and ATM access. Enjoy worldwide acceptance, contactless payments, and 24/7 ATM services.",
   keywords: [
     "covenant microfinance bank debit card",
     "atm card",
@@ -21,11 +22,12 @@ export const metadata: Metadata = {
     "secure payments",
     "worldwide acceptance",
     "24/7 atm access",
-    "card security"
+    "card security",
   ],
   openGraph: {
     title: "Debit Cards & ATM Services - Covenant Microfinance Bank",
-    description: "Get your debit card for secure payments and ATM access with worldwide acceptance and contactless payments.",
+    description:
+      "Get your debit card for secure payments and ATM access with worldwide acceptance and contactless payments.",
     url: "/products/digital-banking/atm",
     images: [
       {
@@ -38,7 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Debit Cards & ATM Services - Covenant Microfinance Bank",
-    description: "Get your debit card for secure payments and worldwide ATM access.",
+    description:
+      "Get your debit card for secure payments and worldwide ATM access.",
   },
 };
 
@@ -46,7 +49,7 @@ export default function DebitCardPage() {
   return (
     <div>
       <ReusableBanner
-        pillText={"Products / Digital Banking / Debit Card"}
+        pillText={"Debit Card"}
         title="Secure, convenient card services for seamless payments and transactions."
         bgPattern="/Core Menu (9) 1.svg"
       />

@@ -10,7 +10,7 @@ const SecurityFeaturesSection = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center flex flex-col justify-center items-center gap-5">
           <Title
-            text="Loan Requirements"
+            text="Why Choose Our Digital Banking"
             borderColor="[#1D9B5E]/40"
             textColor="#1D9B5E"
           />

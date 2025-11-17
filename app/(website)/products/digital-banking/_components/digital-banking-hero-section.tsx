@@ -4,9 +4,9 @@ import React from "react";
 const DigitalBankingHeroSection = () => {
   return (
     <ReusableBanner
-      pillText="Products / Digital Banking"
-      title="Modern banking at your fingertips with comprehensive digital solutions."
-      bgPattern="/Core Menu (8) 1.svg"
+      pillText="Digital Banking"
+      title="Secure, reliable services for individuals, families, and businesses."
+      bgPattern="/Core Menu (5) 1.svg"
     />
   );
 };

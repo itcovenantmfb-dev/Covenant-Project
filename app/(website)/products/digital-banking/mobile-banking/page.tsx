@@ -10,7 +10,8 @@ import UssdBankingSection from "../_components/ussd-banking-section";
 
 export const metadata: Metadata = {
   title: "Mobile Banking App",
-  description: "Download Covenant Microfinance Bank's mobile banking app for secure, convenient banking on the go. Transfer funds, pay bills, check balances, and more from your phone.",
+  description:
+    "Download Covenant Microfinance Bank's mobile banking app for secure, convenient banking on the go. Transfer funds, pay bills, check balances, and more from your phone.",
   keywords: [
     "covenant microfinance bank mobile app",
     "mobile banking app",
@@ -21,11 +22,12 @@ export const metadata: Metadata = {
     "mobile banking services",
     "secure mobile banking",
     "ios android banking app",
-    "digital wallet"
+    "digital wallet",
   ],
   openGraph: {
     title: "Mobile Banking App - Covenant Microfinance Bank",
-    description: "Download our mobile banking app for secure, convenient banking on the go. Transfer funds, pay bills, and check balances.",
+    description:
+      "Download our mobile banking app for secure, convenient banking on the go. Transfer funds, pay bills, and check balances.",
     url: "/products/digital-banking/mobile-banking",
     images: [
       {
@@ -38,14 +40,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Mobile Banking App - Covenant Microfinance Bank",
-    description: "Download our mobile banking app for secure, convenient banking on the go.",
+    description:
+      "Download our mobile banking app for secure, convenient banking on the go.",
   },
 };
 export default function MobileBankingPage() {
   return (
     <div>
       <ReusableBanner
-        pillText={"Products/Digital Banking/Mobile Banking"}
+        pillText={"Mobile Banking"}
         title="  Secure, reliable services for individuals, families, and
               businesses."
         bgPattern="/Core Menu (2) 1.svg"

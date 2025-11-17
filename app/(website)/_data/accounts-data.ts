@@ -50,7 +50,7 @@ export const ACCOUNT_DATA: AccountData[] = [
       { list: "No charges" },
       { list: "Simple upkeep" },
     ],
-    image: "/mini-house-stack-coins-with-green-blur 1.png",
+    image: "/Mask group (21).svg",
 
     overview: {
       title: "Overview",

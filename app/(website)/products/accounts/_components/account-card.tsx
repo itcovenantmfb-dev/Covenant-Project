@@ -45,7 +45,7 @@ export function AccountCard({ account }: AccountCardProps) {
               src={account.image || "/placeholder.svg"}
               alt={account.name}
               fill
-              className="object-contain rounded-4xl px-2 absolute"
+              className="object-contain rounded-4xl absolute"
             />
           </div>
         </CardHeader>
@@ -78,7 +78,7 @@ export function AccountCard({ account }: AccountCardProps) {
               setSelectedAccount(account);
               setIsDialogOpen(true);
             }}
-            className=" bg-green-600 hover:bg-green-700 hidden lg:block text-white"
+            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-fit py-2"
           >
             View Details
           </Button>
@@ -88,7 +88,7 @@ export function AccountCard({ account }: AccountCardProps) {
               setSelectedAccount(account);
               setIsMobileDrawerOpen(true);
             }}
-            className=" bg-green-600 hover:bg-green-700 block lg:hidden text-white"
+            className="bg-green-600 hover:bg-green-700 block lg:hidden text-white w-fit py-2"
           >
             View Details
           </Button>
