@@ -15,7 +15,6 @@ import { useState } from "react";
 import { LoanMobileDrawer } from "./loan-mobile-drawer";
 import { LoanData } from "@/app/(website)/_data/loans-data";
 
-
 interface LoanCardProps {
   loan: LoanData;
 }
@@ -38,20 +37,21 @@ export function LoanCard({ loan }: LoanCardProps) {
   return (
     <>
       <Card className="h-full grid grid-cols-1 gap-0 text-[#000]/60 border-none hover:shadow-lg bg-white transition-shadow duration-200">
-        <CardHeader className="rounded-md relative min-h-[200px] lg:min-h-auto">
-          <div className="rounded-4xl flex">
+        <CardHeader className="rounded-md relative lg:min-h-auto">
+          <div className="rounded-md overflow-hidden flex w-full">
             <Image
               src={loan.image || "/placeholder.svg"}
               alt={loan.name}
               width={600}
               height={600}
-              className="rounded-4xl px-0 object-contain w-full h-auto"
+              className="object-cover w-full"
             />
           </div>
         </CardHeader>
-        <CardContent className="flex flex-col gap-4 p-4 sm:p-6">
+
+        <CardContent className="flex flex-col gap-2 p-2 sm:p-4">
           <div className="flex flex-col gap-3">
-            <CardTitle className="text-lg sm:text-xl font-semibold text-[#04391F]">
+            <CardTitle className="text-lg sm:text-xl font-semibold text-[#04391F] mb-4">
               {loan.name}
             </CardTitle>
             {/* <CardDescription className="text-[#000]/60 w-full text-md">
@@ -59,7 +59,7 @@ export function LoanCard({ loan }: LoanCardProps) {
             </CardDescription> */}
           </div>
 
-          <div className="flex flex-col gap-3 sm:gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4 mb-2">
             {loan.items.map((item, index) => (
               <div key={index} className="flex gap-2 items-start">
                 <Image
@@ -69,7 +69,9 @@ export function LoanCard({ loan }: LoanCardProps) {
                   height={20}
                   className="flex-shrink-0 mt-1"
                 />
-                <p className="text-sm sm:text-base leading-relaxed">{item.list}</p>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  {item.list}
+                </p>
               </div>
             ))}
           </div>
@@ -78,7 +80,7 @@ export function LoanCard({ loan }: LoanCardProps) {
               setSelectedLoan(loan);
               setIsDialogOpen(true);
             }}
-            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-full"
+            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-fit mt-auto py-2"
           >
             View Details
           </Button>
@@ -88,7 +90,7 @@ export function LoanCard({ loan }: LoanCardProps) {
               setSelectedLoan(loan);
               setIsMobileDrawerOpen(true);
             }}
-            className="bg-green-600 hover:bg-green-700 block lg:hidden text-white w-full"
+            className="bg-green-600 hover:bg-green-700 block lg:hidden text-white w-fit mt-auto py-2"
           >
             View Details
           </Button>

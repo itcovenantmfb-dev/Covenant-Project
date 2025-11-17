@@ -5,7 +5,7 @@ const AccountHeroSection = () => {
   return (
     <div>
       <ReusableBanner
-        pillText={"Products / Accounts"}
+        pillText={"Accounts"}
         title="Secure, reliable accounts for individuals, families, and businesses."
         bgPattern="/Core Menu (6) 1.svg"
       />

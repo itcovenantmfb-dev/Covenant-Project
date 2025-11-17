@@ -7,6 +7,8 @@ import CarouselSection from "./_components/carousel-section";
 import UssdBankingSection from "../_components/ussd-banking-section";
 import BenefitsSection from "./_components/benefits-section";
 import ReusableBanner from "@/app/(website)/_components/reusable-banner";
+import PageBanner from "./_components/pos-hero";
+import PosHero from "./_components/pos-hero";
 
 export const metadata: Metadata = {
   title: "POS Terminal Services",
@@ -48,11 +50,7 @@ export const metadata: Metadata = {
 export default function POSPage() {
   return (
     <div>
-      <ReusableBanner
-        pillText={"Products / Digital Banking / POS Terminal"}
-        title="Reliable POS solutions for your business payment needs."
-        bgPattern=""
-      />
+      <PosHero />
       <IntroSection />
       <FeaturesSection />
       <BenefitsSection />

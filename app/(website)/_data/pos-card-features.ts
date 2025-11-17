@@ -1,37 +1,32 @@
 export const POS_FEATURES = [
   {
     number: "/1.png",
-    title: "Multi-Card Acceptance",
-    description:
-      "Accept all major debit and credit cards including Verve, Visa, Mastercard, and international cards. Expand your customer base instantly.",
-    image: "/pos-1.png",
+    title: "Chip & PIN Enabled (EMV Compliant)",
+    description: "Enhanced transaction security",
+    image: "/Gemini_Generated_Image_xxs4d1xxs4d1xxs4_1-removebg-preview.png",
   },
   {
     number: "/2.png",
-    title: "Instant Settlement",
-    description:
-      "Get your money fast with same-day settlement for transactions. No more waiting days for your payments to reflect in your account.",
-    image: "/pos-2.png",
+    title: "Multiple Connectivity Options",
+    description: "GPRS, CDMA, or LAN/Wi-Fi network compatibility.",
+    image: "/Gemini_Generated_Image_c9l9f2c9l9f2c9l9_1-removebg-preview.png",
   },
   {
     number: "/3.png",
-    title: "Real-Time Transaction Monitoring",
-    description:
-      "Track all transactions in real-time with detailed reports. Monitor sales, manage inventory, and analyze business performance on the go.",
-    image: "/pos-3.png",
+    title: "T+1 / Instant Settlement",
+    description: "Receive funds the next working day or instantly",
+    image: "/icons/Gemini_Generated_Image_j87y8pj87y8pj87y 1.svg",
   },
   {
     number: "/4.png",
-    title: "Portable & Durable",
-    description:
-      "Lightweight, battery-powered terminals that work anywhere. Perfect for mobile businesses, markets, and outdoor events.",
-    image: "/pos-4.png",
+    title: "Instant Payment Confirmation",
+    description: "Real-time verification for every transaction",
+    image: "/icons/Gemini_Generated_Image_q894kpq894kpq894 1.png",
   },
   {
     number: "/5.png",
-    title: "24/7 Technical Support",
-    description:
-      "Get round-the-clock support for all your POS needs. Our technical team is always ready to assist you with any issues.",
-    image: "/pos-5.png",
+    title: "Account Balance Enquiry",
+    description: "Check balances directly from the terminal.",
+    image: "/icons/Gemini_Generated_Image_vvus6hvvus6hvvus 1.png",
   },
 ];

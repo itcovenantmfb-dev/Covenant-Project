@@ -5,9 +5,9 @@ const LoanHeroSection = () => {
   return (
     <div>
       <ReusableBanner
-        pillText={"Products / Loans"}
+        pillText={"Loans"}
         title="Secure, reliable services for individuals, families, and businesses."
-        bgPattern=""
+        bgPattern="/Core Menu (8) 1.svg"
       />
     </div>
   );

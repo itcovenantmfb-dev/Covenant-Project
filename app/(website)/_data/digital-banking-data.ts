@@ -56,7 +56,7 @@ export const DIGITAL_BANKING_SERVICES: DigitalBankingService[] = [
       "Check balances and transactions anytime",
     ],
     imageWidth: 470,
-    image: "/card (2).png",
+    image: "/credit-card 1.svg",
     linkUrl: "/products/digital-banking/debit-card",
   },
 ];
