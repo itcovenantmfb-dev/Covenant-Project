@@ -129,15 +129,14 @@ const Navbar = () => {
                       onMouseLeave={() => setOpenDropdown(null)}
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-2xl shadow-xl z-50 animate-in fade-in-0 zoom-in-98 duration-150"
                     >
-                      {/* Arrow pointing up */}
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 shadow-lg"></div>
+                    
 
                       <div
                         className={cn(
                           "px-6 py-6 w-auto relative z-10 bg-white rounded-2xl",
                           item.subItems && item.subItems.length === 1
                             ? "min-w-[320px] max-w-[400px]"
-                            : "min-w-[550px] max-w-[650px]"
+                            : "min-w-[250px] max-w-[250px]"
                         )}
                       >
                         <div
@@ -145,7 +144,7 @@ const Navbar = () => {
                             "grid gap-3",
                             item.subItems && item.subItems.length === 1
                               ? "grid-cols-1"
-                              : "grid-cols-2 md:grid-cols-2"
+                              : "grid-cols-2 md:grid-cols-1"
                           )}
                         >
                           {item.subItems?.map((subItem) => (
@@ -157,6 +156,10 @@ const Navbar = () => {
                                 "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
                                 pathname === subItem.route && "bg-[#F1F5EB]"
                               )}
+                              {...(subItem.route.startsWith('https') && {
+                                target: "_blank",
+                                rel: "noopener noreferrer"
+                              })}
                             >
                               <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A2DE49] flex items-center justify-center mt-0.5">
                                 {getIconComponent(subItem.icon)}
@@ -225,8 +228,8 @@ const Navbar = () => {
                       onMouseLeave={() => setOpenDropdown(null)}
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-2xl shadow-xl z-50 animate-in fade-in-0 zoom-in-98 duration-150"
                     >
-                      {/* Arrow pointing up */}
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 shadow-lg"></div>
+                      {/* Arrow pointing up
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 shadow-lg"></div> */}
 
                       <div
                         className={cn(
@@ -250,6 +253,10 @@ const Navbar = () => {
                                     "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
                                     pathname === subItem.route && "bg-[#F1F5EB]"
                                   )}
+                                  {...(subItem.route.startsWith('https') && {
+                                    target: "_blank",
+                                    rel: "noopener noreferrer"
+                                  })}
                                 >
                                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A2DE49] flex items-center justify-center mt-0.5">
                                     {getIconComponent(subItem.icon)}
@@ -294,6 +301,10 @@ const Navbar = () => {
                                   "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
                                   pathname === subItem.route && "bg-[#F1F5EB]"
                                 )}
+                                {...(subItem.route.startsWith('https') && {
+                                  target: "_blank",
+                                  rel: "noopener noreferrer"
+                                })}
                               >
                                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A2DE49] flex items-center justify-center mt-0.5">
                                   {getIconComponent(subItem.icon)}

@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-import { ParallexCard } from "../../../_components/parallex-card";
+import { MobileBankingCard } from "./mobile-banking-card";
 import { MOBILE_BANKING_FEATURES } from "@/app/(website)/_data/mobile-banking-data";
 
 const FeaturesSection = () => {
@@ -17,12 +17,12 @@ const FeaturesSection = () => {
       {MOBILE_BANKING_FEATURES.map((feature, i) => {
         const targetScale = 1 - (MOBILE_BANKING_FEATURES.length - i) * 0.05;
         return (
-          <ParallexCard
+          <MobileBankingCard
             key={`p_${i}`}
             i={i}
             feature={feature}
             progress={scrollYProgress}
-            range={[i * 0.1, 1]}
+            range={[i * 0.05, 1]}
             targetScale={targetScale}
           />
         );

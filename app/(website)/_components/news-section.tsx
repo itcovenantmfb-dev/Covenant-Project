@@ -1,39 +1,22 @@
 import React from "react";
 import Title from "./title";
 import NewsCard from "./news-card";
+import { urlFor } from "@/sanity/lib/image";
 
-const newsData = [
-  {
-    title: "Unlocking Flexible Pricing for SaaS Success",
-    text: "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world....",
-    date: "16 Jun 2024",
-    image: "/image (3).svg",
-    slug: "flexible-saas-pricing",
-  },
-  {
-    title: "Decoding the Psychology of Pricing Tiers",
-    text: "Pricing perception impacts decision-making. Learn how visual cues and strategic tiering influence customer choices....",
-    date: "16 Jun 2024",
-    image: "/image (4).svg",
-    slug: "psychology-of-pricing",
-  },
-  {
-    title: "Starter Plans Tailored for Small Businesses",
-    text: "Starter plans offer cost-effective solutions tailored to small businesses. Find out how they enable growth without breaking the bank......",
-    date: "16 Jun 2024",
-    image: "/image (5).svg",
-    slug: "starter-plans-smb",
-  },
-  {
-    title: "Unlocking Flexible Pricing for SaaS Success",
-    text: "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world....",
-    date: "16 Jun 2024",
-    image: "/image (6).svg",
-    slug: "flexible-saas-pricing-2",
-  },
-];
+interface NewsArticle {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  excerpt: string;
+  image: any;
+  publishedAt: string;
+}
 
-const NewsSection = () => {
+interface NewsSectionProps {
+  newsArticles: NewsArticle[];
+}
+
+const NewsSection = ({ newsArticles }: NewsSectionProps) => {
   return (
     <section data-aos="fade-up" className="py-6 lg:py-16 bg-[#F1F5EB]">
       <div className="flex flex-col items-center justify-center gap-6 px-4">
@@ -49,9 +32,24 @@ const NewsSection = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {newsData.map((newsItem, index) => (
-            <NewsCard key={index} {...newsItem} />
-          ))}
+          {newsArticles.length > 0 ? (
+            newsArticles.map((newsItem) => (
+              <NewsCard
+                key={newsItem._id}
+                title={newsItem.title}
+                text={newsItem.excerpt.length > 150 ? `${newsItem.excerpt.substring(0, 150)}...` : newsItem.excerpt}
+                date={new Date(newsItem.publishedAt).toLocaleDateString('en-US', {
+                  day: 'numeric',
+                  month: 'short',
+                  year: 'numeric',
+                })}
+                image={newsItem.image ? urlFor(newsItem.image).width(600).height(400).url() : '/image (3).svg'}
+                slug={newsItem.slug.current}
+              />
+            ))
+          ) : (
+            <p className="col-span-2 text-center text-gray-500">No news articles available at the moment.</p>
+          )}
         </div>
       </div>
     </section>

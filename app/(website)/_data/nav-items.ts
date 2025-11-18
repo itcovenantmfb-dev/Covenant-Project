@@ -83,7 +83,7 @@ export const NAV_ITEMS = [
       },
       {
         label: "Video",
-        route: "/media/video",
+        route: "https://www.youtube.com/@CovenantMFB ",
         icon: "Video",
         description: "Watch our journey and impact",
       },
@@ -163,13 +163,13 @@ export const NAV_ITEMS = [
       },
       {
         label: "Internet banking",
-        route: "/products/digital-banking",
+        route: "https://ibank.covenantmfb.com.ng ",
         icon: "Globe",
         description: "Manage your account online easily",
       },
       {
         label: "Corporate Internet banking",
-        route: "/products/digital-banking/corporate",
+        route: " https://prime360.covenantmfb.com.ng ",
         icon: "Building2",
         description: "Secure corporate online banking access",
       },

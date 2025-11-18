@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-import { ParallexCard } from "../../../_components/parallex-card";
+import { POSCard } from "./pos-card";
 import { POS_FEATURES } from "@/app/(website)/_data/pos-card-features";
 
 const FeaturesSection = () => {
@@ -17,14 +17,13 @@ const FeaturesSection = () => {
       {POS_FEATURES.map((feature, i) => {
         const targetScale = 1 - (POS_FEATURES.length - i) * 0.05;
         return (
-          <ParallexCard
+          <POSCard
             key={`p_${i}`}
             i={i}
             feature={feature}
             progress={scrollYProgress}
-            range={[i * 0.1, 1]}
+            range={[i * 0.05, 1]}
             targetScale={targetScale}
-            imageWidth={700}
           />
         );
       })}

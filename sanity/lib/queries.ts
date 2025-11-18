@@ -161,6 +161,34 @@ export async function getNewsBySlug(slug: string) {
   );
 }
 
+// Limited queries for home page
+export async function getRecentNews(limit: number = 4) {
+  return client.fetch(
+    groq`*[_type == "news" && isPublished == true] | order(publishedAt desc) [0...${limit}] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      image,
+      author,
+      category,
+      publishedAt
+    }`
+  );
+}
+
+export async function getRecentFAQs(limit: number = 4) {
+  return client.fetch(
+    groq`*[_type == "faq"] | order(_createdAt desc) [0...${limit}] {
+      _id,
+      question,
+      answer,
+      category,
+      _createdAt
+    }`
+  );
+}
+
 // Gallery Albums
 export async function getAllGalleryAlbums() {
   return client.fetch(

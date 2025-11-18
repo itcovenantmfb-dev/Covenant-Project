@@ -328,7 +328,6 @@ const HeroImage: React.FC = () => {
       <foreignObject x="71.2403" y="434.24" width="576.519" height="277.519">
         <div
           style={{
-            backdropFilter: "blur(0.38px)",
             clipPath: "url(#bgblur_0_470_584_clip_path)",
             height: "100%",
             width: "100%",
@@ -357,7 +356,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="139" y="424.92" width="447" height="206">
           <div
             style={{
-              backdropFilter: "blur(11px)",
               clipPath: "url(#bgblur_2_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -374,7 +372,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="472.588" y="356.965" width="207.998" height="166.676">
           <div
             style={{
-              backdropFilter: "blur(11.03px)",
               clipPath: "url(#bgblur_3_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -395,7 +392,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="38.7727" y="356.521" width="212.639" height="168.119">
           <div
             style={{
-              backdropFilter: "blur(11.03px)",
               clipPath: "url(#bgblur_4_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -416,7 +412,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="115.588" y="387.866" width="492.823" height="136.775">
           <div
             style={{
-              backdropFilter: "blur(11.03px)",
               clipPath: "url(#bgblur_5_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -437,7 +432,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="115.588" y="387.866" width="134.823" height="136.775">
           <div
             style={{
-              backdropFilter: "blur(11.03px)",
               clipPath: "url(#bgblur_6_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -458,7 +452,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="473.588" y="387.866" width="134.823" height="136.775">
           <div
             style={{
-              backdropFilter: "blur(11.03px)",
               clipPath: "url(#bgblur_7_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -479,7 +472,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="160.453" y="354.006" width="403.748" height="199.98">
           <div
             style={{
-              backdropFilter: "blur(11.75px)",
               clipPath: "url(#bgblur_8_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -549,7 +541,6 @@ const HeroImage: React.FC = () => {
         <foreignObject x="59.0422" y="423.866" width="602.384" height="212.775">
           <div
             style={{
-              backdropFilter: "blur(11.03px)",
               clipPath: "url(#bgblur_9_470_584_clip_path)",
               height: "100%",
               width: "100%",
@@ -571,7 +562,6 @@ const HeroImage: React.FC = () => {
       <foreignObject x="0.228218" y="-5.53126" width="411.354" height="227.141">
         <div
           style={{
-            backdropFilter: "blur(11.68px)",
             clipPath: "url(#bgblur_11_470_584_clip_path)",
             height: "100%",
             width: "100%",
@@ -662,7 +652,6 @@ const HeroImage: React.FC = () => {
       <foreignObject x="229.671" y="113" width="410.499" height="221.126">
         <div
           style={{
-            backdropFilter: "blur(12px)",
             clipPath: "url(#bgblur_13_470_584_clip_path)",
             height: "100%",
             width: "100%",
@@ -750,7 +739,6 @@ const HeroImage: React.FC = () => {
       <foreignObject x="91.968" y="233.194" width="408.217" height="207.411">
         <div
           style={{
-            backdropFilter: "blur(12px)",
             clipPath: "url(#bgblur_14_470_584_clip_path)",
             height: "100%",
             width: "100%",

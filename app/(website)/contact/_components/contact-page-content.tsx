@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 const contactInfoData = [
   {
@@ -113,6 +114,7 @@ const ContactPageContent = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -121,10 +123,39 @@ const ContactPageContent = () => {
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent! (Check console for data)");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success("Message sent successfully! We'll get back to you soon.");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -266,9 +297,10 @@ const ContactPageContent = () => {
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#1D9B5E] px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                  disabled={isSubmitting}
+                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#1D9B5E] px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                 >
-                  Send message
+                  {isSubmitting ? "Sending..." : "Send message"}
                   <ChevronRight className="h-5 w-5" />
                 </button>
               </div>

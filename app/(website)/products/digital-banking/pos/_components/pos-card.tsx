@@ -1,7 +1,6 @@
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 interface Feature {
   number: string;
@@ -16,20 +15,16 @@ interface CardProps {
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
-  imageWidth?: number;
 }
 
-export const ParallexCard = ({
+export const POSCard = ({
   i,
   feature,
   progress,
   range,
   targetScale,
-  imageWidth = 700,
 }: CardProps) => {
   const container = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-  const isPOSPage = pathname === "/products/digital-banking/pos";
   
   const { scrollYProgress } = useScroll({
     target: container,
@@ -54,14 +49,14 @@ export const ParallexCard = ({
         }}
         className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-8 lg:p-4 origin-top"
       >
-        <div className="flex flex-col lg:flex-row max-w-[900px] mx-auto  gap-12 items-center justify-center h-full">
+        <div className="flex flex-col lg:flex-row max-w-[900px] mx-auto gap-12 items-center justify-center h-full">
           <div className={""}>
             <div className="flex flex-col items-left gap-4 mb-6">
-              <div className=" text-white rounded-full hidden lg:flex items-left gap-4 justify-left text-xl font-bold">
+              <div className="text-white rounded-full hidden lg:flex items-left gap-4 justify-left text-xl font-bold">
                 <Image src={feature.number} width={60} height={60} alt="" />
               </div>
 
-              <div className=" text-white rounded-full flex lg:hidden items-left gap-4 justify-left text-xl font-bold">
+              <div className="text-white rounded-full flex lg:hidden items-left gap-4 justify-left text-xl font-bold">
                 <Image src={feature.number} width={30} height={30} alt="" />
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[#020617]">
@@ -73,21 +68,21 @@ export const ParallexCard = ({
 
           <div className="flex justify-center">
             <div className="hidden lg:flex w-[350px] justify-center">
-              <motion.div className={`${isPOSPage ? 'bg-white p-6' : ''} rounded-3xl shadow flex justify-center items-center w-[550px] h-[350px]`}>
+              <motion.div className="bg-white p-6 rounded-3xl shadow flex justify-center items-center w-[550px] h-[350px]">
                 <Image
                   src={feature.image}
-                  alt={`${feature.title} Mobile Banking Feature`}
+                  alt={`${feature.title} POS Feature`}
                   width={400}
                   height={300}
                   className="object-contain"
                 />
               </motion.div>
             </div>
-            <div className="flex lg:hidden  w-[200px] justify-center">
-              <motion.div className={`${isPOSPage ? 'bg-white p-3' : ''} rounded-2xl shadow flex justify-center items-center w-[500px] h-[300px]`}>
+            <div className="flex lg:hidden w-[200px] justify-center">
+              <motion.div className="bg-white p-3 rounded-2xl shadow flex justify-center items-center w-[500px] h-[300px]">
                 <Image
                   src={feature.image}
-                  alt={`${feature.title} Mobile Banking Feature`}
+                  alt={`${feature.title} POS Feature`}
                   width={350}
                   height={300}
                   className="object-contain"

@@ -43,7 +43,9 @@ const HeroBanner = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* Google Play Button */}
                 <motion.a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-3 flex items-center gap-3 hover:bg-black/30 transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -63,7 +65,9 @@ const HeroBanner = () => {
 
                 {/* App Store Button */}
                 <motion.a
-                  href="#"
+                  href="https://apps.apple.com/ng/app/covenantmfb-edge-banking/id6504527106"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-3 flex items-center gap-3 hover:bg-black/30 transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

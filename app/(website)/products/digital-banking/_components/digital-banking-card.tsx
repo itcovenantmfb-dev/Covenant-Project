@@ -66,7 +66,7 @@ export function DigitalBankingCard({
         </div>
 
         <div className="flex justify-center w-full lg:w-auto">
-          <div className="mt-0 lg:mt-[-100px] max-w-[280px] sm:max-w-[350px] lg:max-w-none">
+          <div className="mt-0  max-w-[280px] sm:max-w-[350px] lg:max-w-none">
             <Image
               src={image}
               alt={title}

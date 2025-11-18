@@ -7,6 +7,9 @@ import Footer from "../_components/footer-section";
 import GallerySection from "./_components/gallery-content";
 import { getAllGalleryAlbums } from "@/sanity/lib/queries";
 
+export const dynamic = "force-static";
+export const revalidate = 60;
+
 async function page() {
   const albums = await getAllGalleryAlbums();
 

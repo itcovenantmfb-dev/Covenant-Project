@@ -16,7 +16,7 @@ const HeroSection = () => {
     >
       <div
         data-aos="fade-up"
-        className="flex items-center justify-center w-full mt-[6rem] sm:mt-[7rem] lg:mt-[4rem]"
+        className="flex items-center justify-center w-full mt-[6rem] sm:mt-[1rem] lg:mt-[1rem]"
       >
         <p className="text-[#FFFFFF] font-medium text-xs sm:text-sm bg-[#FFFFFF]/10 py-[6px] pr-3 sm:pr-4 pl-1 w-fit rounded-full h-fit">
           <span className="bg-[#D2F801] text-[#0F2028] rounded-full py-1 px-2 sm:px-3 mr-2 text-xs sm:text-sm">
@@ -31,9 +31,9 @@ const HeroSection = () => {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left"
+          className="flex flex-col items-start justify-center text-left"
         >
-          <div className="text-[#FFFFFF] max-w-[560px] mt-2 lg:mt-6 space-y-[11px] mx-auto lg:mx-0">
+          <div className="text-[#FFFFFF] max-w-[560px] mt-2 lg:mt-6 space-y-[11px] lg:mx-0">
             <h2 className="text-[28px] sm:text-[36px] lg:text-[60px] leading-tight font-bold">
               Empowering Dreams,
               <br className="hidden sm:block" />{" "}
@@ -45,7 +45,7 @@ const HeroSection = () => {
               through tailored banking solutions, accessible loans, and smart
               financial tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-4 w-full sm:w-auto">
               <Button className="bg-[#1D9B5E] text-[#ffffff] rounded-full text-sm sm:text-base w-full sm:w-48 h-12 sm:h-13 lg:h-14 flex items-center justify-center">
                 Learn More
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2" />

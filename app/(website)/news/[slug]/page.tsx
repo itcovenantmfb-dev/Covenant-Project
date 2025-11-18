@@ -9,6 +9,8 @@ import { getNewsBySlug, getAllNews } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 
+export const revalidate = 60;
+
 export async function generateMetadata({
   params,
 }: {

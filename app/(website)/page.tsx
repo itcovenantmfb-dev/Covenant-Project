@@ -8,7 +8,14 @@ import NewsSection from "./_components/news-section";
 import FAQSection from "./_components/faq-section";
 import Carousel from "./_components/carousel";
 import ProductsSection from "./products/services/_components/products-section";
-import { getTestimonials } from "@/sanity/lib/queries";
+import {
+  getTestimonials,
+  getRecentNews,
+  getRecentFAQs,
+} from "@/sanity/lib/queries";
+
+export const dynamic = "force-static";
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Home",
@@ -48,6 +55,8 @@ export const metadata: Metadata = {
 };
 const page = async () => {
   const testimonials = await getTestimonials();
+  const recentNews = await getRecentNews(4);
+  const recentFAQs = await getRecentFAQs(4);
 
   return (
     <main className="min-h-screen">
@@ -57,9 +66,10 @@ const page = async () => {
       </div>
       <NumbersSection />
       <ProductsSection />
-      <Testimonials testimonials={testimonials} />
-      <NewsSection />
-      <FAQSection />
+      {testimonials && <Testimonials testimonials={testimonials} />}
+
+      {recentNews && <NewsSection newsArticles={recentNews} />}
+      {recentFAQs && <FAQSection faqs={recentFAQs} />}
       <Carousel />
     </main>
   );

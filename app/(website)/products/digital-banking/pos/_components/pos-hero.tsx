@@ -19,6 +19,22 @@ function PosHero() {
         <h1 className="text-6xl font-bold text-[#1B1C31] text-center mb-10">
           Point of Sales Terminal
         </h1>
+        
+        {/* YouTube Video Embed */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-xl"
+              src="https://www.youtube.com/embed/-QM1xJqEvVM?si=gFmx4Dc0hE59BmPq&autoplay=1&mute=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
         {/* Background Image */}
         <Image
           src="/worldmap (7).svg"

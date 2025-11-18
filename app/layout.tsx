@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 import localFont from "next/font/local";
 
@@ -94,7 +95,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.className} antialiased`}>{children}</body>
+      <body className={`${myFont.className} antialiased`}>
+        {children}
+        <Toaster position="bottom-center" richColors />
+      </body>
     </html>
   );
 }

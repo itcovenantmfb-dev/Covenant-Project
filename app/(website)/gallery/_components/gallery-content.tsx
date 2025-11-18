@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { ArrowRight, ArrowLeft, X, Images } from "lucide-react";
+import { ArrowRight, ArrowLeft, X, Images, Calendar, MapPin } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 
 interface MediaItem {
@@ -176,11 +176,19 @@ const AlbumDetailView: React.FC<{ album: Album; onGoBack: () => void }> = ({
         <p className="text-gray-600 mb-6">{album.description}</p>
       )}
       {(album.eventDate || album.location) && (
-        <div className="flex gap-4 mb-8 text-sm text-gray-500">
+        <div className="flex gap-4 mb-8">
           {album.eventDate && (
-            <span>📅 {new Date(album.eventDate).toLocaleDateString()}</span>
+            <span className="flex items-center gap-2 px-4 py-2 bg-[#F1F5EB] rounded-xl text-sm text-gray-700">
+              <Calendar className="h-4 w-4 text-[#1D9B5E]" />
+              {new Date(album.eventDate).toLocaleDateString()}
+            </span>
           )}
-          {album.location && <span>📍 {album.location}</span>}
+          {album.location && (
+            <span className="flex items-center gap-2 px-4 py-2 bg-[#F1F5EB] rounded-xl text-sm text-gray-700">
+              <MapPin className="h-4 w-4 text-[#1D9B5E]" />
+              {album.location}
+            </span>
+          )}
         </div>
       )}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">

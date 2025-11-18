@@ -6,6 +6,9 @@ import BlogList from "./_components/blog-list";
 import Carousel from "../_components/carousel";
 import { getAllNews } from "@/sanity/lib/queries";
 
+export const dynamic = "force-static";
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "News & Updates",
   description: "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank. Read about our services, financial tips, and industry updates.",

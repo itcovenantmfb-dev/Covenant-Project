@@ -5,6 +5,9 @@ import FaqPageContent from "./_components/faq-page-content";
 import Carousel from "../_components/carousel";
 import { getAllFAQs } from "@/sanity/lib/queries";
 
+export const dynamic = "force-static";
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:

@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-import { ParallexCard } from "../../../_components/parallex-card";
+import { ATMCard } from "./atm-card";
 import { DEBIT_CARD_FEATURES } from "@/app/(website)/_data/debit-card-features";
 
 const FeaturesSection = () => {
@@ -17,13 +17,12 @@ const FeaturesSection = () => {
       {DEBIT_CARD_FEATURES.map((feature, i) => {
         const targetScale = 1 - (DEBIT_CARD_FEATURES.length - i) * 0.05;
         return (
-          <ParallexCard
+          <ATMCard
             key={`p_${i}`}
             i={i}
-            imageWidth={900}
             feature={feature}
             progress={scrollYProgress}
-            range={[i * 0.1, 1]}
+            range={[i * 0.05, 1]}
             targetScale={targetScale}
           />
         );

@@ -5,6 +5,9 @@ import Carousel from "../_components/carousel";
 import JobListings from "./_components/job-listing";
 import { getAllJobs } from "@/sanity/lib/queries";
 
+export const dynamic = "force-static";
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Careers",
   description: "Join our team at Covenant Microfinance Bank! Explore exciting career opportunities, job openings, and build your future in the financial services industry with us.",

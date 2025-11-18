@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const BankOnGo = () => (
@@ -22,29 +23,33 @@ const BankOnGo = () => (
           phone, anytime, anywhere. Fast. Secure. Easy.
         </p>
         <div className="flex flex-col w-full  md:flex-row gap-4 mt-4">
-          <Button className="bg-gradient-to-b from-[#1D9B5E] to-[#074426]  text-white/70 rounded-[12px] px-10 py-3 font-semibold text-sm flex items-center gap-2 shadow-md h-14">
-            <Image
-              src="/google-play 1.svg"
-              alt="Google Play"
-              width={24}
-              height={24}
-            />
-            <p className="text-left leading-3 text-xs font-normal">
-              Get It On <br />
-              <span className="font-semibold text-white text-base">
-                Google Play
-              </span>
-            </p>
-          </Button>
-          <Button className="bg-gradient-to-b from-[#1D9B5E] to-[#074426] text-white/70 rounded-[12px] px-10 py-3 font-semibold text-sm flex items-center gap-2 shadow-md h-14 w-full md:w-fit">
-            <Image src="/apple 1.svg" alt="App Store" width={24} height={24} />
-            <p className="text-left leading-3 text-xs font-normal">
-              Download on the <br />
-              <span className="font-semibold text-white text-base">
-                App Store
-              </span>
-            </p>
-          </Button>
+          <Link href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-gradient-to-b from-[#1D9B5E] to-[#074426]  text-white/70 rounded-[12px] px-10 py-3 font-semibold text-sm flex items-center gap-2 shadow-md h-14">
+              <Image
+                src="/google-play 1.svg"
+                alt="Google Play"
+                width={24}
+                height={24}
+              />
+              <p className="text-left leading-3 text-xs font-normal">
+                Get It On <br />
+                <span className="font-semibold text-white text-base">
+                  Google Play
+                </span>
+              </p>
+            </Button>
+          </Link>
+          <Link href="https://apps.apple.com/ng/app/covenantmfb-edge-banking/id6504527106" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-gradient-to-b from-[#1D9B5E] to-[#074426] text-white/70 rounded-[12px] px-10 py-3 font-semibold text-sm flex items-center gap-2 shadow-md h-14 w-full md:w-fit">
+              <Image src="/apple 1.svg" alt="App Store" width={24} height={24} />
+              <p className="text-left leading-3 text-xs font-normal">
+                Download on the <br />
+                <span className="font-semibold text-white text-base">
+                  App Store
+                </span>
+              </p>
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="hidden lg:block absolute z-20 bottom-34 right-16 h-full">
