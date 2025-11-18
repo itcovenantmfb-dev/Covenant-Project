@@ -13,9 +13,10 @@ function NotFound() {
         data-aos="fade-up"
         className=" py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
       >
-        <h1 className="text-8xl font-bold text-[#1B1C31] text-center mt-4 ">
+        <h1 className="text-8xl font-bold text-[#1B1C31] text-center mb-10 sm:mb-20 mt-16 sm:mt-0">
           404
         </h1>
+
         <h2 className="text-4xl font-bold text-[#1B1C31] text-center ">
           Ops.. Page not found
         </h2>

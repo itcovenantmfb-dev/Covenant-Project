@@ -1,7 +1,14 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { ArrowRight, ArrowLeft, X, Images, Calendar, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  X,
+  Images,
+  Calendar,
+  MapPin,
+} from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 
 interface MediaItem {
@@ -128,7 +135,7 @@ const AlbumCard: React.FC<{
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
     </div>
-    <div className="absolute bottom-1 right-1 z-10 bg-white p-1.5 shadow-md rounded-tl-[13px] rounded-br-[12px]">
+    <div className="absolute bottom-1 right-1 z-10 bg-white p-1.5 rounded-tl-[13px] rounded-br-[12px]">
       <button
         onClick={() => onViewAlbum(album)}
         className="flex items-center gap-1.5 bg-[#A2DE49] px-3 py-2 text-xs font-semibold transition-transform hover:scale-105 rounded-tl-[13px] rounded-br-[12px] text-[#043B20]"
@@ -251,10 +258,12 @@ const GallerySection: React.FC<{ albums: Album[] }> = ({ albums }) => {
                 No Albums Available
               </h3>
               <p className="text-gray-600 mb-6">
-                We don't have any photo albums to display at the moment. Check back soon for updates from our events and activities!
+                We don't have any photo albums to display at the moment. Check
+                back soon for updates from our events and activities!
               </p>
               <p className="text-sm text-gray-500">
-                Stay connected with us on social media to see our latest moments.
+                Stay connected with us on social media to see our latest
+                moments.
               </p>
             </div>
           </div>

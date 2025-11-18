@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { LoanData } from "@/app/(website)/_data/loans-data";
+import Link from "next/link";
 
 interface LoanDetailDialogProps {
   loan: LoanData | null;
@@ -200,10 +201,21 @@ export function LoanDetailDialog({
                 {renderTabContent()}
               </div>
               <div className="flex-shrink-0 pt-0">
-                <Button className="w-full bg-[#A2DE49] rounded-b-4xl  text-black">
-                  <Image src={"/Lightning.png"} width={20} height={20} alt="" />
-                  Visit any Covenant Microfinance Bank branch nearest to you to
-                  apply
+                <Button className="w-full bg-[#A2DE49] rounded-b-4xl text-black flex items-center gap-2 whitespace-normal text-left ml-2">
+                  <Image src="/Lightning.png" width={20} height={20} alt="" />
+
+                  <span>
+                    <Link
+                      href="https://loans.covenantmfb.com.ng"
+                      target="_blank"
+                      className="underline font-semibold hover:opacity-80 transition"
+                    >
+                      Click here to Apply
+                    </Link>
+                    <span className="ml-2 inline-block">
+                      or Visit nearest CovenantMFB Branch
+                    </span>
+                  </span>
                 </Button>
               </div>
             </div>

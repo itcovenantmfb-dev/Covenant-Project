@@ -13,9 +13,10 @@ const WhoWeAreSection = () => {
       data-aos="fade-up"
       className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
     >
-      <h1 className="text-6xl font-bold text-[#1B1C31] text-center mb-10">
+      <h1 className="text-6xl font-bold text-[#1B1C31] text-center mb-10 sm:mb-20 mt-16 sm:mt-0">
         About Us
       </h1>
+
       {/* Background Image */}
       <Image
         src="/worldmap (7).svg"
