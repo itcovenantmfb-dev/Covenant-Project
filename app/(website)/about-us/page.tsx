@@ -8,6 +8,8 @@ import Carousel from "../_components/carousel";
 import TimelineSection from "./_components/timeline-section";
 import { getTestimonials } from "@/sanity/lib/queries";
 
+export const dynamic = "force-static";
+export const revalidate = 60;
 export const metadata: Metadata = {
   title: "About Us",
   description:
