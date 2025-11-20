@@ -214,7 +214,11 @@ const Footer = () => (
           <span className="text-white font-semibold mb-1">
             Download our App
           </span>
-          <Link href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button className="bg-white/8 border border-white/12 backdrop-blur-md text-white/70 rounded-[12px] px-6 py-2 font-semibold text-sm flex items-center gap-2 shadow-md h-12 w-full">
               <Image
                 src="/google-play 1.svg"
@@ -230,9 +234,18 @@ const Footer = () => (
               </span>
             </Button>
           </Link>
-          <Link href="https://apps.apple.com/ng/app/covenantmfb-edge-banking/id6504527106" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://apps.apple.com/ng/app/covenantmfb-edge-banking/id6504527106"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button className="bg-white/8 border border-white/12 backdrop-blur-md text-white/70 rounded-[12px] px-6 py-2 font-semibold text-sm flex items-center gap-2 shadow-md h-12 w-full">
-              <Image src="/apple 1.svg" alt="App Store" width={24} height={24} />
+              <Image
+                src="/apple 1.svg"
+                alt="App Store"
+                width={24}
+                height={24}
+              />
               <span className="text-left leading-3 text-xs font-normal">
                 Download on the <br />
                 <span className="font-semibold text-white text-base">

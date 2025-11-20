@@ -43,7 +43,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Dr Barry \nRoberts,\nCRM",
+    name: "Dr. Barry Roberts,CRM",
     role: "Managing Director/CEO",
     imageUrl: "/Mask group (1).svg",
     credentials: "FICA",
