@@ -136,7 +136,7 @@ export const NAV_ITEMS = [
     subItems: [
       {
         label: "CU School Fees",
-        route: "/payments/cu-school-fees",
+        route: "https://payment.covenantmfb.com.ng",
         icon: "GraduationCap",
         description: "Pay Covenant University fees easily",
       },
@@ -145,7 +145,7 @@ export const NAV_ITEMS = [
   {
     icon: "/icons/contact_icon.svg",
     text: "Contact Us",
-    route: "/contact",
+    route: " https://ibank.covenantmfb.com",
     center: true,
   },
 
@@ -163,13 +163,13 @@ export const NAV_ITEMS = [
       },
       {
         label: "Internet banking",
-        route: "https://ibank.covenantmfb.com.ng ",
+        route: " https://ibank.covenantmfb.com",
         icon: "Globe",
         description: "Manage your account online easily",
       },
       {
         label: "Corporate Internet banking",
-        route: " https://prime360.covenantmfb.com.ng ",
+        route: "https://prime360.covenantmfb.com",
         icon: "Building2",
         description: "Secure corporate online banking access",
       },
