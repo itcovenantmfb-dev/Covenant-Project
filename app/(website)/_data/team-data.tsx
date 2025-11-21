@@ -650,7 +650,7 @@ export const managementStaff: TeamMember[] = [
     name: "Oluwatoyin\n Bolujoko-Oluwole",
     role: "Branch Manager, Sango",
     imageUrl: "/Mask group (14).svg",
-    credentials: "BSc, MSc, MCIB, MICA",
+    // credentials: "BSc, MSc, MCIB, MICA",
     biography: (
       <>
         <p>
@@ -682,7 +682,7 @@ export const managementStaff: TeamMember[] = [
     name: "Adetunji \nAdedeji Akanbi",
     role: "Head, Internal Audit",
     imageUrl: "/Mask group (15).svg",
-    credentials: "B.A (HONS) English, ACA,MCIB",
+    // credentials: "B.A (HONS) English, ACA,MCIB",
     biography: (
       <>
         <p>

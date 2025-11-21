@@ -4,26 +4,26 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import MobileNavbar from "./mobile-navbar";
 import { usePathname } from "next/navigation";
-import { 
-  ChevronDown, 
-  Building2, 
-  Briefcase, 
-  Users, 
-  Globe, 
-  Smartphone, 
-  DollarSign, 
-  CreditCard, 
-  Wallet, 
-  LayoutGrid, 
-  Image as ImageIcon, 
-  Video, 
-  Newspaper, 
-  Heart, 
-  HelpCircle, 
-  FileText, 
+import {
+  ChevronDown,
+  Building2,
+  Briefcase,
+  Users,
+  Globe,
+  Smartphone,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  LayoutGrid,
+  Image as ImageIcon,
+  Video,
+  Newspaper,
+  Heart,
+  HelpCircle,
+  FileText,
   MessageCircleQuestion,
   GraduationCap,
-  LucideIcon
+  LucideIcon,
 } from "lucide-react";
 import BrandLogo from "./Logo";
 import { cn } from "@/lib/utils";
@@ -79,7 +79,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={` sticky hidden lg:block top-0 w-full z-50 py-3 lg:py-5   transition-colors duration-300 ${
+        className={` sticky hidden lg:block top-0 w-full z-50 py-3 lg:py-5 transition-colors duration-300 ${
           isHomePage
             ? "bg-[url('/hero-banner.svg')] bg-cover bg-top"
             : "bg-[#001102]"
@@ -129,8 +129,6 @@ const Navbar = () => {
                       onMouseLeave={() => setOpenDropdown(null)}
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-2xl shadow-xl z-50 animate-in fade-in-0 zoom-in-98 duration-150"
                     >
-                    
-
                       <div
                         className={cn(
                           "px-6 py-6 w-auto relative z-10 bg-white rounded-2xl",
@@ -156,9 +154,9 @@ const Navbar = () => {
                                 "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
                                 pathname === subItem.route && "bg-[#F1F5EB]"
                               )}
-                              {...(subItem.route.startsWith('https') && {
+                              {...(subItem.route.startsWith("https") && {
                                 target: "_blank",
-                                rel: "noopener noreferrer"
+                                rel: "noopener noreferrer",
                               })}
                             >
                               <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A2DE49] flex items-center justify-center mt-0.5">
@@ -234,11 +232,11 @@ const Navbar = () => {
                       <div
                         className={cn(
                           "px-6 py-6 w-auto relative z-10 bg-white rounded-2xl",
-                          item.text === "Products" 
+                          item.text === "Products"
                             ? "min-w-[850px] max-w-[950px]"
                             : item.subItems && item.subItems.length === 1
-                            ? "min-w-[320px] max-w-[400px]"
-                            : "min-w-[550px] max-w-[650px]"
+                              ? "min-w-[320px] max-w-[400px]"
+                              : "min-w-[550px] max-w-[650px]"
                         )}
                       >
                         {item.text === "Products" ? (
@@ -253,9 +251,9 @@ const Navbar = () => {
                                     "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
                                     pathname === subItem.route && "bg-[#F1F5EB]"
                                   )}
-                                  {...(subItem.route.startsWith('https') && {
+                                  {...(subItem.route.startsWith("https") && {
                                     target: "_blank",
-                                    rel: "noopener noreferrer"
+                                    rel: "noopener noreferrer",
                                   })}
                                 >
                                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A2DE49] flex items-center justify-center mt-0.5">
@@ -272,7 +270,7 @@ const Navbar = () => {
                                 </Link>
                               ))}
                             </div>
-                            
+
                             <div className="flex-shrink-0 w-[280px]">
                               <Image
                                 src="/Front 1.svg"
@@ -301,9 +299,9 @@ const Navbar = () => {
                                   "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
                                   pathname === subItem.route && "bg-[#F1F5EB]"
                                 )}
-                                {...(subItem.route.startsWith('https') && {
+                                {...(subItem.route.startsWith("https") && {
                                   target: "_blank",
-                                  rel: "noopener noreferrer"
+                                  rel: "noopener noreferrer",
                                 })}
                               >
                                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A2DE49] flex items-center justify-center mt-0.5">
