@@ -39,16 +39,16 @@ export function AccountCard({ account }: AccountCardProps) {
   return (
     <>
       <Card className="h-full grid grid-cols-1 lg:grid-cols-2 gap-0 text-[#000]/60 border-none hover:shadow-lg bg-white transition-shadow duration-200">
-        <CardHeader className="rounded-md relative min-h-[200px] lg:min-h-auto">
-          <div className="rounded-4xl flex lg:flex">
-            <Image
-              src={account.image || "/placeholder.svg"}
-              alt={account.name}
-              fill
-              className="object-contain rounded-4xl absolute"
-            />
-          </div>
-        </CardHeader>
+        {/* <CardHeader className="rounded-md relative"> */}
+        <div className="relative aspect-square lg:aspect-auto">
+          <Image
+            src={account.image || "/placeholder.svg"}
+            alt={account.name}
+            fill
+            className="object-cover object-top lg:object-cover pl-2 rounded-lg py-2.5 "
+          />
+        </div>
+        {/* </CardHeader> */}
         <CardContent className="flex flex-col gap-4 p-4 sm:p-6">
           <div className="flex flex-col gap-3">
             <CardTitle className="text-lg sm:text-xl font-semibold text-[#04391F]">
@@ -78,7 +78,7 @@ export function AccountCard({ account }: AccountCardProps) {
               setSelectedAccount(account);
               setIsDialogOpen(true);
             }}
-            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-fit py-2"
+            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-fit py-2 mt-auto"
           >
             View Details
           </Button>
