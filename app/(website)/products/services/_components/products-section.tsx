@@ -1,10 +1,7 @@
-
-
 import React from "react";
 import ProductCard from "../../_components/products-card";
 import Title from "@/app/(website)/_components/title";
 import { PRODUCT_DATA } from "@/app/(website)/_data/products";
-
 
 const ProductsSection = () => {
   return (

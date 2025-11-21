@@ -140,7 +140,7 @@ const Footer = () => (
       className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-6 sm:gap-4"
     >
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full">
-        <div className="flex flex-col items-center sm:items-start gap-4 sm:gap-6 max-w-full sm:max-w-xs text-center sm:text-left">
+        <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-full sm:max-w-xs text-left ml-10 ">
           <Image
             src="/COVENANT-MICROFINANCE-BANK-LTD---AUDIT-COMPLAINCE-TRUSTMARK 1.svg"
             alt="Covenant MFB"
@@ -148,11 +148,11 @@ const Footer = () => (
             height={150}
             className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] lg:w-[190px] lg:h-[190px]"
           />
-          <p className="text-[#F1F5EB] text-sm lg:text-base leading-relaxed">
+          <p className="text-[#F1F5EB] text-base md:text-sm lg:text-xs leading-relaxed">
             Transforming ordinary individuals <br />
             into creators of wealth since 2003
           </p>
-          <div className="flex gap-3 mt-2 justify-start">
+          <div className="flex gap-3 mt-2 justify-start text-base md:text-sm lg:text-xs leading-relaxed">
             {socials.map((social, index) => (
               <Link
                 href={social.link}
@@ -189,19 +189,17 @@ const Footer = () => (
                         </Link>
                       </li>
                     ) : (
-                      <div className="flex items-center gap-2 justify-start">
+                      <div className="flex items-center gap-2 justify-start ">
                         {"icon" in link && (
                           <Image
                             src={link.icon}
                             alt=""
-                            width={20}
-                            height={20}
+                            width={22}
+                            height={22}
                             className="flex-shrink-0"
                           />
                         )}
-                        <span className="text-xs sm:text-sm leading-relaxed">
-                          {link.text}
-                        </span>
+                        <span>{link.text}</span>
                       </div>
                     )}
                   </div>
@@ -210,7 +208,7 @@ const Footer = () => (
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit lg:ml-8">
+        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit w-fit sm:w-fit lg:ml-8 ml-12">
           <span className="text-white font-semibold mb-1">
             Download our App
           </span>
@@ -256,7 +254,7 @@ const Footer = () => (
           </Link>
         </div>
       </div>
-      <div className="w-full text-center text-white/60 text-xs mt-12">
+      <div className="w-full text-center text-white/60 text-xs mt-8">
         © 2025 Covenant Microfinance Bank | All rights reserved.
       </div>
     </div>

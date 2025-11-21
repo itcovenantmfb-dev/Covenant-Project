@@ -1,4 +1,3 @@
-
 export const PRODUCT_DATA = [
   {
     title: "Accounts",
@@ -18,7 +17,7 @@ export const PRODUCT_DATA = [
     title: "Mobile Banking",
     description:
       "Bank on the go with our mobile services. Transfer funds, pay bills, and manage your account 24/7 from your phone — simple, fast, and secure.",
-    imageSrc: "/Frame3.png",
+    imageSrc: "/Frame 270 (1).png",
     link: "/products/digital-banking/mobile-banking",
   },
   {

@@ -13,7 +13,7 @@ const ServiceCard = ({
   return (
     <div
       key={title}
-      className="flex flex-col rounded-2xl bg-[#F8F8F8] p-4 sm:p-6 shadow-sm ring-0 h-full whitespace-pre-line"
+      className="flex flex-col rounded-2xl bg-[#F8F8F8] p-4 sm:p-6 shadow-sm ring-0 h-full lg:whitespace-pre-line"
     >
       <div className={`flex ${position} gap-3 sm:gap-5`}>
         <div className="flex-shrink-0">
