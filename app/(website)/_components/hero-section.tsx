@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import HeroImage from "@/public/hero-image";
 import { ArrowRight, MenuIcon, Play } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -52,9 +53,11 @@ const HeroSection = () => {
                 Learn More
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2" />
               </Button>
-              <Button className="bg-[#ffffff] text-[#0A1519]/70 rounded-full text-sm sm:text-base w-full sm:w-48 h-12 sm:h-13 lg:h-14 flex items-center justify-center">
-                Contact Us
-              </Button>
+              <Link href="https://ibank.covenantmfb.com" target="_blank">
+                <Button className="bg-[#ffffff] text-[#0A1519]/70 rounded-full text-sm sm:text-base w-full sm:w-48 h-12 sm:h-13 lg:h-14 flex items-center justify-center">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
