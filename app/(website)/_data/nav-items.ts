@@ -145,7 +145,7 @@ export const NAV_ITEMS = [
   {
     icon: "/icons/contact_icon.svg",
     text: "Contact Us",
-    route: " https://ibank.covenantmfb.com",
+    route: "/contact",
     center: true,
   },
 
