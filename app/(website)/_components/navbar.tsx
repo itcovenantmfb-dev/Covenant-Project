@@ -352,10 +352,10 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="hidden lg:flex w-fit relative">
+          {/* <div className="hidden lg:flex w-fit relative">
             <div className="absolute top-0 left-5 max-w-3/4 mx-auto w-full h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full z-40" />
           </div>
-          <MobileNavbar />
+          <MobileNavbar /> */}
         </div>
         {/* Mobile Navbar */}
       </nav>

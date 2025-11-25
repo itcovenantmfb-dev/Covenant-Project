@@ -22,7 +22,7 @@ const ProductCard = ({
           src={imageSrc}
           alt={title}
           fill
-          className="object-contain px-1.5"
+          className="object-contain px-3"
         />
       </div>
 

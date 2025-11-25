@@ -31,13 +31,11 @@ const MeetTheTeamSection = () => {
         className="bg-[#F8FBF8] py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
       >
         <div className="max-w-[1200px] mx-auto">
-          <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-20 mt-16 sm:mt-0">
+          <div className="mx-auto max-w-4xl text-center mb-10 sm:mb-20 mt-16 sm:mt-0">
             <SectionPill>Meet The Team</SectionPill>
-            <p className="mt-4 text-base sm:text-lg lg:text-[28px] font-bold text-center lg:text-start leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg lg:text-[28px] font-bold text-center leading-relaxed">
               At the heart of everything we do is a passionate and experienced
-              team, dedicated to driving our mission forward. Each member brings
-              unique expertise and energy, working together to create meaningful
-              impact and lasting change.
+              team, dedicated to driving our mission forward.
             </p>
           </div>
 

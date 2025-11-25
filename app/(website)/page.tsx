@@ -1,18 +1,10 @@
-import React from "react";
 import { Metadata } from "next";
-import HeroSection from "./_components/hero-section";
-import WhyChooseUs from "./_components/why-choose-us";
-import NumbersSection from "./_components/numbers-section";
-import Testimonials from "./_components/testimonials";
-import NewsSection from "./_components/news-section";
-import FAQSection from "./_components/faq-section";
-import Carousel from "./_components/carousel";
-import ProductsSection from "./products/services/_components/products-section";
 import {
   getTestimonials,
   getRecentNews,
   getRecentFAQs,
 } from "@/sanity/lib/queries";
+import HomePageClient from "./_components/home-page-client";
 
 export const dynamic = "force-static";
 export const revalidate = 60;
@@ -53,26 +45,21 @@ export const metadata: Metadata = {
       "Welcome to Covenant Microfinance Bank - Your trusted partner for savings, loans, digital banking, and comprehensive financial solutions.",
   },
 };
-const page = async () => {
+
+const Page = async () => {
+  // Data fetching stays here, on the server
   const testimonials = await getTestimonials();
   const recentNews = await getRecentNews(4);
   const recentFAQs = await getRecentFAQs(4);
 
+  // We pass the data down to the client component as props
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <div className="lg:mt-[-0px] 3xl:mt-[-100px]  bg-white">
-        <WhyChooseUs />
-      </div>
-      <NumbersSection />
-      <ProductsSection />
-      {testimonials && <Testimonials testimonials={testimonials} />}
-
-      {recentNews && <NewsSection newsArticles={recentNews} />}
-      {recentFAQs && <FAQSection faqs={recentFAQs} />}
-      <Carousel />
-    </main>
+    <HomePageClient
+      testimonials={testimonials}
+      recentNews={recentNews}
+      recentFAQs={recentFAQs}
+    />
   );
 };
 
-export default page;
+export default Page;

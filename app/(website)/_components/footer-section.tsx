@@ -20,12 +20,12 @@ const socials = [
   //   alt: "Instagram",
   // },
   {
-    icon: "/icons/x-social-media-white-icon.png",
+    icon: "/icons/x-social-media-white-icon 1.png",
     link: "https://x.com/covenantmfb_",
     alt: "Twitter",
   },
   {
-    icon: "/icons/youtube.svg",
+    icon: "/icons/youtube (2).svg",
     link: "https://www.youtube.com/@CovenantMFB ",
     alt: "Youtube",
   },
@@ -137,22 +137,23 @@ const Footer = () => (
   >
     <div
       data-aos="fade-up"
-      className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-6 sm:gap-4"
+      className="max-w-[1200px] mx-auto flex flex-col justify-between items-start gap-8"
     >
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full">
-        <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-full sm:max-w-xs text-left ml-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full">
+        {/* Column 1: Logo & Socials */}
+        <div className="flex flex-col items-start gap-4 sm:gap-6 ml-8 lg:ml-0">
           <Image
             src="/COVENANT-MICROFINANCE-BANK-LTD---AUDIT-COMPLAINCE-TRUSTMARK 1.svg"
             alt="Covenant MFB"
             width={150}
             height={150}
-            className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] lg:w-[190px] lg:h-[190px]"
+            className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px]"
           />
-          <p className="text-[#F1F5EB] text-base md:text-sm lg:text-xs leading-relaxed">
+          <p className="text-[#F1F5EB] text-sm leading-relaxed">
             Transforming ordinary individuals <br />
             into creators of wealth since 2003
           </p>
-          <div className="flex gap-3 mt-2 justify-start text-base md:text-sm lg:text-xs leading-relaxed">
+          <div className="flex gap-3 mt-2">
             {socials.map((social, index) => (
               <Link
                 href={social.link}
@@ -169,62 +170,63 @@ const Footer = () => (
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full lg:flex-1">
-          {footerItems.map((item, index) => (
-            <div key={index} className="text-left ml-12">
-              <h4 className="text-[#B6E44B] font-semibold mb-3 text-base sm:text-lg">
-                {item.title}
-              </h4>
-              <div className="space-y-2 text-white/80 text-sm">
-                {item.links.map((link, linkIndex) => (
-                  <div key={linkIndex}>
-                    {"route" in link ? (
-                      <li className="flex items-start gap-1 justify-start">
-                        <span className="mb-1">•</span>
-                        <Link
-                          href={link.route}
-                          className="hover:text-white transition-colors"
-                        >
-                          {link.text}
-                        </Link>
-                      </li>
-                    ) : (
-                      <div className="flex items-center gap-2 justify-start ">
-                        {"icon" in link && (
-                          <Image
-                            src={link.icon}
-                            alt=""
-                            width={22}
-                            height={22}
-                            className="flex-shrink-0"
-                          />
-                        )}
-                        <span>{link.text}</span>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+
+        {/* Columns 2, 3, 4: Links */}
+        {footerItems.map((item, index) => (
+          <div key={index} className="text-left ml-8 lg:ml-0">
+            <h4 className="text-[#B6E44B] font-semibold mb-4 text-lg">
+              {item.title}
+            </h4>
+            <div className="flex flex-col gap-2 text-white/80 text-sm">
+              {item.links.map((link, linkIndex) => (
+                <div key={linkIndex}>
+                  {"route" in link ? (
+                    <li className="flex items-start gap-2">
+                      <span>•</span>
+                      <Link
+                        href={link.route}
+                        className="hover:text-white transition-colors"
+                      >
+                        {link.text}
+                      </Link>
+                    </li>
+                  ) : (
+                    <div className="flex items-start gap-3">
+                      {"icon" in link && (
+                        <Image
+                          src={link.icon}
+                          alt=""
+                          width={18}
+                          height={18}
+                          className="flex-shrink-0 mt-1"
+                        />
+                      )}
+                      <span>{link.text}</span>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit w-fit sm:w-fit lg:ml-8 ml-12">
-          <span className="text-white font-semibold mb-1">
-            Download our App
-          </span>
+          </div>
+        ))}
+
+        {/* Column 5: App Downloads */}
+        <div className="flex flex-col items-start gap-4 bg-white/4 backdrop-blur-md border border-white/8 rounded-2xl p-5 h-fit ml-8 lg:ml-0">
+          <span className="text-white font-semibold">Download our App</span>
           <Link
             href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full"
           >
-            <Button className="bg-white/8 border border-white/12 backdrop-blur-md text-white/70 rounded-[12px] px-6 py-2 font-semibold text-sm flex items-center gap-2 shadow-md h-12 w-full">
+            <Button className="bg-white/8 border border-white/12 backdrop-blur-md text-white/70 rounded-[12px] px-4 py-2 font-semibold text-sm flex items-center gap-2 shadow-md h-12 w-full">
               <Image
                 src="/google-play 1.svg"
                 alt="Google Play"
                 width={24}
                 height={24}
               />
-              <span className="text-left leading-3 text-xs font-normal">
+              <span className="text-left leading-tight text-xs font-normal">
                 Get It On <br />
                 <span className="font-semibold text-white text-base">
                   Google Play
@@ -236,15 +238,16 @@ const Footer = () => (
             href="https://apps.apple.com/ng/app/covenantmfb-edge-banking/id6504527106"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full"
           >
-            <Button className="bg-white/8 border border-white/12 backdrop-blur-md text-white/70 rounded-[12px] px-6 py-2 font-semibold text-sm flex items-center gap-2 shadow-md h-12 w-full">
+            <Button className="bg-white/8 border border-white/12 backdrop-blur-md text-white/70 rounded-[12px] px-4 py-2 font-semibold text-sm flex items-center gap-2 shadow-md h-12 w-full">
               <Image
                 src="/apple 1.svg"
                 alt="App Store"
                 width={24}
                 height={24}
               />
-              <span className="text-left leading-3 text-xs font-normal">
+              <span className="text-left leading-tight text-xs font-normal">
                 Download on the <br />
                 <span className="font-semibold text-white text-base">
                   App Store
@@ -254,7 +257,7 @@ const Footer = () => (
           </Link>
         </div>
       </div>
-      <div className="w-full text-center text-white/60 text-xs mt-8">
+      <div className="w-full text-center text-white/60 text-xs mb-8  pt-8">
         © 2025 Covenant Microfinance Bank | All rights reserved.
       </div>
     </div>
