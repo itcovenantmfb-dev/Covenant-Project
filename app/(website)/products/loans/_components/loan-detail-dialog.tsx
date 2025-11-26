@@ -200,8 +200,8 @@ export function LoanDetailDialog({
               >
                 {renderTabContent()}
               </div>
-              <div className="flex-shrink-0 pt-0">
-                <Button className="w-full bg-[#A2DE49] rounded-b-4xl text-black flex items-center gap-2 whitespace-normal text-left ml-2">
+              <div className="flex-shrink-0 pt-0 ">
+                <Button className="w-full bg-[#A2DE49] rounded-b-4xl text-black flex items-center gap-2 whitespace-normal text-left">
                   <Image src="/Lightning.png" width={20} height={20} alt="" />
 
                   <span>
