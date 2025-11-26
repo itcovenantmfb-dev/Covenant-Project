@@ -80,7 +80,7 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   onViewBio,
 }) => {
   return (
-    <div className="flex w-auto max-w-[350px] items-stretch rounded-2xl bg-[#FFFFFF] p-2 shadow-sm ring-1 ring-gray-900/5">
+    <div className="flex w-auto max-w-[350px] items-stretch rounded-2xl bg-[#FFFFFF] p-3 shadow-sm ring-1 ring-gray-900/5">
       <div className="relative h-40 w-40 flex-shrink-0">
         <Image
           src={member.imageUrl}
@@ -90,9 +90,9 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         />
       </div>
 
-      <div className="ml-6 flex justify-between flex-grow flex-col ">
+      <div className="ml-4 flex justify-between flex-grow flex-col ">
         <div>
-          <h3 className="text-lg font-bold text-green-900 whitespace-pre-line">
+          <h3 className="text-lg font-bold text-green-900 whitespace-pre-line leading-tight">
             {member.name}
           </h3>
           {member.credentials && (
@@ -106,7 +106,7 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         <div className="">
           <button
             onClick={() => onViewBio(member)}
-            className="rounded-md bg-[#1D9B5E] px-2 py-1 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700 w-[140px]"
+            className="rounded-lg bg-[#1D9B5E] px-2 py-1 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700 w-[140px]"
           >
             View Profile
           </button>

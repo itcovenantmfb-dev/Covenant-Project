@@ -47,12 +47,10 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  // Data fetching stays here, on the server
   const testimonials = await getTestimonials();
   const recentNews = await getRecentNews(4);
   const recentFAQs = await getRecentFAQs(4);
 
-  // We pass the data down to the client component as props
   return (
     <HomePageClient
       testimonials={testimonials}

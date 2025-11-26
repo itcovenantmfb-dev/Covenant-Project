@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CashAndPayments = () => (
   <section data-aos="fade-up" className=" relative mt-8 lg:mt-14 px-4 lg:px-0">
@@ -22,9 +23,12 @@ const CashAndPayments = () => (
           Offer quick payments with POS and ATM services from Covenant MFB —
           built to support your business and community.
         </p>
-        <Button className="bg-[#1D9B5E] text-white py-4 px-7.5 rounded-[14px] h-fit text-sm font-semibold">
-          Find Out More
-        </Button>
+
+        <Link href="/products/digital-banking/pos">
+          <Button className="bg-[#1D9B5E] text-white py-4 px-7.5 rounded-[14px] h-fit text-sm font-semibold">
+            Find Out More
+          </Button>
+        </Link>
       </div>
     </div>
   </section>

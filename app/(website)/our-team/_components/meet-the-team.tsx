@@ -43,7 +43,7 @@ const MeetTheTeamSection = () => {
             <h2 className="text-center text-xl sm:text-2xl font-semibold text-gray-600 mb-8">
               Board Members
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 justify-items-center ">
               {/* <div className="flex flex-wrap justify-center gap-8"> */}
               {boardMembers.map((member) => (
                 <TeamMemberCard
@@ -59,7 +59,7 @@ const MeetTheTeamSection = () => {
             <h2 className="text-center text-xl sm:text-2xl font-semibold text-gray-600 mb-8">
               Management Staff
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 justify-items-center">
               {/* <div className="flex flex-wrap justify-center gap-8"> */}
               {managementStaff.map((member) => (
                 <TeamMemberCard
