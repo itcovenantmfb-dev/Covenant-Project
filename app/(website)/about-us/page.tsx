@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 };
 
 const AboutPage = async () => {
-    const testimonials = await getTestimonials();
+  const testimonials = await getTestimonials();
   return (
     <div>
       {/* <AboutHeroSection /> */}

@@ -1,19 +1,19 @@
 import React from "react";
 import MeetTheTeamSection from "./_components/meet-the-team";
+import Carousel from "../_components/carousel";
+import { getTestimonials } from "@/sanity/lib/queries";
 import Testimonials from "../_components/testimonials";
 
-import Carousel from "../_components/carousel";
+const page = async () => {
+  const testimonials = await getTestimonials();
 
-import CTA from "../_components/cta-section";
-function page() {
   return (
     <div>
       <MeetTheTeamSection />
-      <Testimonials />
+      <Testimonials testimonials={testimonials} />
       <Carousel />
-    
     </div>
   );
-}
+};
 
 export default page;

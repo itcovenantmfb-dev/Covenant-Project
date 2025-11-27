@@ -9,7 +9,6 @@ import {
   Building2,
   Briefcase,
   Users,
-  Globe,
   Smartphone,
   DollarSign,
   CreditCard,
@@ -34,7 +33,6 @@ const iconComponents: Record<string, LucideIcon> = {
   Building2,
   Briefcase,
   Users,
-  Globe,
   Smartphone,
   DollarSign,
   CreditCard,
@@ -52,6 +50,11 @@ const iconComponents: Record<string, LucideIcon> = {
 
 // Get icon component from icon name
 const getIconComponent = (iconName: string) => {
+  if (iconName.startsWith("/")) {
+    return (
+      <Image src={iconName} alt="" width={20} height={20} className="w-5 h-5" />
+    );
+  }
   const IconComponent = iconComponents[iconName] || Building2;
   return <IconComponent className="w-5 h-5 text-[#09244B]" />;
 };
@@ -231,16 +234,16 @@ const Navbar = () => {
 
                       <div
                         className={cn(
-                          "px-6 py-6 w-auto relative z-10 bg-white rounded-2xl",
+                          "px-4 py-4 w-auto relative z-10 bg-white rounded-2xl",
                           item.text === "Products"
-                            ? "min-w-[850px] max-w-[950px]"
+                            ? "min-w-[800px] max-w-[850px]"
                             : item.subItems && item.subItems.length === 1
                               ? "min-w-[320px] max-w-[400px]"
                               : "min-w-[550px] max-w-[650px]"
                         )}
                       >
                         {item.text === "Products" ? (
-                          <div className="flex gap-6">
+                          <div className="flex gap-8">
                             <div className="grid grid-cols-2 gap-3">
                               {item.subItems?.map((subItem) => (
                                 <Link
@@ -275,8 +278,8 @@ const Navbar = () => {
                               <Image
                                 src="/Front 1.svg"
                                 alt="Grow with a Bank"
-                                width={280}
-                                height={300}
+                                width={250}
+                                height={250}
                                 className="rounded-xl object-cover"
                               />
                             </div>
@@ -352,10 +355,10 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="hidden lg:flex w-fit relative">
+          {/* <div className="hidden lg:flex w-fit relative">
             <div className="absolute top-0 left-5 max-w-3/4 mx-auto w-full h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full z-40" />
           </div>
-          <MobileNavbar />
+          <MobileNavbar /> */}
         </div>
         {/* Mobile Navbar */}
       </nav>
