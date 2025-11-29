@@ -65,7 +65,7 @@ const AccountServices: React.FC = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {servicesData.map((card: ServiceCardData, cardIndex: number) => (
             <div key={cardIndex} className="bg-slate-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-slate-900 mb-5">
+              <h3 className="text-xl font-bold text-slate-700 mb-5">
                 {card.title}
               </h3>
               <ul className="space-y-4 text-slate-700">

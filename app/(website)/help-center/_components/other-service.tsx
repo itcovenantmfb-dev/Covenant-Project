@@ -11,6 +11,7 @@ interface OtherServicesProps {
 
 const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
   const linkClasses = "text-[#1D9B5E] hover:text-green-700 font-medium";
+
   return (
     <>
       {parts.map((part, index) => {
@@ -30,6 +31,12 @@ const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
               >
                 {part.content}
               </a>
+            );
+          case "title":
+            return (
+              <p key={index} className="font-bold text-lg mb-1">
+                {part.content}
+              </p>
             );
           default:
             return <span key={index}>{part.content}</span>;

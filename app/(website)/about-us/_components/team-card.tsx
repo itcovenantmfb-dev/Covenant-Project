@@ -38,7 +38,7 @@ export const BiographyModal: React.FC<BiographyModalProps> = ({
           <DialogTitle className="text-xl font-bold text-[#a3d960]">
             {member.name}
             {member.credentials && (
-              <span className="ml-2 font-normal text-gray-300 text-sm">
+              <span className="ml-2 font-normal text-gray-300 text-sm whitespace-pre-line">
                 {member.credentials}
               </span>
             )}
@@ -97,7 +97,7 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           </h3>
           {member.credentials && (
             <p className="mt-1 text-sm font-medium text-gray-700">
-              ({member.credentials})
+              {/* ({member.credentials}) */}
             </p>
           )}
           <p className=" text-sm text-gray-500">{member.role}</p>

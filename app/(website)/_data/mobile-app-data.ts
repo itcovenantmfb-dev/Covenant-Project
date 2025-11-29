@@ -1,5 +1,5 @@
 type ContentPart = {
-  type: "text" | "link" | "email" | "phone";
+  type: "text" | "link" | "email" | "phone" | "title";
   content: string;
   href?: string;
 };
@@ -15,29 +15,27 @@ export type CardData = {
 export const topRowData: CardData[] = [
   {
     content: [
+      { type: "title", content: "Forgot Username/Password/Secret Answer:" },
       {
         type: "text",
-        content:
-          "Forgot Username/Password/Secret Answer: Download PIN Reset Form, Fill, Scan and email to ",
+        content: " Download PIN Reset Form, Fill, Scan and email to ",
       },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
   },
   {
     content: [
-      {
-        type: "text",
-        content: "Registration Issues: Send error details/ screenshot to ",
-      },
+      { type: "title", content: "Registration Issues:" },
+      { type: "text", content: " Send error details/ screenshot to " },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
   },
   {
     content: [
+      { type: "title", content: "Limit Increase:" },
       {
         type: "text",
-        content:
-          "Limit Increase: Download Limit Increase Form, Fill, Scan and email to ",
+        content: " Download Limit Increase Form, Fill, Scan and email to ",
       },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
@@ -46,11 +44,12 @@ export const topRowData: CardData[] = [
 
 export const bottomRowCard: CardData = {
   content: [
-    { type: "text", content: "Log Failed Transactions: Click " },
+    { type: "title", content: "Log Failed Transactions:" },
+    { type: "text", content: " Click " },
     { type: "link", content: "here", href: "#" },
     {
       type: "text",
-      content: "\nto fill online complaint form or contact \nE-business Unit",
+      content: " to fill online complaint form or contact E-business Unit",
     },
   ],
   contactInfo: {
