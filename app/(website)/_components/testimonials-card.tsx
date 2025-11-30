@@ -13,10 +13,10 @@ const TestimonialsCard = ({
   business,
 }: TestimonialsCardProps) => {
   return (
-    <div className="testimonial-card w-full mx-auto">
+    <div className="testimonial-card w-full mx-auto mt-4 sm:mt-6">
       <div
         data-aos="fade-up"
-        className="bg-[#F8FAFC] rounded-[16px] p-6 lg:p-10 flex flex-col justify-between h-[320px]"
+        className="bg-[#F8FAFC] rounded-[16px] p-6 lg:p-10 flex flex-col"
       >
         <p className="text-[#020617] text-base font-normal text-center mb-6">
           {testimonial}

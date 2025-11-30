@@ -35,15 +35,20 @@ export const BiographyModal: React.FC<BiographyModalProps> = ({
         showCloseButton={false}
       >
         <DialogHeader className="bg-[#0c3c26] rounded-t-2xl p-4 text-left flex-shrink-0 relative">
-          <DialogTitle className="text-xl font-bold text-[#a3d960]">
+          <DialogTitle className="text-xl font-bold text-[#a3d960] leading-tight">
             {member.name}
             {member.credentials && (
+<<<<<<< Updated upstream
               <span className="ml-2 font-normal text-gray-300 text-sm whitespace-pre-line">
+=======
+              <span className="ml-1 font-normal text-gray-300 text-sm">
+>>>>>>> Stashed changes
                 {member.credentials}
               </span>
             )}
           </DialogTitle>
-          <DialogDescription className="text-sm text-gray-300 mt-1">
+
+          <DialogDescription className="text-sm text-gray-300 mt-0 leading-tight">
             {member.role}
           </DialogDescription>
         </DialogHeader>
