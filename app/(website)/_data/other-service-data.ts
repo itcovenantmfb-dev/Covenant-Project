@@ -1,5 +1,5 @@
 type ContentPart = {
-  type: "text" | "link" | "email" | "phone";
+  type: "text" | "link" | "email" | "phone" | "title";
   content: string;
   href?: string;
 };
@@ -28,18 +28,19 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
+            { type: "title", content: "Block ATM:" },
             {
               type: "text",
-              content: "Block ATM: Put the Information on the Banner here.",
+              content: " Put the Information on the Banner here.",
             },
           ],
         },
         {
           content: [
+            { type: "title", content: "Forgot PIN:" },
             {
               type: "text",
-              content:
-                "Forgot PIN: Download PIN Reset Form, Fill, Scan and email to ",
+              content: " Download PIN Reset Form, Fill, Scan and email to ",
             },
             { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
           ],
@@ -48,7 +49,8 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
-            { type: "text", content: "Log Failed Transactions: Click " },
+            { type: "title", content: "Log Failed Transactions:" },
+            { type: "text", content: " Click " },
             { type: "link", content: "here", href: "#" },
             {
               type: "text",
@@ -71,7 +73,8 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
-            { type: "text", content: "Confirm loan balance: send a mail to " },
+            { type: "title", content: "Confirm Loan Balance:" },
+            { type: "text", content: "Send a mail to " },
             { type: "email", content: "hibizdev@covenantmfb.com.ng" },
             { type: "text", content: " with your Account information" },
           ],
@@ -80,10 +83,11 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
+            { type: "title", content: "Log Loan Issues:" },
             {
               type: "text",
               content:
-                "Log Loan Issues: Click here to fill online complaint form or contact Biz Development Unit",
+                "Click here to fill online complaint form or contact Biz Development Unit",
             },
           ],
           contactInfo: {

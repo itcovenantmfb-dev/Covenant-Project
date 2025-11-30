@@ -1,5 +1,5 @@
 type ContentPart = {
-  type: "text" | "link" | "email" | "phone";
+  type: "text" | "link" | "email" | "phone" | "title";
   content: string;
   href?: string;
 };
@@ -16,15 +16,13 @@ export type UssdCardData = {
 export const ussdData: UssdCardData[] = [
   {
     lineContent: [
-      {
-        type: "text",
-        content: "Registration Issues: Send error details/ screenshot to ",
-      },
+      { type: "title", content: "Registration Issues:" },
+      { type: "text", content: " Send error details/ screenshot to " },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
   },
   {
-    title: "Contact E-business Unit",
+    lineContent: [{ type: "title", content: "Contact E-business Unit" }],
     contactInfo: {
       phone: "+234-08100716957",
       email: "hiebusiness@covenantmfb.com.ng",
@@ -32,17 +30,18 @@ export const ussdData: UssdCardData[] = [
   },
   {
     lineContent: [
-      { type: "text", content: "Log Failed Transactions: Click " },
+      { type: "title", content: "Log Failed Transactions:" },
+      { type: "text", content: " Click " },
       { type: "link", content: "here", href: "#" },
       { type: "text", content: " to fill online complaint form" },
     ],
   },
   {
     lineContent: [
+      { type: "title", content: "Forgot PIN:" },
       {
         type: "text",
-        content:
-          "Forgot PIN: Download PIN Reset Form, Fill, Scan and email to ",
+        content: " Download PIN Reset Form, Fill, Scan and email to ",
       },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],

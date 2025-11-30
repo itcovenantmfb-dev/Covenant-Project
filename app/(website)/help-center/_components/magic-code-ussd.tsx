@@ -38,6 +38,12 @@ const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
                 {part.content}
               </a>
             );
+          case "title":
+            return (
+              <p key={index} className="font-bold text-lg mb-1">
+                {part.content}
+              </p>
+            );
           default:
             return <span key={index}>{part.content}</span>;
         }

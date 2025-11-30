@@ -7,22 +7,23 @@ function PosHero() {
     <div>
       <section
         data-aos="fade-up"
-        className="relative py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
+        className="relative py-26 lg:py-28 px-4 sm:px-6"
       >
-        <div className="mx-auto max-w-2xl text-center flex flex-col justify-center items-center gap-5 mb-4">
+        <div className="mx-auto max-w-2xl text-center flex flex-col justify-center items-center gap-5 lg:mb-6">
           <Title
             text="Product"
             borderColor="[#1D9B5E]/40"
             textColor="#1D9B5E"
           />
         </div>
-        <h1 className="text-6xl font-bold text-[#1B1C31] text-center mb-10">
+
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1B1C31] text-center ">
           Point of Sales Terminal
         </h1>
-        
+
         {/* YouTube Video Embed */}
         <div className="max-w-4xl mx-auto mb-10">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-xl"
               src="https://www.youtube.com/embed/-QM1xJqEvVM?si=gFmx4Dc0hE59BmPq&autoplay=1&mute=1"
