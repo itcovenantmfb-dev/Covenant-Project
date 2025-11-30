@@ -43,7 +43,7 @@ export const boardMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Dr. Barry Roberts,CRM",
+    name: "Dr. Barry Roberts, CRM",
     role: "Managing Director/CEO",
     imageUrl: "/Mask group (1).svg",
     credentials: "FICA",
@@ -194,6 +194,7 @@ export const boardMembers: TeamMember[] = [
     id: 5,
     name: "Prof.\n Kehinde \nAdetiloye",
     role: "Board Member",
+    credentials: "PhD, FCIB, ACS, CRM",
     imageUrl: "/Mask group (4).svg",
     biography: (
       <>
@@ -340,7 +341,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Oluwunmi \n Temidayo \nEsther",
+    name: "Olawunmi \n Temidayo \nEsther",
     role: "Branch Manager, Ifo, Ogun State",
     imageUrl: "/Mask group (7).svg",
     biography: (
@@ -427,6 +428,7 @@ export const managementStaff: TeamMember[] = [
     id: 4,
     name: "Justina\n Meekness Okorie",
     role: "Head, Administration and Human Resources Department",
+    credentials: "MCIA",
     imageUrl: "/Mask group (9).svg",
     biography: (
       <>
@@ -650,7 +652,7 @@ export const managementStaff: TeamMember[] = [
     name: "Oluwatoyin\n Bolujoko-Oluwole",
     role: "Branch Manager, Sango",
     imageUrl: "/Mask group (14).svg",
-    // credentials: "BSc, MSc, MCIB, MICA",
+    credentials: "B.Sc, M.Sc, FIBAKM, \n FCBA, FCKM, MCIB, MICA",
     biography: (
       <>
         <p>
@@ -682,7 +684,7 @@ export const managementStaff: TeamMember[] = [
     name: "Adetunji \nAdedeji Akanbi",
     role: "Head, Internal Audit",
     imageUrl: "/Mask group (15).svg",
-    // credentials: "B.A (HONS) English, ACA,MCIB",
+    credentials: "B.A (HONS) English, ACA,MCIB",
     biography: (
       <>
         <p>
@@ -713,7 +715,7 @@ export const managementStaff: TeamMember[] = [
   {
     id: 11,
     name: "Emmanuel \nAdeleke\n Adekeye",
-    role: "Branch Manager,Akute",
+    role: "Branch Manager, Akute",
     imageUrl: "/Mask group (16).svg",
     biography: (
       <>

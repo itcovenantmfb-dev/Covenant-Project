@@ -18,7 +18,7 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@/components/ui/drawer";
-import  type { AccountData } from "@/app/(website)/_data/accounts-data";
+import type { AccountData } from "@/app/(website)/_data/accounts-data";
 
 interface AccountDetailDialogProps {
   account: AccountData | null;
@@ -26,7 +26,12 @@ interface AccountDetailDialogProps {
   onClose: () => void;
 }
 
-type TabType = "overview" | "features" | "benefits" | "target-clients";
+type TabType =
+  | "overview"
+  | "benefits"
+  | "features"
+  | "requirements"
+  | "target-clients";
 
 export function AccountMobileDrawer({
   account,
@@ -37,6 +42,15 @@ export function AccountMobileDrawer({
 
   if (!account) return null;
 
+  const hasBenefits = account.benefits && account.benefits.length > 0;
+  const hasFeatures = account.features && account.features.length > 0;
+  const hasTargetClients =
+    account.targetClients && account.targetClients.length > 0;
+
+  const secondTabLabel = hasBenefits ? "Benefits" : "Features";
+  const secondTabId = hasBenefits ? "benefits" : "features";
+
+  // Build tabs dynamically
   const tabs = [
     {
       id: "overview" as TabType,
@@ -44,21 +58,24 @@ export function AccountMobileDrawer({
       icon: "/icons/avatar-img.svg",
     },
     {
-      id: "features" as TabType,
-      label: "Features",
+      id: secondTabId as TabType,
+      label: secondTabLabel,
       icon: "/icons/avatar-img.svg",
     },
     {
-      id: "benefits" as TabType,
-      label: "Benefits",
-      icon: "/icons/avatar-img.svg",
-    },
-    {
-      id: "target-clients" as TabType,
-      label: "Target Clients",
+      id: "requirements" as TabType,
+      label: "Requirements",
       icon: "/icons/avatar-img.svg",
     },
   ];
+
+  if (hasTargetClients) {
+    tabs.push({
+      id: "target-clients" as TabType,
+      label: "Target Clients",
+      icon: "/icons/avatar-img.svg",
+    });
+  }
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -76,15 +93,40 @@ export function AccountMobileDrawer({
             </p>
           </div>
         );
-      case "features":
+      case "benefits":
         return (
           <div className="space-y-4">
             <div className="flex  flex-col items-left justify-center gap-2 text-green-600">
               <Image src={"/bank.svg"} width={20} height={20} alt="" />
-              <h3 className="font-semibold text-lg text-[#020617]">Features</h3>
+              <h3 className="font-semibold text-lg text-[#020617]">Benefits</h3>
             </div>
             <div className="space-y-3">
-              {account.features.map((feature, index) => (
+              {account.benefits?.map((benefits, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Image
+                    src={"/icons/mark.svg"}
+                    alt="mark-icon"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="text-muted-foreground text-[#5B5B5B]">
+                    {benefits.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case "features":
+        return (
+          <div className="space-y-4">
+            <div className="flex flex-col gap-2 text-green-600">
+              <Image src={"/bank.svg"} width={20} height={20} alt="" />
+              <h3 className="font-semibold text-lg text-[#020617]">Features</h3>
+            </div>
+
+            <div className="space-y-3">
+              {account.features?.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Image
                     src={"/icons/mark.svg"}
@@ -100,15 +142,18 @@ export function AccountMobileDrawer({
             </div>
           </div>
         );
-      case "benefits":
+
+      case "requirements":
         return (
           <div className="space-y-4">
             <div className="flex flex-col items-left gap-2 text-green-600">
               <Image src={"/bank.svg"} width={20} height={20} alt="" />
-              <h3 className="font-semibold text-lg text-[#020617]">Benefits</h3>
+              <h3 className="font-semibold text-lg text-[#020617]">
+                Requirements
+              </h3>
             </div>
             <div className="space-y-3">
-              {account.benefits.map((benefit, index) => (
+              {account.requirements.map((requirements, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Image
                     src={"/icons/mark.svg"}
@@ -116,8 +161,8 @@ export function AccountMobileDrawer({
                     width={20}
                     height={20}
                   />
-                  <p className="text-muted-foreground text-[#5B5B5B]">
-                    {benefit.text}
+                  <p className="text-muted-foreground text-[#5B5B5B] h-full">
+                    {requirements.text}
                   </p>
                 </div>
               ))}
@@ -135,7 +180,7 @@ export function AccountMobileDrawer({
               </h3>
             </div>
             <div className="space-y-3">
-              {account.targetClients.map((client, index) => (
+              {account.targetClients?.map((client, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Image
                     src={"/icons/mark.svg"}
@@ -168,8 +213,15 @@ export function AccountMobileDrawer({
 
             <Accordion type="single" collapsible className="w-full">
               {tabs.map((tab) => (
-                <AccordionItem className="border-none" key={tab.id} value={tab.id}>
-                  <AccordionTrigger className="px-4" onClick={() => setActiveTab(tab.id)}>
+                <AccordionItem
+                  className="border-none"
+                  key={tab.id}
+                  value={tab.id}
+                >
+                  <AccordionTrigger
+                    className="px-4"
+                    onClick={() => setActiveTab(tab.id)}
+                  >
                     <div className="flex gap-2 justify-center items-center">
                       {tab.icon && (
                         <Image src={tab.icon} width={10} height={10} alt="" />
@@ -177,7 +229,9 @@ export function AccountMobileDrawer({
                       {tab.label}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent  className="px-4"  >{renderTabContent()}</AccordionContent>
+                  <AccordionContent className="px-4">
+                    {renderTabContent()}
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>

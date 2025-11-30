@@ -41,7 +41,7 @@ const HeroSection = ({
           <div className="text-[#FFFFFF] max-w-[560px] mt-2 lg:mt-6 space-y-[11px] lg:mx-0">
             <h2 className="text-[28px] sm:text-[36px] lg:text-[60px] leading-tight font-bold">
               Empowering Dreams,
-              <br className="hidden sm:block" />
+              <br />
               <span className="text-[#A2DD49]">Financing Growth </span>
             </h2>
             <p className="text-[#FFFFFF]/70 font-medium text-sm sm:text-base lg:text-lg leading-relaxed">

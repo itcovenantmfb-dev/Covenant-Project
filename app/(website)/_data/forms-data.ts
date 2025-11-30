@@ -188,16 +188,16 @@ export const allForms: Form[] = [
     downloadLink: "/CMFB-FUNDS-TRANSFER-REQUEST-FORM-ONLINE.pdf",
   },
 
-  {
-    id: 18,
-    title: "Indemnity Form for Token Release",
-    description:
-      "To request release of a security token after loss or liability. Provide indemnity details and identification to receive replacement.",
-    category: "Electronic",
-    fileType: "PDF",
-    fileSize: "235kb",
-    downloadLink: "/forms/indenmity-form.pdf",
-  },
+  // {
+  //   id: 18,
+  //   title: "Indemnity Form for Token Release",
+  //   description:
+  //     "To request release of a security token after loss or liability. Provide indemnity details and identification to receive replacement.",
+  //   category: "Electronic",
+  //   fileType: "PDF",
+  //   fileSize: "235kb",
+  //   downloadLink: "/forms/indenmity-form.pdf",
+  // },
 
   {
     id: 19,
