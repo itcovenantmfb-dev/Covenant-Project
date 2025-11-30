@@ -20,7 +20,7 @@ interface AccountDetailDialogProps {
   onClose: () => void;
 }
 
-type TabType = "overview" | "features" | "benefits" | "target-clients";
+type TabType = "overview" | "features" | "benefits" | "requirements";
 
 export function AccountDetailDialog({
   account,
@@ -42,14 +42,10 @@ export function AccountDetailDialog({
       label: "Features",
       icon: "/icons/avatar-img.svg",
     },
+  
     {
-      id: "benefits" as TabType,
-      label: "Benefits",
-      icon: "/icons/avatar-img.svg",
-    },
-    {
-      id: "target-clients" as TabType,
-      label: "Target Clients",
+      id: "requirements" as TabType,
+      label: "Requirements",
       icon: "/icons/avatar-img.svg",
     },
   ];
@@ -94,38 +90,38 @@ export function AccountDetailDialog({
             </div>
           </div>
         );
-      case "benefits":
-        return (
-          <div className="space-y-4">
-            <div className="flex flex-col items-left gap-2 text-green-600">
-              <Image src={"/bank.svg"} width={20} height={20} alt="" />
-              <h3 className="font-semibold text-lg text-[#020617]">Benefits</h3>
-            </div>
-            <div className="space-y-3">
-              {account.benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <Image
-                    src={"/icons/mark.svg"}
-                    alt="mark-icon"
-                    width={20}
-                    height={20}
-                  />
-                  <p className="text-muted-foreground text-[#5B5B5B]">
-                    {benefit.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
+      // case "benefits":
+      //   return (
+      //     <div className="space-y-4">
+      //       <div className="flex flex-col items-left gap-2 text-green-600">
+      //         <Image src={"/bank.svg"} width={20} height={20} alt="" />
+      //         <h3 className="font-semibold text-lg text-[#020617]">Benefits</h3>
+      //       </div>
+      //       <div className="space-y-3">
+      //         {account.benefits.map((benefit, index) => (
+      //           <div key={index} className="flex items-start gap-3">
+      //             <Image
+      //               src={"/icons/mark.svg"}
+      //               alt="mark-icon"
+      //               width={20}
+      //               height={20}
+      //             />
+      //             <p className="text-muted-foreground text-[#5B5B5B]">
+      //               {benefit.text}
+      //             </p>
+      //           </div>
+      //         ))}
+      //       </div>
+      //     </div>
+      //   );
 
-      case "target-clients":
+      case "requirements":
         return (
           <div className="space-y-4">
             <div className="flex flex-col items-left gap-2 text-green-600">
               <Image src={"/bank.svg"} width={20} height={20} alt="" />
               <h3 className="font-semibold text-lg text-[#020617]">
-                Target Clients
+             Requirements 
               </h3>
             </div>
             <div className="space-y-3">
@@ -195,8 +191,8 @@ export function AccountDetailDialog({
               {" "}
               <div
                 className={cn(
-                  "flex flex-col justify-center  overflow-y-auto h-[415px] py-6 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
-                  activeTab === "target-clients" && "rounded-none "
+                  "flex flex-col   overflow-y-auto h-[415px] py-10 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
+                  activeTab === "requirements" && "rounded-none "
                 )}
               >
                 {renderTabContent()}

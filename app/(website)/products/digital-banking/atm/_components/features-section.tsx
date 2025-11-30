@@ -13,7 +13,7 @@ const FeaturesSection = () => {
   });
 
   return (
-    <div ref={container} className="relative">
+    <div ref={container} className="relative ">
       {DEBIT_CARD_FEATURES.map((feature, i) => {
         const targetScale = 1 - (DEBIT_CARD_FEATURES.length - i) * 0.05;
         return (

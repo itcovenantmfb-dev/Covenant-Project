@@ -33,7 +33,7 @@ export const MobileBankingCard = ({
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 0.9, 1], [1, 1, 0.3, 0]);
+  const gradientOpacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 0, 0.8]);
 
   // Increase size for index 4
   const isIndex4 = i === 4;
@@ -41,17 +41,20 @@ export const MobileBankingCard = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center justify-center mt-20 sticky top-0"
     >
       <motion.div
         style={{
           scale,
-          opacity,
           top: `calc(-1vh + ${i * 0}px)`,
           backgroundColor: "#F1F5EB",
         }}
-        className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-8 lg:p-4 origin-top"
+        className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-0 lg:pb-0 origin-top"
       >
+        <motion.div 
+          style={{ opacity: gradientOpacity }}
+          className="absolute inset-0 bg-gradient-to-b from-white/90 via-white to-white rounded-3xl pointer-events-none z-10"
+        />
         <div className="flex flex-col lg:flex-row max-w-[900px] mx-auto gap-12 items-center justify-center h-full">
           <div className={""}>
             <div className="flex flex-col items-left gap-4 mb-6">
@@ -72,11 +75,8 @@ export const MobileBankingCard = ({
           <div className="flex justify-center">
             <div className="hidden lg:flex justify-center" style={{ width: isIndex4 ? '450px' : '350px' }}>
               <motion.div 
-                className="rounded-3xl shadow flex justify-center items-center" 
-                style={{ 
-                  width: isIndex4 ? '650px' : '550px', 
-                  height: isIndex4 ? '450px' : '350px' 
-                }}
+                className="rounded-3xl  mt-[-100px] flex justify-center items-center" 
+             
               >
                 <Image
                   src={feature.image}
@@ -88,12 +88,12 @@ export const MobileBankingCard = ({
               </motion.div>
             </div>
             <div className="flex lg:hidden w-[200px] justify-center">
-              <motion.div className="rounded-2xl shadow flex justify-center items-center w-[500px] h-[300px]">
+              <motion.div className="rounded-2xl shadow flex justify-center items-center w-[500px] h-[200px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} Mobile Banking Feature`}
                   width={350}
-                  height={300}
+                  height={200}
                   className="object-contain"
                 />
               </motion.div>

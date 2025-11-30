@@ -68,7 +68,7 @@ export const ATMCard = ({
 
           <div className="flex justify-center">
             <div className="hidden lg:flex w-[350px] justify-center">
-              <motion.div className="rounded-3xl shadow flex justify-center items-center w-[550px] h-[350px]">
+              <motion.div className="rounded-3xl  flex justify-center items-center w-[550px] h-[350px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} ATM Feature`}

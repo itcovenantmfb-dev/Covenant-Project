@@ -14,6 +14,7 @@ interface DigitalBankingCardProps {
   linkUrl?: string;
   imageWidth?: number;
   className?: string;
+  index?: number;
 }
 
 export function DigitalBankingCard({
@@ -25,12 +26,13 @@ export function DigitalBankingCard({
   image,
   linkUrl,
   className = "",
+  index = 0,
 }: DigitalBankingCardProps) {
   return (
     <Card
       className={`bg-[#F1F5EB] border-none hover:shadow-lg pb-0 transition-shadow duration-200 ${className}`}
     >
-      <CardContent className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-10 p-4 sm:p-6">
+      <CardContent className={`flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-10 ${index === 0 || index === 1 ? ' pb-0' : 'p-4'}`}>
         <div className="flex flex-col gap-4 sm:gap-5 w-full lg:w-auto">
           <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#020617] text-center lg:text-left">
             {title}
@@ -66,7 +68,7 @@ export function DigitalBankingCard({
         </div>
 
         <div className="flex justify-center w-full lg:w-auto">
-          <div className="mt-0  max-w-[280px] sm:max-w-[350px] lg:max-w-none">
+          <div className={`${index === 0 ? 'mt-[-100]' : ''} max-w-[280px] sm:max-w-[350px] lg:max-w-none`}>
             <Image
               src={image}
               alt={title}

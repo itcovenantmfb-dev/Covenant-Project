@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HeroBanner = () => {
   return (
-    <section className="bg-[#033224] py-2 flex items-center relative overflow-hidden">
+    <section className="bg-[#033224] pt-2 pb-0 flex items-center relative overflow-hidden">
  
       
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
