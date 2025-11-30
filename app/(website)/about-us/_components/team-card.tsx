@@ -38,11 +38,7 @@ export const BiographyModal: React.FC<BiographyModalProps> = ({
           <DialogTitle className="text-xl font-bold text-[#a3d960] leading-tight">
             {member.name}
             {member.credentials && (
-<<<<<<< Updated upstream
-              <span className="ml-2 font-normal text-gray-300 text-sm whitespace-pre-line">
-=======
               <span className="ml-1 font-normal text-gray-300 text-sm">
->>>>>>> Stashed changes
                 {member.credentials}
               </span>
             )}
