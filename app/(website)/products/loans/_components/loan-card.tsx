@@ -80,7 +80,7 @@ export function LoanCard({ loan }: LoanCardProps) {
               setSelectedLoan(loan);
               setIsDialogOpen(true);
             }}
-            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-fit mt-auto py-2 rounded-xl"
+            className="bg-green-600 hover:bg-green-700 hidden lg:block text-white w-full mt-auto py-2 rounded-xl"
           >
             View Details
           </Button>
@@ -90,7 +90,7 @@ export function LoanCard({ loan }: LoanCardProps) {
               setSelectedLoan(loan);
               setIsMobileDrawerOpen(true);
             }}
-            className="bg-green-600 hover:bg-green-700 block lg:hidden text-white w-fit mt-auto py-2 rounded-xl"
+            className="bg-green-600 hover:bg-green-700 block lg:hidden text-white w-full mt-auto py-2 rounded-xl"
           >
             View Details
           </Button>

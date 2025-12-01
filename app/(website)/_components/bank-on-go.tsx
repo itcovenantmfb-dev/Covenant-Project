@@ -24,7 +24,7 @@ const BankOnGo = () => (
         </p>
         <div className="flex flex-col w-full  md:flex-row gap-4 mt-4">
           <Link href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-gradient-to-b from-[#1D9B5E] to-[#074426]  text-white/70 rounded-[12px] px-10 py-3 font-semibold text-sm flex items-center gap-2 shadow-md h-14">
+            <Button className="bg-gradient-to-b from-[#1D9B5E] to-[#074426]  text-white/70 rounded-[12px] px-10 py-3 font-semibold text-sm flex items-center gap-2 w-full md:w-fit shadow-md h-14">
               <Image
                 src="/google-play 1.svg"
                 alt="Google Play"

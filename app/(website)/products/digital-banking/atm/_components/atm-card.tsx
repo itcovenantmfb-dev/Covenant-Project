@@ -38,7 +38,7 @@ export const ATMCard = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center justify-center sticky top-2"
     >
       <motion.div
         style={{
@@ -47,7 +47,7 @@ export const ATMCard = ({
           top: `calc(-1vh + ${i * 0}px)`,
           backgroundColor: "#F1F5EB",
         }}
-        className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-8 lg:p-4 origin-top"
+        className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-10 lg:p-10 origin-top"
       >
         <div className="flex flex-col lg:flex-row max-w-[900px] mx-auto gap-12 items-center justify-center h-full">
           <div className={""}>
@@ -68,7 +68,7 @@ export const ATMCard = ({
 
           <div className="flex justify-center">
             <div className="hidden lg:flex w-[350px] justify-center">
-              <motion.div className="rounded-3xl shadow flex justify-center items-center w-[550px] h-[350px]">
+              <motion.div className="rounded-3xl  flex justify-center items-center w-[550px] h-[350px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} ATM Feature`}
@@ -79,11 +79,11 @@ export const ATMCard = ({
               </motion.div>
             </div>
             <div className="flex lg:hidden w-[200px] justify-center">
-              <motion.div className="rounded-2xl shadow flex justify-center items-center w-[500px] h-[300px]">
+              <motion.div className="rounded-2xl  flex justify-center items-center w-[600px] h-[300px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} ATM Feature`}
-                  width={350}
+                  width={400}
                   height={300}
                   className="object-contain"
                 />

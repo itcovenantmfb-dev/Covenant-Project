@@ -32,7 +32,7 @@ export const servicesData: ServiceCardData[] = [
       {
         content: [
           { type: "text", content: "Click " },
-          { type: "link", content: "here", href: "#" },
+          { type: "link", content: "here", href: "/forms" },
           { type: "text", content: " to Fill online block form" },
         ],
       },
@@ -59,7 +59,7 @@ export const servicesData: ServiceCardData[] = [
       {
         content: [
           { type: "text", content: "Download the Account Update form " },
-          { type: "link", content: "here", href: "#" },
+          { type: "link", content: "here", href: "/forms" },
           {
             type: "text",
             content:
@@ -89,7 +89,7 @@ export const servicesData: ServiceCardData[] = [
         ],
         subContent: [
           { type: "text", content: "Click " },
-          { type: "link", content: "here", href: "#" },
+          { type: "link", content: "here", href: "/forms" },
           {
             type: "text",
             content:

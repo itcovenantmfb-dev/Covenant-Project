@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const GetStartedSection = () => {
   return (
@@ -6,7 +7,7 @@ const GetStartedSection = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {/* For New Clients */}
-          <div className="bg-[#e8f4f1] rounded-2xl p-6 sm:p-8">
+          <div className="bg-[#F1F5EB] rounded-2xl p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
               For New Clients
             </h3>
@@ -18,7 +19,7 @@ const GetStartedSection = () => {
           </div>
 
           {/* For Existing Clients */}
-          <div className="bg-[#e8f4f1] rounded-2xl p-6 sm:p-8">
+          <div className="bg-[#F1F5EB] rounded-2xl p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
               For Existing Clients
             </h3>
@@ -62,10 +63,12 @@ const GetStartedSection = () => {
                 </p>
               </div>
             </div>
-            
-            <button className="w-full bg-[#1D9B5E] hover:bg-[#168a54] text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors duration-300 text-sm sm:text-base">
+            <Link href={"/contact"}>
+            <button className="w-full bg-[#1D9B5E] cursor-pointer hover:bg-[#168a54] text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-colors duration-300 text-sm sm:text-base">
               Contact Us Now
             </button>
+            </Link>
+            
           </div>
         </div>
       </div>

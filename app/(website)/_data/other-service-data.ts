@@ -51,7 +51,7 @@ export const otherServicesData: SectionData[] = [
           content: [
             { type: "title", content: "Log Failed Transactions:" },
             { type: "text", content: " Click " },
-            { type: "link", content: "here", href: "#" },
+            { type: "link", content: "here", href: "/forms" },
             {
               type: "text",
               content:

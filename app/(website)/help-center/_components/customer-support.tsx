@@ -108,7 +108,7 @@ const CustomerSupport: React.FC = () => {
   )?.component;
 
   return (
-    <div>
+    <div className="py-20 mb-10">
       <div className="sticky px-4 py-6">
         <div
           className="

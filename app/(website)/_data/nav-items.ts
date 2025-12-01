@@ -95,7 +95,7 @@ export const NAV_ITEMS = [
       },
       {
         label: "Corporate Social Responsibility (CSR)",
-        route: "/media/csr",
+        route: "/news",
         icon: "/icons/Group.svg",
         description: "Empowering lives and our communities",
       },

@@ -194,7 +194,7 @@ export function LoanDetailDialog({
             <div className="bg-[#A2DE49] rounded-b-4xl rounded-tr-4xl">
               <div
                 className={cn(
-                  "flex flex-col justify-center overflow-y-auto h-[415px] py-6 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
+                  "flex flex-col  overflow-y-auto h-[415px] py-20 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
                   activeTab === "target-clients" && "rounded-none"
                 )}
               >

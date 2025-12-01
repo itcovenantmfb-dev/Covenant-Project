@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HeroBanner = () => {
   return (
-    <section className="bg-[#033224] py-2 flex items-center relative overflow-hidden">
+    <section className="bg-[#033224] py-10 text-center  lg:p-0 flex lg:text-left  lg:items-left relative overflow-hidden">
  
       
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -33,20 +33,20 @@ const HeroBanner = () => {
 
             {/* Download Section */}
             <motion.div 
-              className="space-y-4  bg-white/4 w-fit backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit "
+              className="space-y-4   bg-white/4 w-full lg:w-fit backdrop-blur-md border border-white/8 rounded-2xl px-5 py-6 h-fit "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <h3 className="text-xl font-semibold text-white">Download our App</h3>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col  sm:flex-row justify-center items-center w-full gap-4">
                 {/* Google Play Button */}
                 <motion.a
                   href="https://play.google.com/store/apps/details?id=com.covenantmfb.mobileapp&hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-3 flex items-center gap-3 hover:bg-black/30 transition-all duration-300 group"
+                  className="bg-black/20 backdrop-blur-sm border w-full  border-white/20 rounded-xl px-6 py-3 flex justify-center items-center gap-3 hover:bg-black/30 transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -68,7 +68,7 @@ const HeroBanner = () => {
                   href="https://apps.apple.com/ng/app/covenantmfb-edge-banking/id6504527106"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black/20 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-3 flex items-center gap-3 hover:bg-black/30 transition-all duration-300 group"
+                  className="bg-black/20 backdrop-blur-sm border w-full border-white/20 rounded-xl px-6 py-3 flex justify-center items-center gap-3 hover:bg-black/30 transition-all duration-300 group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -93,7 +93,7 @@ const HeroBanner = () => {
 
           {/* Right Content - Phone Mockup */}
           <motion.div 
-            className="relative flex justify-center lg:justify-end"
+            className="relative hidden lg:flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}

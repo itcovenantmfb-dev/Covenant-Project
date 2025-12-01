@@ -19,7 +19,7 @@ const ReusableBanner = ({
       {/* Decorative Background Pattern */}
       <div className="">
         <div
-          className="absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover bg-center md:bg-left"
+          className="absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover bg-left lg:bg-center md:bg-left"
           style={{ backgroundImage: `url('${bgPattern}')` }}
         ></div>
       </div>

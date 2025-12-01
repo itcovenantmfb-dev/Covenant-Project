@@ -32,6 +32,6 @@ export const DEBIT_CARD_FEATURES = [
     title: "Enhanced Security",
     description:
       "Access your money anytime at thousands of ATMs nationwide. Check balances, withdraw cash, and perform transfers round the clock.",
-    image: "/credit-card-5.png",
+    image: "/credit-card-1.png",
   },
 ];

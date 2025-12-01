@@ -32,7 +32,7 @@ export const ussdData: UssdCardData[] = [
     lineContent: [
       { type: "title", content: "Log Failed Transactions:" },
       { type: "text", content: " Click " },
-      { type: "link", content: "here", href: "#" },
+      { type: "link", content: "here", href: "/forms" },
       { type: "text", content: " to fill online complaint form" },
     ],
   },

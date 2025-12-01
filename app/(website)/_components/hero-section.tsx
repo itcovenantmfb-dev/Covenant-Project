@@ -39,12 +39,12 @@ const HeroSection = ({
           className="flex flex-col items-start justify-center text-left"
         >
           <div className="text-[#FFFFFF] max-w-[560px] mt-2 lg:mt-6 space-y-[11px] lg:mx-0">
-            <h2 className="text-[28px] sm:text-[36px] lg:text-[60px] leading-tight font-bold">
+            <h2 className="text-4xl  lg:text-[60px] leading-tight font-bold">
               Empowering Dreams,
               <br />
               <span className="text-[#A2DD49]">Financing Growth </span>
             </h2>
-            <p className="text-[#FFFFFF]/70 font-medium text-sm sm:text-base lg:text-lg leading-relaxed">
+            <p className="text-[#FFFFFF]/70 font-medium text-sm sm:text-sm lg:text-lg leading-relaxed">
               For over 2 decades, Covenant Microfinance Bank Ltd. has empowered
               individuals and businesses to achieve their financial goals
               through tailored banking solutions, accessible loans, and smart

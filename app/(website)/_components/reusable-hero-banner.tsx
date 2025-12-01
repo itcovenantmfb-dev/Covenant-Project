@@ -28,7 +28,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl mt-8">
+        <h1 className=" font-bold tracking-tight text-white text-2xl lg:text-5xl mt-8">
           {title}
         </h1>
       </div>
