@@ -39,10 +39,12 @@ const HeroSection = ({
           className="flex flex-col items-start justify-center text-left"
         >
           <div className="text-[#FFFFFF] max-w-[560px] mt-2 lg:mt-6 space-y-[11px] lg:mx-0">
-            <h2 className="text-4xl  lg:text-[60px] leading-tight font-bold">
-              Empowering Dreams,
+            <h2 className="text-[38px]  lg:text-[60px] leading-tight font-bold">
+              Transforming ordinary individuals
               <br />
-              <span className="text-[#A2DD49]">Financing Growth </span>
+              <span className="text-[#A2DD49]">
+                into creators of wealth since 2003
+              </span>
             </h2>
             <p className="text-[#FFFFFF]/70 font-medium text-sm sm:text-sm lg:text-lg leading-relaxed">
               For over 2 decades, Covenant Microfinance Bank Ltd. has empowered
@@ -53,13 +55,13 @@ const HeroSection = ({
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-4 w-full sm:w-auto">
               <Button
                 onClick={onLearnMoreClick}
-                className="bg-[#1D9B5E] text-[#ffffff] rounded-full text-sm sm:text-base w-full sm:w-48 h-12 sm:h-13 lg:h-14 flex items-center justify-center"
+                className="bg-[#1D9B5E] text-[#ffffff] rounded-full text-sm sm:text-base w-full sm:w-48 h-10 sm:h-13 lg:h-14 flex items-center justify-center"
               >
                 Learn More
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2" />
               </Button>
               <Link href="https://ibank.covenantmfb.com" target="_blank">
-                <Button className="bg-[#ffffff] text-[#0A1519]/70 rounded-full text-sm sm:text-base w-full sm:w-48 h-12 sm:h-13 lg:h-14 flex items-center justify-center">
+                <Button className="bg-[#ffffff] text-[#0A1519]/70 rounded-full text-sm sm:text-base w-full sm:w-48 h-10 sm:h-13 lg:h-14 flex items-center justify-center">
                   Open Account
                 </Button>
               </Link>
