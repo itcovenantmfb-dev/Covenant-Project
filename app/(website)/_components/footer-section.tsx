@@ -153,7 +153,7 @@ const Footer = () => (
             Transforming ordinary individuals <br />
             into creators of wealth since 2003
           </p>
-          <div className="flex gap-3 mt-2">
+          <div className=" hidden lg:flex gap-3 mt-2">
             {socials.map((social, index) => (
               <Link
                 href={social.link}
@@ -257,7 +257,26 @@ const Footer = () => (
           </Link>
         </div>
       </div>
-      <div className="w-full text-center text-white/60 text-xs mb-8  pt-8">
+      <div className="  flex justify-center items-center lg:hidden   mx-auto">
+        <div className="  flex  lg:hidden  gap-3 ">
+          {socials.map((social, index) => (
+            <Link
+              href={social.link}
+              key={index}
+              className="rounded-[12px] h-11 w-11 flex items-center justify-center bg-white/4 backdrop-blur-md hover:bg-white/20 transition"
+            >
+              <Image
+                src={social.icon}
+                alt={social.alt}
+                width={16}
+                height={16}
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full text-center text-white/60 text-xs mb-2 lg:mb-8 pt-2 lg:pt-8">
         © 2025 Covenant Microfinance Bank | All rights reserved.
       </div>
     </div>

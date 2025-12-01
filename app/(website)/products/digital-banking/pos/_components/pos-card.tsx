@@ -7,6 +7,8 @@ interface Feature {
   title: string;
   description: string;
   image: string;
+  width: number;
+  height: number;
 }
 
 interface CardProps {
@@ -35,10 +37,13 @@ export const POSCard = ({
   const scale = useTransform(progress, range, [1, targetScale]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 0.9, 1], [1, 1, 0.3, 0]);
 
+  // Special styling for index 1
+  const isIndex1 = i === 0;
+
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-center justify-center sticky top-1"
     >
       <motion.div
         style={{
@@ -51,41 +56,40 @@ export const POSCard = ({
       >
         <div className="flex flex-col lg:flex-row max-w-[900px] mx-auto gap-12 items-center justify-center h-full">
           <div className={""}>
-            <div className="flex flex-col items-left gap-4 mb-6">
+            <div className="flex flex-col text-center lg:items-left gap-4 mb-6">
               <div className="text-white rounded-full hidden lg:flex items-left gap-4 justify-left text-xl font-bold">
                 <Image src={feature.number} width={60} height={60} alt="" />
               </div>
 
-              <div className="text-white rounded-full flex lg:hidden items-left gap-4 justify-left text-xl font-bold">
+              <div className="text-white rounded-full flex lg:hidden items-center gap-4 justify-center text-center text-xl font-bold">
                 <Image src={feature.number} width={30} height={30} alt="" />
               </div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-[#020617]">
+              <h2 className="text-xl lg:text-3xl font-bold text-[#020617]">
                 {feature.title}
               </h2>
             </div>
-            <p className="text-[#000]/70 text-lg mb-8">{feature.description}</p>
+            <p className="text-[#000]/70 text-sm  lg:text-lg text-center mb-8">{feature.description}</p>
           </div>
 
           <div className="flex justify-center">
-            <div className="hidden lg:flex w-[350px] justify-center">
-              <motion.div className="bg-white p-6 rounded-3xl shadow flex justify-center items-center w-[550px] h-[350px]">
+            <div className="hidden lg:flex  justify-center">
+              <motion.div className={`bg-white rounded-3xl shadow flex justify-center items-center ${isIndex1 ? 'w-full h-[350px] px-0' : 'w-full h-[350px] p-0'}`}>
                 <Image
                   src={feature.image}
                   alt={`${feature.title} POS Feature`}
-                  width={400}
-                  height={300}
+                  width={feature.width}
+                  height={feature.height}
                   className="object-contain"
                 />
               </motion.div>
             </div>
-            <div className="flex lg:hidden w-[200px] justify-center">
-              <motion.div className="bg-white p-3 rounded-2xl shadow flex justify-center items-center w-[500px] h-[300px]">
+            <div className="flex lg:hidden w-[300px] justify-center">
+              <motion.div className="bg-white relative p-0 rounded-2xl flex justify-center items-center w-[500px] h-[300px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} POS Feature`}
-                  width={350}
-                  height={300}
-                  className="object-contain"
+                fill
+                  className="object-cover absolute"
                 />
               </motion.div>
             </div>

@@ -211,7 +211,7 @@ export function AccountMobileDrawer({
               </DrawerTitle>
             </DrawerHeader>
 
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full mb-20">
               {tabs.map((tab) => (
                 <AccordionItem
                   className="border-none"

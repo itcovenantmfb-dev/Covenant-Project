@@ -103,7 +103,7 @@ const MobileNavbar = () => {
               {NAV_ITEMS.map((item, index) => (
                 <div key={index}>
                   {item.text === "Online Banking" ? (
-                    <div className="mt-6">
+                    <div className="mt-6 mb-20">
                       <div className="w-full relative">
                         <div className="absolute top-0 left-5 right-5 h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-lg z-40" />
                         <button

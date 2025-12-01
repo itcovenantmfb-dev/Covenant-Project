@@ -49,7 +49,7 @@ export const MobileBankingCard = ({
           top: `calc(-1vh + ${i * 0}px)`,
           backgroundColor: "#F1F5EB",
         }}
-        className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-0 lg:pb-0 origin-top"
+        className="relative w-full max-w-[1200px] mx-auto bg-white rounded-3xl p-7 lg:pb-0 origin-top"
       >
         <motion.div 
           style={{ opacity: gradientOpacity }}
@@ -88,12 +88,12 @@ export const MobileBankingCard = ({
               </motion.div>
             </div>
             <div className="flex lg:hidden w-[200px] justify-center">
-              <motion.div className="rounded-2xl shadow flex justify-center items-center w-[500px] h-[200px]">
+              <motion.div className="rounded-2xl  flex justify-center items-center w-[500px] h-[260px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} Mobile Banking Feature`}
-                  width={350}
-                  height={200}
+                  width={250}
+                  height={250}
                   className="object-contain"
                 />
               </motion.div>

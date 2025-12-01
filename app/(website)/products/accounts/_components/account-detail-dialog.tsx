@@ -241,7 +241,7 @@ export function AccountDetailDialog({
               <div
                 className={cn(
                   "flex flex-col overflow-y-auto min-h-[415px] h-auto py-10 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
-                  activeTab === "target-clients" 
+                  activeTab === "requirements" && "rounded-none"
                 )}
               >
                 {renderTabContent()}

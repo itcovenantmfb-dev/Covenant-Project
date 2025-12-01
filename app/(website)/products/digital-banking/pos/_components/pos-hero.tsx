@@ -17,12 +17,12 @@ function PosHero() {
           />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1B1C31] text-center ">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl mt-5 lg:mt-0  font-bold text-[#1B1C31] text-center ">
           Point of Sales Terminal
         </h1>
 
         {/* YouTube Video Embed */}
-        <div className="max-w-4xl mx-auto mb-10">
+        <div className="max-w-4xl mx-auto mb-0 lg:mb-10 mt-10 lg:mt-0 ">
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-xl"

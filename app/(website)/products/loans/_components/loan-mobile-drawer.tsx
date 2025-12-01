@@ -166,7 +166,7 @@ export function LoanMobileDrawer({
               </DrawerTitle>
             </DrawerHeader>
 
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full mb-20">
               {tabs.map((tab) => (
                 <AccordionItem className="border-none" key={tab.id} value={tab.id}>
                   <AccordionTrigger className="px-4" onClick={() => setActiveTab(tab.id)}>
