@@ -8,8 +8,8 @@ const BrandLogo = ({ small }: { small?: boolean }) => {
       <Image
         src={"/Brand-logo.svg"}
         alt="company logo"
-        width={small ? 120 : 160}
-        height={small ? 120 : 160}
+        width={small ? 80 : 160}
+        height={small ? 100 : 160}
       />
     </Link>
   );
