@@ -16,7 +16,7 @@ export type UssdCardData = {
 export const ussdData: UssdCardData[] = [
   {
     lineContent: [
-      { type: "title", content: "Registration Issues:" },
+      { type: "title", content: "Registration Issues" },
       { type: "text", content: " Send error details/ screenshot to " },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
@@ -30,7 +30,7 @@ export const ussdData: UssdCardData[] = [
   },
   {
     lineContent: [
-      { type: "title", content: "Log Failed Transactions:" },
+      { type: "title", content: "Log Failed Transactions" },
       { type: "text", content: " Click " },
       { type: "link", content: "here", href: "/forms" },
       { type: "text", content: " to fill online complaint form" },
@@ -38,10 +38,11 @@ export const ussdData: UssdCardData[] = [
   },
   {
     lineContent: [
-      { type: "title", content: "Forgot PIN:" },
+      { type: "title", content: "Forgot PIN" },
       {
-        type: "text",
-        content: " Download PIN Reset Form, Fill, Scan and email to ",
+        type: "link",
+        content: "Download PIN Reset Form",
+        href: "/forms",
       },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],

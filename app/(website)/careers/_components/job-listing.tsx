@@ -215,7 +215,7 @@ const JobListings: React.FC<JobListingsProps> = ({
                 href="mailto:careers@covenantmfb.com"
                 className="text-[#1D9B5E] hover:underline"
               >
-                careers@covenantmfb.com
+                careers@covenantmfb.com.ng
               </a>{" "}
               for future consideration.
             </p>

@@ -3,24 +3,25 @@ import { CardData } from "./mobile-app-data";
 export const topRowData: CardData[] = [
   {
     content: [
-      { type: "title", content: "Registration Issue:" },
+      { type: "title", content: "Registration Issue" },
       { type: "text", content: "Send error details/ screenshot to" },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
   },
   {
     content: [
-      { type: "title", content: "Forgot Username/Password/Secret Answer:" },
+      { type: "title", content: "Forgot Username/Password/Secret Answer" },
       {
-        type: "text",
-        content: " Download PIN Reset Form, Fill, Scan and email to ",
+        type: "link",
+        content: "Download PIN Reset Form",
+        href: "/forms",
       },
       { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
     ],
   },
   {
     content: [
-      { type: "title", content: "Limit Increase:" },
+      { type: "title", content: "Limit Increase" },
       {
         type: "text",
         content: " Download Limit Increase Form, Fill, Scan and email to ",
@@ -32,7 +33,7 @@ export const topRowData: CardData[] = [
 
 export const bottomRowCard: CardData = {
   content: [
-    { type: "title", content: "Log Failed Transactions:" },
+    { type: "title", content: "Log Failed Transactions" },
     { type: "text", content: " Click " },
     { type: "link", content: "here", href: "/forms" },
     {
@@ -45,3 +46,4 @@ export const bottomRowCard: CardData = {
     email: "hiebusiness@covenantmfb.com.ng",
   },
 };
+export type { CardData };

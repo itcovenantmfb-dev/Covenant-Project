@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CTASection = () => {
   return (
@@ -19,6 +20,7 @@ const CTASection = () => {
               id: 1,
               imageSrc: "/flash.svg",
               title: "Download the PoS Application Form from our website.",
+              link: "/forms",
             },
             {
               id: 2,
@@ -40,17 +42,26 @@ const CTASection = () => {
               <h3 className="text-lg font-semibold mb-4 text-[#020617]">
                 {step.title}
               </h3>
+
+              {step.id === 1 && (
+                <Link
+                  href={step.link || "#"}
+                  className="inline-block bg-[#1D9B5E] hover:bg-[#06512B] text-white text-sm font-medium px-8 py-3 rounded-xl"
+                >
+                  Download Now
+                </Link>
+              )}
             </div>
           ))}
         </div>
 
         {/* Bottom Message */}
-        {/* <div className="text-center">
+        <div className="text-center">
           <p className="text-xl lg:text-2xl text-white font-medium max-w-4xl mx-auto leading-relaxed">
             Our team will process your request and guide you through the next
             steps to get your POS terminal up and running.
           </p>
-        </div> */}
+        </div>
       </div>
     </section>
   );

@@ -28,19 +28,24 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
-            { type: "title", content: "Block ATM:" },
+            { type: "title", content: "Block ATM" },
             {
               type: "text",
-              content: " Put the Information on the Banner here.",
+              content: "Contact E-business Unit",
             },
           ],
+          contactInfo: {
+            phone: "+234-08100716957",
+            email: "hiebusiness@covenantmfb.com.ng",
+          },
         },
         {
           content: [
-            { type: "title", content: "Forgot PIN:" },
+            { type: "title", content: "Forgot PIN" },
             {
-              type: "text",
-              content: " Download PIN Reset Form, Fill, Scan and email to ",
+              type: "link",
+              content: "Download PIN Reset Form",
+              href: "/forms",
             },
             { type: "email", content: "hiebusiness@covenantmfb.com.ng" },
           ],
@@ -49,7 +54,7 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
-            { type: "title", content: "Log Failed Transactions:" },
+            { type: "title", content: "Log Failed Transactions" },
             { type: "text", content: " Click " },
             { type: "link", content: "here", href: "/forms" },
             {
@@ -73,7 +78,7 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
-            { type: "title", content: "Confirm Loan Balance:" },
+            { type: "title", content: "Confirm Loan Balance" },
             { type: "text", content: "Send a mail to " },
             { type: "email", content: "hibizdev@covenantmfb.com.ng" },
             { type: "text", content: " with your Account information" },
@@ -83,11 +88,16 @@ export const otherServicesData: SectionData[] = [
       [
         {
           content: [
-            { type: "title", content: "Log Loan Issues:" },
+            { type: "title", content: "Log Loan Issues" },
+            {
+              type: "text",
+              content: "Click ",
+            },
+            { type: "link", content: "here", href: "/forms" },
             {
               type: "text",
               content:
-                "Click here to fill online complaint form or contact Biz Development Unit",
+                " to fill online complaint form or contact Biz Development Unit",
             },
           ],
           contactInfo: {

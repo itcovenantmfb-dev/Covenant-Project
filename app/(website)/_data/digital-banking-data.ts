@@ -21,7 +21,7 @@ export const DIGITAL_BANKING_SERVICES: DigitalBankingService[] = [
       "Bank anywhere, anytime with 24/7 access to your accounts and transactions.",
     features: [
       "View balance anywhere with 24/7 access",
-      "Fund balance transactions or top-ups online",
+      "Instant Funds transfer at your fingertips",
       "Easy to control with real-time account monitoring",
       "Enhanced security with encrypted data and verification",
     ],

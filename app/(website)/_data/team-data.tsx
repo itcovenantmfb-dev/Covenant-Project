@@ -341,7 +341,7 @@ export const managementStaff: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Olawunmi \n Temidayo \nEsther",
+    name: "Olawumi \n Temidayo \nEsther",
     role: "Branch Manager, Ifo, Ogun State",
     imageUrl: "/Mask group (7).svg",
     biography: (
@@ -367,6 +367,13 @@ export const managementStaff: TeamMember[] = [
           promoting banking products and services while fostering a positive
           work culture. A strong leader, she has mentored and trained staff with
           a focus on upholding operational integrity and service excellence. 
+        </p>
+        <p>
+          Esther holds a Higher National Diploma (2006) and a National Diploma
+          (2002) from Osun State College of Technology. She is also a member of
+          several professional bodies, including the Microfinance Chartered
+          Institute of Bankers (MCIB), the Nigeria Institute of Management
+          (NIM), and the Member of Credit Administration (MICA).
         </p>
       </>
     ),
@@ -684,7 +691,7 @@ export const managementStaff: TeamMember[] = [
     name: "Adetunji \nAdedeji Akanbi",
     role: "Head, Internal Audit",
     imageUrl: "/Mask group (15).svg",
-    credentials: "B.A (HONS) English, ACA,MCIB",
+    credentials: "B.A (HONS) English, ACA, MCIB",
     biography: (
       <>
         <p>

@@ -55,7 +55,6 @@ export function AccountDetailDialog({
       label: secondTabLabel,
       icon: "/icons/avatar-img.svg",
     },
-  
     {
       id: "requirements" as TabType,
       label: "Requirements",
@@ -164,13 +163,13 @@ export function AccountDetailDialog({
           </div>
         );
 
-      case "requirements":
+      case "target-clients":
         return (
           <div className="space-y-4">
             <div className="flex flex-col items-left gap-2 text-green-600">
               <Image src={"/bank.svg"} width={20} height={20} alt="" />
               <h3 className="font-semibold text-lg text-[#020617]">
-             Requirements 
+                Target Clients
               </h3>
             </div>
             <div className="space-y-3">
@@ -237,11 +236,10 @@ export function AccountDetailDialog({
               ))}
             </div>
             <div className="bg-[#A2DE49] rounded-b-4xl rounded-tr-4xl">
-              {" "}
               <div
                 className={cn(
-                  "flex flex-col overflow-y-auto min-h-[415px] h-auto py-10 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
-                  activeTab === "requirements" && "rounded-none"
+                  "flex flex-col justify-center  overflow-y-auto min-h-[415px] h-auto py-6 bg-[#F1F5EB] rounded-b-4xl  px-8",
+                  activeTab === "target-clients" && ""
                 )}
               >
                 {renderTabContent()}

@@ -40,7 +40,8 @@ export function AccountCard({ account }: AccountCardProps) {
     <>
       <Card className="h-full grid grid-cols-1 lg:grid-cols-2 gap-0 text-[#000]/60 border-none hover:shadow-lg bg-white transition-shadow duration-200">
         {/* <CardHeader className="rounded-md relative"> */}
-        <div className="relative aspect-square hidden lg:flex lg:aspect-auto rounded-4xl">
+        <div className="relative aspect-square flex lg:aspect-auto rounded-4xl">
+          {/* <div className="relative w-full h-100 lg:h-auto"> */}
           <Image
             src={account.image || "/placeholder.svg"}
             alt={account.name}

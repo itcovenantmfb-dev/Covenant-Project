@@ -7,7 +7,8 @@ import BranchLocator from "./_components/branch-locator";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Covenant Microfinance Bank. Find our branch locations, contact information, customer service details, and reach out for banking inquiries and support.",
+  description:
+    "Get in touch with Covenant Microfinance Bank. Find our branch locations, contact information, customer service details, and reach out for banking inquiries and support.",
   keywords: [
     "contact covenant microfinance bank",
     "bank branches",
@@ -18,11 +19,12 @@ export const metadata: Metadata = {
     "phone numbers",
     "email addresses",
     "bank address",
-    "customer care"
+    "customer care",
   ],
   openGraph: {
     title: "Contact Us - Covenant Microfinance Bank",
-    description: "Get in touch with Covenant Microfinance Bank. Find our branch locations, contact information, and customer service details.",
+    description:
+      "Get in touch with Covenant Microfinance Bank. Find our branch locations, contact information, and customer service details.",
     url: "/contact",
     images: [
       {
@@ -35,7 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Contact Us - Covenant Microfinance Bank",
-    description: "Get in touch with Covenant Microfinance Bank. Find our branch locations and contact information.",
+    description:
+      "Get in touch with Covenant Microfinance Bank. Find our branch locations and contact information.",
   },
 };
 

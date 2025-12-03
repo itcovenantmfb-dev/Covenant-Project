@@ -8,7 +8,7 @@ export const DEBIT_CARD_FEATURES = [
   },
   {
     number: "/2.png",
-    title: "Global Acceptance",
+    title: "Acceptance Across Africa and Beyond",
     description:
       "Use your Covenant MFB debit card anywhere in the world. Accepted at millions of merchants and ATMs globally through Verve, Visa, and Mastercard networks.",
     image: "/credit-card 1.svg",
