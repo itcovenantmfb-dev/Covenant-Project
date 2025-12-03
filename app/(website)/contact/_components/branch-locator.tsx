@@ -29,7 +29,7 @@ const branchesData = [
   {
     name: "Sango Branch",
     address:
-      "Km 151, Lagos Abeokuta Expressway,Joju Bus stop, Sango Ota, Ogun State",
+      "Km 151, Lagos Abeokuta Expressway, Joju Bus stop, Sango Ota, Ogun State",
     phone: "+2347079107417",
     phoneHref: "tel:+2347079107417",
   },

@@ -1,9 +1,9 @@
+import React from "react";
 import {
   CardData,
   topRowData,
   bottomRowCard,
-} from "@/app/(website)/_data/mobile-app-data";
-import React from "react";
+} from "../../_data/mobile-app-data";
 
 const ContentRenderer: React.FC<{ parts: any[] }> = ({ parts }) => {
   const linkClasses = "text-[#1D9B5E] hover:text-green-700 font-medium";

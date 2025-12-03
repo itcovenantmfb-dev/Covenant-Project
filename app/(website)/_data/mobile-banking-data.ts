@@ -50,7 +50,7 @@ export const MOBILE_BANKING_FEATURES: Feature[] = [
   },
   {
     number: "/7.png",
-    title: "Live Friendly Interface",
+    title: "Friendly User Interface",
     description:
       "Enjoy our intuitive and user-friendly interface designed for seamless banking experience.",
     image: "/247 Account Access 2.svg",

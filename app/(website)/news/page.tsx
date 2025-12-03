@@ -5,13 +5,15 @@ import NewsHeroSection from "./_components/news-hero";
 import BlogList from "./_components/blog-list";
 import Carousel from "../_components/carousel";
 import { getAllNews } from "@/sanity/lib/queries";
+import NewsSection from "../_components/news-section";
 
 export const dynamic = "force-static";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "News & Updates",
-  description: "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank. Read about our services, financial tips, and industry updates.",
+  description:
+    "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank. Read about our services, financial tips, and industry updates.",
   keywords: [
     "covenant microfinance bank news",
     "banking news",
@@ -22,11 +24,12 @@ export const metadata: Metadata = {
     "banking insights",
     "press releases",
     "company news",
-    "financial services updates"
+    "financial services updates",
   ],
   openGraph: {
     title: "News & Updates - Covenant Microfinance Bank",
-    description: "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank.",
+    description:
+      "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank.",
     url: "/news",
     images: [
       {
@@ -39,7 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "News & Updates - Covenant Microfinance Bank",
-    description: "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank.",
+    description:
+      "Stay updated with the latest news, announcements, and insights from Covenant Microfinance Bank.",
   },
 };
 
@@ -50,16 +54,21 @@ const page = async () => {
     return (
       <div>
         <NewsHeroSection />
-        <BlogList newsArticles={newsArticles} />
+        <NewsSection newsArticles={newsArticles} showTitle={false} />
+        {/* <BlogList newsArticles={newsArticles} /> */}
         <Carousel />
       </div>
     );
   } catch (error) {
-    console.error('Error fetching news:', error);
+    console.error("Error fetching news:", error);
     return (
       <div>
         <NewsHeroSection />
-        <BlogList newsArticles={[]} error="Failed to load news articles. Please try again later." />
+        {/* <BlogList
+          newsArticles={[]}
+          error="Failed to load news articles. Please try again later."
+        /> */}
+        <NewsSection newsArticles={[]} showTitle={false} />
         <Carousel />
       </div>
     );

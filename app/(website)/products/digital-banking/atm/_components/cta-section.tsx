@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const CTASection = () => {
   return (
     <section className="py-16 bg-[#043B20] text-white relative z-10">
@@ -17,11 +18,13 @@ const CTASection = () => {
               id: 1,
               imageSrc: "/flash.svg",
               title: "Download & Complete the ATM Card Application Form",
+              link: "/forms",
             },
             {
               id: 2,
               imageSrc: "/flash.svg",
-              title: "Submit the completed form at any Covenant MFB branch.",
+              title: "Submit the completed form to",
+              email: "hiebusiness@covenantmfb.com.ng",
             },
             {
               id: 3,
@@ -36,7 +39,21 @@ const CTASection = () => {
               <Image src={step.imageSrc} width={40} height={40} alt="" />
               <h3 className="text-lg font-semibold mb-4 text-[#020617]">
                 {step.title}
+                {step.email && (
+                  <p className="text-[#1D9B5E] font-medium ">
+                    <a href={`mailto:${step.email}`}>{step.email}</a>
+                  </p>
+                )}
               </h3>
+
+              {step.id === 1 && (
+                <Link
+                  href={step.link || "#"}
+                  className="inline-block bg-[#1D9B5E] hover:bg-[#06512B] text-white text-sm font-medium px-8 py-3 rounded-xl"
+                >
+                  Download Now
+                </Link>
+              )}
             </div>
           ))}
         </div>

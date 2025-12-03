@@ -54,7 +54,7 @@ export const servicesData: ServiceCardData[] = [
     ],
   },
   {
-    title: "Update Account:",
+    title: "Update Account",
     items: [
       {
         content: [

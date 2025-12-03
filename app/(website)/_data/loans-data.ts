@@ -165,7 +165,7 @@ export const LOAN_DATA: LoanData[] = [
         "At Covenant Microfinance Bank, we are committed to supporting small businesses. This loan facility was designed specifically for small business owners to provide the financial boost they need to grow and thrive.",
     },
     features: [
-      { text: "Loan amounts from ₦500,000 to ₦2,000,000." },
+      { text: "Loan amounts from ₦100,000 to ₦2,000,000." },
       {
         text: "Maximum tenor of 6 months for first-time borrowers and 24 months for existing customers.",
       },
@@ -190,7 +190,7 @@ export const LOAN_DATA: LoanData[] = [
 
   {
     id: "daap-loan",
-    name: "DreamAsset Acquisition Product (DAAP)",
+    name: "Dream Asset Acquisition Product (DAAP)",
     shortName: "DAAP",
     description:
       "Make your dream purchases a reality with our simple, flexible, and convenient payment plan.",
@@ -213,7 +213,7 @@ export const LOAN_DATA: LoanData[] = [
       { text: "Warranty provided in line with supplier's policy." },
       { text: "Highly competitive prices." },
       { text: "Only 10% equity contribution required." },
-      { text: "Up to 30 months and above repayment period." },
+      { text: "Up to 10 months and above repayment period." },
       { text: "Zero management fees." },
       { text: "Affordable interest rates." },
     ],
@@ -246,7 +246,7 @@ export const LOAN_DATA: LoanData[] = [
         "We provide support for your transportation business by helping you acquire assets such as bicycles and motorcycles on request.",
     },
     features: [
-      { text: "Pay as little as 20% of the cost price upfront." },
+      { text: "Pay as little as 5% of the cost price upfront." },
       { text: "Repayment period of up to 12 months." },
       { text: "Available to current account holders." },
       { text: "Flexible weekly repayment plan." },
@@ -309,7 +309,9 @@ export const LOAN_DATA: LoanData[] = [
       { list: "Up to ₦500,000 for school fees." },
       { list: "Flexible repayment (up to 8 months)." },
       { list: "Competitive interest rates." },
-      { list: "Designed for Covenant/affiliated schools’ parents." },
+      {
+        list: "Designed for Parents with children/wards Covenant affiliated schools.",
+      },
     ],
     image: "/Mask group (6).png",
     overview: {
@@ -318,7 +320,7 @@ export const LOAN_DATA: LoanData[] = [
         "Are you a parent or guardian with a child enrolled in Kingdom Heritage Model School, Faith Academy, Covenant University, or Landmark University? If you ever find yourself needing support to cover school fees before your income comes in, we're here to help.",
     },
     features: [
-      { text: "Up to 9-months repayment period." },
+      { text: "Up to 8-months repayment period." },
       { text: "Maximum loan amount of ₦200,000." },
       { text: "Flexible repayment options and structure." },
       { text: "Competitive interest rates." },
