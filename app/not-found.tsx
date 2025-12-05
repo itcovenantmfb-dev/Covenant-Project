@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./(website)/_components/navbar";
@@ -8,7 +8,9 @@ import CTA from "./(website)/_components/cta-section";
 function NotFound() {
   return (
     <>
-      <Navbar />
+      <Suspense fallback={<div className="h-20" />}>
+        <Navbar />
+      </Suspense>
       <section
         data-aos="fade-up"
         className=" py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
