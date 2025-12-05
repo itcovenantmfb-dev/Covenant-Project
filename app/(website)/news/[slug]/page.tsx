@@ -8,6 +8,7 @@ import Carousel from "../../_components/carousel";
 import { getNewsBySlug, getAllNews } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
+import { portableTextComponents } from "@/lib/portableTextComponents";
 
 export const revalidate = 60;
 
@@ -149,7 +150,7 @@ export default async function BlogPostPage({
                 className="prose prose-lg max-w-none font-normal leading-relaxed prose-headings:text-gray-900 prose-strong:text-gray-900 prose-a:text-green-600 hover:prose-a:text-green-700"
                 style={{ color: "hsla(215, 28%, 55%, 1)" }}
               >
-                <PortableText value={post.content} />
+                <PortableText value={post.content} components={portableTextComponents} />
               </div>
             </div>
           </article>

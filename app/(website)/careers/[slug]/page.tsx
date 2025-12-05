@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { getJobBySlug, getAllJobs } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
+import { portableTextComponents } from "@/lib/portableTextComponents";
 
 export async function generateMetadata({
   params,
@@ -101,7 +102,7 @@ export default async function JobDetailsPage({
               Primary Responsibility:
             </h2>
             <div className="mt-4 prose prose-lg max-w-none prose-p:text-gray-600 prose-p:leading-relaxed">
-              <PortableText value={job.primaryResponsibilities} />
+              <PortableText value={job.primaryResponsibilities} components={portableTextComponents} />
             </div>
           </div>
 
@@ -111,7 +112,7 @@ export default async function JobDetailsPage({
               Job Specification
             </h2>
             <div className="mt-4 prose prose-lg max-w-none prose-p:text-gray-600 prose-p:leading-relaxed">
-              <PortableText value={job.jobSpecification} />
+              <PortableText value={job.jobSpecification} components={portableTextComponents} />
             </div>
           </div>
 

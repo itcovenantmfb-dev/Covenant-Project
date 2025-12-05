@@ -10,6 +10,7 @@ import {
 import { ChevronDown, ChevronRight } from "lucide-react";
 import SectionPill from "../../about-us/_components/section-pill";
 import { PortableText } from "@portabletext/react";
+import { portableTextComponents } from "@/lib/portableTextComponents";
 
 // Category mapping to display proper names
 const categoryDisplayNames: Record<string, string> = {
@@ -95,7 +96,7 @@ const FaqPageContent = ({ faqs }: FaqPageContentProps) => {
                       </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-[#727272] text-sm lg:text-base text-justify leading-7 tracking-wide pt-2 pb-1 px-0 ">
-                      <PortableText value={faq.answer} />
+                      <PortableText value={faq.answer} components={portableTextComponents} />
                     </AccordionContent>
                   </AccordionItem>
                 ))}
