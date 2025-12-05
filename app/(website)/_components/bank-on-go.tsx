@@ -15,7 +15,7 @@ const BankOnGo = () => (
     >
       <div className="flex flex-col justify-center items-start w-full lg:w-1/2 h-full lg:px-8 py-12">
         <h1 className="text-white font-semibold text-3xl lg:text-[50px] mb-4">
-          Bank on the Go
+       Your bank in your pocket
         </h1>
         <p className="text-white text-sm lg:text-base text-justify tracking-wide mb-8 max-w-md">
           Manage your money on the go with the Covenant MFB mobile app. Transfer
@@ -54,11 +54,11 @@ const BankOnGo = () => (
       </div>
       <div className="hidden lg:block absolute z-20 bottom-34 right-16 h-full">
         <Image
-          src="/iphone-15-mockups 1.svg"
+          src="/i12_15 1 (1).svg"
           alt="App phone"
           height={300}
           quality={100}
-          width={333}
+          width={600}
           className="object-contain"
           priority
         />

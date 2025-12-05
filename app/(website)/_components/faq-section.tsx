@@ -6,11 +6,12 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { PortableText } from "@portabletext/react";
 
 interface FAQ {
   _id: string;
   question: string;
-  answer: string;
+  answer: any; // PortableText block content
   category: string;
 }
 
@@ -80,7 +81,7 @@ const FAQSection = ({ faqs }: FAQSectionProps) => {
                       </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-[#727272] text-sm lg:text-base text-justify leading-7 tracking-wide pt-2 pb-1 px-0 ">
-                      {q.answer}
+                      <PortableText value={q.answer} />
                     </AccordionContent>
                   </AccordionItem>
                 ))}

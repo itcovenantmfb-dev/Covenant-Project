@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import SectionPill from "../../about-us/_components/section-pill";
+import { PortableText } from "@portabletext/react";
 
 // Category mapping to display proper names
 const categoryDisplayNames: Record<string, string> = {
@@ -22,7 +23,7 @@ const categoryDisplayNames: Record<string, string> = {
 interface FAQ {
   _id: string;
   question: string;
-  answer: string;
+  answer: any; // PortableText block content
   category: string;
   order: number;
   isActive: boolean;
@@ -94,7 +95,7 @@ const FaqPageContent = ({ faqs }: FaqPageContentProps) => {
                       </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-[#727272] text-sm lg:text-base text-justify leading-7 tracking-wide pt-2 pb-1 px-0 ">
-                      {faq.answer}
+                      <PortableText value={faq.answer} />
                     </AccordionContent>
                   </AccordionItem>
                 ))}

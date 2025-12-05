@@ -126,7 +126,7 @@ const AlbumCard: React.FC<{
   album: Album;
   onViewAlbum: (album: Album) => void;
 }> = ({ album, onViewAlbum }) => (
-  <article className="relative h-65 w-full max-w-md overflow-hidden rounded-2xl shadow-lg group">
+  <article className="relative w-full max-w-md overflow-hidden rounded-2xl shadow-lg group">
     <div className="relative w-full h-64 border-8 border-white rounded-2xl overflow-hidden">
       <Image
         src={urlFor(album.coverImage.asset).url()}
@@ -134,7 +134,23 @@ const AlbumCard: React.FC<{
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
+      {/* Gradient overlay for better text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
+    
+    {/* Album Title */}
+    <div className="absolute top-4 left-4 right-4 z-10">
+      <h3 className="text-white font-bold text-lg sm:text-xl drop-shadow-lg line-clamp-2">
+        {album.title}
+      </h3>
+      {album.description && (
+        <p className="text-white/90 text-sm mt-1 drop-shadow-md line-clamp-1">
+          {album.description}
+        </p>
+      )}
+    </div>
+
+    {/* View Album Button */}
     <div className="absolute bottom-1 right-1 z-10 bg-white p-1.5 rounded-tl-[13px] rounded-br-[12px]">
       <button
         onClick={() => onViewAlbum(album)}

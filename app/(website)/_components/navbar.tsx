@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import MobileNavbar from "./mobile-navbar";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   ChevronDown,
   Building2,
@@ -61,9 +61,24 @@ const getIconComponent = (iconName: string) => {
 
 const Navbar = () => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const isHomePage = pathname === "/";
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  // Helper function to check if a route is active
+  const isRouteActive = (route: string) => {
+    const currentQuery = searchParams.toString();
+    
+    if (route.includes('?')) {
+      // Route has query params - match both path and query
+      const [routePath, routeQuery] = route.split('?');
+      return pathname === routePath && currentQuery === routeQuery;
+    } else {
+      // Route has no query params - only match if current URL also has no query params
+      return pathname === route && currentQuery === '';
+    }
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -148,14 +163,17 @@ const Navbar = () => {
                               : "grid-cols-2 md:grid-cols-1"
                           )}
                         >
-                          {item.subItems?.map((subItem) => (
+                          {item.subItems?.map((subItem) => {
+                            const isActive = isRouteActive(subItem.route);
+                            
+                            return (
                             <Link
                               key={subItem.route}
                               href={subItem.route}
                               onClick={() => setOpenDropdown(null)}
                               className={cn(
                                 "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
-                                pathname === subItem.route && "bg-[#F1F5EB]"
+                                isActive && "bg-[#F1F5EB]"
                               )}
                               {...(subItem.route.startsWith("https") && {
                                 target: "_blank",
@@ -174,7 +192,8 @@ const Navbar = () => {
                                 </p>
                               </div>
                             </Link>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
@@ -192,12 +211,12 @@ const Navbar = () => {
                     className={cn(
                       "hover:bg-transparent focus:bg-transparent cursor-pointer text-[#DBE4C4] hover:text-white p-0 font-normal text-[13px] gap-1 relative px-3 py-2 rounded-md flex items-center",
                       item.subItems?.some(
-                        (subItem) => pathname === subItem.route
+                        (subItem) => isRouteActive(subItem.route)
                       ) && "text-white"
                     )}
                   >
                     {item.subItems?.some(
-                      (subItem) => pathname === subItem.route
+                      (subItem) => isRouteActive(subItem.route)
                     ) && (
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#75FF8C]/20 to-transparent rounded-md" />
                     )}
@@ -217,7 +236,7 @@ const Navbar = () => {
                       />
                     </div>
                     {item.subItems?.some(
-                      (subItem) => pathname === subItem.route
+                      (subItem) => isRouteActive(subItem.route)
                     ) && (
                       <div className="absolute bottom-0 cursor-pointer left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full" />
                     )}
@@ -245,14 +264,17 @@ const Navbar = () => {
                         {item.text === "Products" ? (
                           <div className="flex gap-8">
                             <div className="grid grid-cols-2 gap-3">
-                              {item.subItems?.map((subItem) => (
+                              {item.subItems?.map((subItem) => {
+                                const isActive = isRouteActive(subItem.route);
+                                
+                                return (
                                 <Link
                                   key={subItem.route}
                                   href={subItem.route}
                                   onClick={() => setOpenDropdown(null)}
                                   className={cn(
                                     "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
-                                    pathname === subItem.route && "bg-[#F1F5EB]"
+                                    isActive && "bg-[#F1F5EB]"
                                   )}
                                   {...(subItem.route.startsWith("https") && {
                                     target: "_blank",
@@ -271,7 +293,8 @@ const Navbar = () => {
                                     </p>
                                   </div>
                                 </Link>
-                              ))}
+                                );
+                              })}
                             </div>
 
                             <div className="flex-shrink-0 w-[280px]">
@@ -293,14 +316,17 @@ const Navbar = () => {
                                 : "grid-cols-2 md:grid-cols-2"
                             )}
                           >
-                            {item.subItems?.map((subItem) => (
+                            {item.subItems?.map((subItem) => {
+                              const isActive = isRouteActive(subItem.route);
+                              
+                              return (
                               <Link
                                 key={subItem.route}
                                 href={subItem.route}
                                 onClick={() => setOpenDropdown(null)}
                                 className={cn(
                                   "flex items-start gap-3 px-4 py-3 text-sm cursor-pointer hover:bg-[#F1F5EB] rounded-xl transition-all duration-200",
-                                  pathname === subItem.route && "bg-[#F1F5EB]"
+                                  isActive && "bg-[#F1F5EB]"
                                 )}
                                 {...(subItem.route.startsWith("https") && {
                                   target: "_blank",
@@ -319,7 +345,8 @@ const Navbar = () => {
                                   </p>
                                 </div>
                               </Link>
-                            ))}
+                              );
+                            })}
                           </div>
                         )}
                       </div>
