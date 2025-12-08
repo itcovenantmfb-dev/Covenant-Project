@@ -310,7 +310,7 @@ export const LOAN_DATA: LoanData[] = [
       { list: "Flexible repayment (up to 8 months)." },
       { list: "Competitive interest rates." },
       {
-        list: "Designed for Parents with children/wards Covenant affiliated schools.",
+        list: "Designed for Parents with children/wards  in Covenant affiliated schools.",
       },
     ],
     image: "/Mask group (6).png",

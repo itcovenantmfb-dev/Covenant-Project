@@ -134,31 +134,28 @@ const AlbumCard: React.FC<{
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      {/* Gradient overlay for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Gradient overlay at bottom for text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
     </div>
     
-    {/* Album Title */}
-    <div className="absolute top-4 left-4 right-4 z-10">
-      <h3 className="text-white font-bold text-lg sm:text-xl drop-shadow-lg line-clamp-2">
-        {album.title}
-      </h3>
-      {album.description && (
-        <p className="text-white/90 text-sm mt-1 drop-shadow-md line-clamp-1">
-          {album.description}
-        </p>
-      )}
-    </div>
-
-    {/* View Album Button */}
-    <div className="absolute bottom-1 right-1 z-10 bg-white p-1.5 rounded-tl-[13px] rounded-br-[12px]">
-      <button
-        onClick={() => onViewAlbum(album)}
-        className="flex items-center gap-1.5 bg-[#A2DE49] px-3 py-2 text-xs font-semibold transition-transform hover:scale-105 rounded-tl-[13px] rounded-br-[12px] text-[#043B20]"
-      >
-        View Album
-        <Images className="h-4 w-4" />
-      </button>
+    {/* Album Title and Button - Bottom Left */}
+    <div className="absolute bottom-4 left-4 right-4 z-10 flex items-end justify-between">
+      <div className="flex-1">
+        <h3 className="text-white font-bold text-sm md:text-sm drop-shadow-lg line-clamp-2">
+          {album.title}
+        </h3>
+      </div>
+      
+      {/* View Images Button */}
+      <div className="ml-3 bg-white p-1 rounded-tl-[13px] rounded-br-[12px] flex-shrink-0">
+        <button
+          onClick={() => onViewAlbum(album)}
+          className="flex items-center gap-1.5 bg-[#A2DE49] px-3 py-2 text-sm font-semibold transition-transform hover:scale-105 rounded-tl-[13px] rounded-br-[12px] text-[#043B20] whitespace-nowrap"
+        >
+          View Images
+          <Images className="h-4 w-4" />
+        </button>
+      </div>
     </div>
   </article>
 );
@@ -304,7 +301,7 @@ const GallerySection: React.FC<{ albums: Album[] }> = ({ albums }) => {
   return (
     <section className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {albums.map((album) => (
             <AlbumCard
               key={album._id}

@@ -22,12 +22,12 @@ const OneCodeAway = () => (
           </p>
         </div>
 
-        <div className="hidden lg:block lg:absolute z-20 bottom-34 right-8 h-full">
+        <div className="hidden lg:block lg:absolute z-20 bottom-30 right-8 h-full">
           <Image
             src="/smiling-girl.svg"
             alt="girl smiling"
-            height={516}
-            width={604}
+            height={400}
+            width={445}
             className="object-contain"
             priority
           />
