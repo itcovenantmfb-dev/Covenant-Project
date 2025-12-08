@@ -14,7 +14,7 @@ import CashAndPayments from "./cash-and-payments";
 
 const Carousel = () => {
   return (
-    <div className="relative w-full max-w-[1200px] mx-auto">
+    <div className="relative w-full max-w-[1100px] mx-auto">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -42,7 +42,7 @@ const Carousel = () => {
 
       <div className="flex justify-between items-center w-full py-6">
         <div className="carousel-swiper-pagination flex justify-center" />
-        <div className="gap-4 justify-center items-center mr-20 hidden lg:flex">
+        <div className="gap-4 justify-center items-center mr-10 hidden lg:flex">
           <Button className="carousel-prev rounded-full bg-transparent border-2  border-[#043B20] w-10 h-10 flex items-center justify-center">
             <ArrowLeft className="text-[#043B20] w-6 h-6" />
           </Button>
