@@ -14,7 +14,7 @@ const CTASection = () => {
         </div>
 
         {/* Steps Grid */}
-        <div className="grid lg:grid-cols-3 gap-8  mb-12">
+        <div className="grid lg:grid-cols-3 gap-8   mb-12">
           {[
             {
               id: 1,
@@ -36,7 +36,7 @@ const CTASection = () => {
           ].map((step) => (
             <div
               key={step.id}
-              className="bg-white backdrop-blur-sm space-y-1.5 rounded-2xl p-8 text-left"
+              className="bg-[#F1F5EB] backdrop-blur-sm space-y-1.5 rounded-2xl p-8 text-left"
             >
               <Image src={step.imageSrc} width={40} height={40} alt="" />
               <h3 className="text-lg font-semibold mb-4 text-[#020617]">
