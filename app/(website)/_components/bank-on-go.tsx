@@ -15,7 +15,7 @@ const BankOnGo = () => (
     >
       <div className="flex flex-col justify-center  items-start w-full  h-full lg:px-8 py-12">
         <h1 className="text-white font-semibold text-3xl lg:text-5xl mb-4">
-          Your bank  in <br/> your pocket
+          Bank on the Go
         </h1>
         <p className="text-white text-sm lg:text-base text-justify tracking-wide mb-8 max-w-md">
           Manage your money on the go with the Covenant MFB mobile app. Transfer
