@@ -25,13 +25,14 @@ const CTASection = () => {
             {
               id: 2,
               imageSrc: "/flash.svg",
-              title: "Fill out the form with the required details",
+              title: "Submit the completed form to",
+              email: "hiebusiness@covenantmfb.com.ng",
             },
             {
               id: 3,
               imageSrc: "/flash.svg",
               title:
-                "Submit the completed form at any Covenant MFB branch closest to you.",
+                "Receive your Verve Debit Card and PIN instantly. Pickup your Pos Terminal",
             },
           ].map((step) => (
             <div
@@ -40,7 +41,15 @@ const CTASection = () => {
             >
               <Image src={step.imageSrc} width={40} height={40} alt="" />
               <h3 className="text-lg font-semibold mb-4 text-[#020617]">
-                {step.title}
+                {step.title}{" "}
+                {step.id === 2 && step.email && (
+                  <a
+                    href={`mailto:${step.email}`}
+                    className="text-[#1D9B5E] font-medium tracking-leading m-0 p-0"
+                  >
+                    {step.email}
+                  </a>
+                )}
               </h3>
 
               {step.id === 1 && (
