@@ -1,5 +1,5 @@
-import { Resend } from 'resend';
-import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from "resend";
+import { NextRequest, NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,15 +11,15 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!fullName || !email || !phone || !subject || !message) {
       return NextResponse.json(
-        { error: 'All fields are required' },
+        { error: "All fields are required" },
         { status: 400 }
       );
     }
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Covenant MFB Contact <onboarding@resend.dev>', // Use your verified domain later
-      to: [process.env.CONTACT_EMAIL || 'office@covenantmfb.com.ng'],
+      from: "Covenant MFB Contact <webcontact@covenantmfb.com.ng>", // Use your verified domain later
+      to: [process.env.CONTACT_EMAIL || "office@covenantmfb.com.ng"],
       replyTo: email, // Allow direct reply to the customer
       subject: `New Contact Form: ${subject}`,
       html: `
@@ -158,17 +158,17 @@ export async function POST(request: NextRequest) {
                   
                   <div class="info-item">
                     <div class="label">Message</div>
-                    <div class="message-box">${message.replace(/\n/g, '<br>')}</div>
+                    <div class="message-box">${message.replace(/\n/g, "<br>")}</div>
                   </div>
                 </div>
                 
                 <div class="footer">
                   <p>Submitted via website contact form</p>
                   <div class="timestamp">
-                    ${new Date().toLocaleString('en-NG', { 
-                      timeZone: 'Africa/Lagos',
-                      dateStyle: 'medium',
-                      timeStyle: 'short'
+                    ${new Date().toLocaleString("en-NG", {
+                      timeZone: "Africa/Lagos",
+                      dateStyle: "medium",
+                      timeStyle: "short",
                     })}
                   </div>
                 </div>
@@ -180,22 +180,22 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error("Resend error:", error);
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { error: "Failed to send email" },
         { status: 400 }
       );
     }
 
     return NextResponse.json({
       success: true,
-      message: 'Email sent successfully',
+      message: "Email sent successfully",
       data,
     });
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }
