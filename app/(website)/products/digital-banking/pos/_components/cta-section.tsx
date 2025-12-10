@@ -31,8 +31,7 @@ const CTASection = () => {
             {
               id: 3,
               imageSrc: "/flash.svg",
-              title:
-                "Receive your Verve Debit Card and PIN instantly. Pickup your Pos Terminal",
+              title: "Pick your POS Terminal at the nearest branch.",
             },
           ].map((step) => (
             <div
