@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import MobileNavbar from "./mobile-navbar";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   ChevronDown,
   Building2,
@@ -61,23 +61,13 @@ const getIconComponent = (iconName: string) => {
 
 const Navbar = () => {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const isHomePage = pathname === "/";
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   // Helper function to check if a route is active
   const isRouteActive = (route: string) => {
-    const currentQuery = searchParams.toString();
-    
-    if (route.includes('?')) {
-      // Route has query params - match both path and query
-      const [routePath, routeQuery] = route.split('?');
-      return pathname === routePath && currentQuery === routeQuery;
-    } else {
-      // Route has no query params - only match if current URL also has no query params
-      return pathname === route && currentQuery === '';
-    }
+    return pathname === route;
   };
 
   useEffect(() => {
