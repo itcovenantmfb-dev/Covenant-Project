@@ -212,7 +212,7 @@ const JobListings: React.FC<JobListingsProps> = ({
             <p className="text-sm text-gray-500">
               You can also send your resume to{" "}
               <a
-                href="mailto:careers@covenantmfb.com"
+                href="mailto:careers@covenantmfb.com.ng"
                 className="text-[#1D9B5E] hover:underline"
               >
                 careers@covenantmfb.com.ng
