@@ -189,6 +189,77 @@ export async function getRecentFAQs(limit: number = 4) {
   );
 }
 
+// CSR Initiatives
+export async function getAllCSR() {
+  return client.fetch(
+    groq`*[_type == "csr" && isPublished == true] | order(publishedAt desc) {
+      _id,
+      title,
+      slug,
+      excerpt,
+      image,
+      content,
+      author,
+      category,
+      tags,
+      featured,
+      publishedAt
+    }`
+  );
+}
+
+export async function getFeaturedCSR() {
+  return client.fetch(
+    groq`*[_type == "csr" && featured == true && isPublished == true] | order(publishedAt desc) {
+      _id,
+      title,
+      slug,
+      excerpt,
+      image,
+      content,
+      author,
+      category,
+      tags,
+      featured,
+      publishedAt
+    }`
+  );
+}
+
+export async function getCSRBySlug(slug: string) {
+  return client.fetch(
+    groq`*[_type == "csr" && slug.current == $slug && isPublished == true][0] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      image,
+      content,
+      author,
+      category,
+      tags,
+      featured,
+      publishedAt
+    }`,
+    { slug }
+  );
+}
+
+export async function getRecentCSR(limit: number = 4) {
+  return client.fetch(
+    groq`*[_type == "csr" && isPublished == true] | order(publishedAt desc) [0...${limit}] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      image,
+      author,
+      category,
+      publishedAt
+    }`
+  );
+}
+
 // Gallery Albums
 export async function getAllGalleryAlbums() {
   return client.fetch(

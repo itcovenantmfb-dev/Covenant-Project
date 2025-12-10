@@ -8,9 +8,9 @@ import CTA from "./(website)/_components/cta-section";
 function NotFound() {
   return (
     <>
-      <Suspense fallback={<div className="h-20" />}>
+     
         <Navbar />
-      </Suspense>
+    
       <section
         data-aos="fade-up"
         className=" py-12 sm:py-16 lg:py-24 px-4 sm:px-6"
